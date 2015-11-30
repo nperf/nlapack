@@ -1,4 +1,4 @@
-# nLAPACK
+# nLAPACK ![travis](https://img.shields.io/travis/mateogianolio/nlapack.svg)
 
 Node `>=4.0` C++ bindings for all single- and double-precision CLAPACK (Linear Algebra Package) routines.
 
