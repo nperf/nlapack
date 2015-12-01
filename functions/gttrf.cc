@@ -1,7 +1,7 @@
 #include "gttrf.h"
 
 NAN_METHOD(dgttrf) {
-	unsigned int n = info[0]->Uint32Value();
+	int n = info[0]->Uint32Value();
 	assert(info[1]->IsFloat64Array());
 	void *dl_data = info[1].As<v8::Float64Array>()->Buffer()->GetContents().Data();
 	double *dl = reinterpret_cast<double*>(dl_data);
@@ -17,15 +17,15 @@ NAN_METHOD(dgttrf) {
 	assert(info[5]->IsInt32Array());
 	void *ipiv_data = info[5].As<v8::Int32Array>()->Buffer()->GetContents().Data();
 	int *ipiv = reinterpret_cast<int*>(ipiv_data);
-	int **i = NULL;
-	clapack_dgttrf(n, dl, d, du, du2, ipiv, i);
+	int i;
+	dgttrf_(&n, dl, d, du, du2, ipiv, &i);
 	info.GetReturnValue().Set(
-		Nan::New<v8::Number>(**i)
+		Nan::New<v8::Number>(i)
 	);
 }
 
 NAN_METHOD(sgttrf) {
-	unsigned int n = info[0]->Uint32Value();
+	int n = info[0]->Uint32Value();
 	assert(info[1]->IsFloat32Array());
 	void *dl_data = info[1].As<v8::Float32Array>()->Buffer()->GetContents().Data();
 	float *dl = reinterpret_cast<float*>(dl_data);
@@ -41,10 +41,9 @@ NAN_METHOD(sgttrf) {
 	assert(info[5]->IsInt32Array());
 	void *ipiv_data = info[5].As<v8::Int32Array>()->Buffer()->GetContents().Data();
 	int *ipiv = reinterpret_cast<int*>(ipiv_data);
-	int **i = NULL;
-	clapack_sgttrf(n, dl, d, du, du2, ipiv, i);
+	int i;
+	sgttrf_(&n, dl, d, du, du2, ipiv, &i);
 	info.GetReturnValue().Set(
-		Nan::New<v8::Number>(**i)
+		Nan::New<v8::Number>(i)
 	);
 }
-

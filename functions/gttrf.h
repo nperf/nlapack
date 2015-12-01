@@ -4,25 +4,25 @@
 #include <nan.h>
 
 NAN_METHOD(dgttrf);
-extern "C" int clapack_dgttrf (
-	const int,
-	const double*,
-	const double*,
-	const double*,
-	const double*,
-	const int*,
-	int**
+extern "C" int dgttrf_ (
+	int*,
+	double*,
+	double*,
+	double*,
+	double*,
+	int*,
+	int*
 );
 
 NAN_METHOD(sgttrf);
-extern "C" int clapack_sgttrf (
-	const int,
-	const float*,
-	const float*,
-	const float*,
-	const float*,
-	const int*,
-	int**
+extern "C" int sgttrf_ (
+	int*,
+	float*,
+	float*,
+	float*,
+	float*,
+	int*,
+	int*
 );
 
 #endif

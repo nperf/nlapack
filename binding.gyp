@@ -7,7 +7,6 @@
         "functions/getrf.cc",
         "functions/gbtrf.cc",
         "functions/gttrf.cc",
-        "functions/dttrfb.cc",
         "functions/potrf.cc",
         "functions/pstrf.cc",
         "functions/pftrf.cc",
@@ -21,7 +20,8 @@
         "<!(node -e \"require('nan')\")"
       ],
       "libraries": [
-        "-llapack"
+        "-llapack",
+        "-lblas"
       ]
     }
   ]

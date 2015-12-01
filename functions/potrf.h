@@ -4,21 +4,21 @@
 #include <nan.h>
 
 NAN_METHOD(dpotrf);
-extern "C" int clapack_dpotrf (
-	const int,
-	const int,
-	const double*,
-	const int,
-	int**
+extern "C" int dpotrf_ (
+	int*,
+	int*,
+	double*,
+	int*,
+	int*
 );
 
 NAN_METHOD(spotrf);
-extern "C" int clapack_spotrf (
-	const int,
-	const int,
-	const float*,
-	const int,
-	int**
+extern "C" int spotrf_ (
+	int*,
+	int*,
+	float*,
+	int*,
+	int*
 );
 
 #endif

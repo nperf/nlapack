@@ -15,8 +15,6 @@ NAN_MODULE_INIT(init) {
   Set(target, New<String>("sgbtrf").ToLocalChecked(), GetFunction(New<FunctionTemplate>(sgbtrf)).ToLocalChecked());
   Set(target, New<String>("dgttrf").ToLocalChecked(), GetFunction(New<FunctionTemplate>(dgttrf)).ToLocalChecked());
   Set(target, New<String>("sgttrf").ToLocalChecked(), GetFunction(New<FunctionTemplate>(sgttrf)).ToLocalChecked());
-  Set(target, New<String>("ddttrfb").ToLocalChecked(), GetFunction(New<FunctionTemplate>(ddttrfb)).ToLocalChecked());
-  Set(target, New<String>("sdttrfb").ToLocalChecked(), GetFunction(New<FunctionTemplate>(sdttrfb)).ToLocalChecked());
   Set(target, New<String>("dpotrf").ToLocalChecked(), GetFunction(New<FunctionTemplate>(dpotrf)).ToLocalChecked());
   Set(target, New<String>("spotrf").ToLocalChecked(), GetFunction(New<FunctionTemplate>(spotrf)).ToLocalChecked());
   Set(target, New<String>("dpstrf").ToLocalChecked(), GetFunction(New<FunctionTemplate>(dpstrf)).ToLocalChecked());

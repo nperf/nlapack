@@ -6,7 +6,6 @@
 #include "functions/getrf.h"
 #include "functions/gbtrf.h"
 #include "functions/gttrf.h"
-#include "functions/dttrfb.h"
 #include "functions/potrf.h"
 #include "functions/pstrf.h"
 #include "functions/pftrf.h"

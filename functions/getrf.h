@@ -4,23 +4,23 @@
 #include <nan.h>
 
 NAN_METHOD(dgetrf);
-extern "C" int clapack_dgetrf (
-	const int,
-	const int,
-	const double*,
-	const int,
-	const int*,
-	int**
+extern "C" int dgetrf_ (
+	int*,
+	int*,
+	double*,
+	int*,
+	int*,
+	int*
 );
 
 NAN_METHOD(sgetrf);
-extern "C" int clapack_sgetrf (
-	const int,
-	const int,
-	const float*,
-	const int,
-	const int*,
-	int**
+extern "C" int sgetrf_ (
+	int*,
+	int*,
+	float*,
+	int*,
+	int*,
+	int*
 );
 
 #endif

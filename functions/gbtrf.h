@@ -4,27 +4,27 @@
 #include <nan.h>
 
 NAN_METHOD(dgbtrf);
-extern "C" void clapack_dgbtrf (
-	const int,
-	const int,
-	const int,
-	const int,
-	const double*,
-	const int,
-	const int*,
-	int**
+extern "C" void dgbtrf_ (
+	int*,
+	int*,
+	int*,
+	int*,
+	double*,
+	int*,
+	int*,
+	int*
 );
 
 NAN_METHOD(sgbtrf);
-extern "C" void clapack_sgbtrf (
-	const int,
-	const int,
-	const int,
-	const int,
-	const double*,
-	const int,
-	const int*,
-	int**
+extern "C" void sgbtrf_ (
+	int*,
+	int*,
+	int*,
+	int*,
+	double*,
+	int*,
+	int*,
+	int*
 );
 
 #endif

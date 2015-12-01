@@ -4,29 +4,29 @@
 #include <nan.h>
 
 NAN_METHOD(dpstrf);
-extern "C" int clapack_dpstrf (
-	const int,
-	const int,
-	const double*,
-	const int,
-	const int*,
-	const int,
-	const double,
-	const double*,
-	int**
+extern "C" int dpstrf_ (
+	int*,
+	int*,
+	double*,
+	int*,
+	int*,
+	int*,
+	double*,
+	double*,
+	int*
 );
 
 NAN_METHOD(spstrf);
-extern "C" int clapack_spstrf (
-	const int,
-	const int,
-	const float*,
-	const int,
-	const int*,
-	const int,
-	const float,
-	const float*,
-	int**
+extern "C" int spstrf_ (
+	int*,
+	int*,
+	float*,
+	int*,
+	int*,
+	int*,
+	float*,
+	float*,
+	int*
 );
 
 #endif

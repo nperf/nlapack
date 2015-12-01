@@ -4,19 +4,19 @@
 #include <nan.h>
 
 NAN_METHOD(dpttrf);
-extern "C" int clapack_dpttrf (
-	const int,
-	const double*,
-	const double*,
-	int**
+extern "C" int dpttrf_ (
+	int*,
+	double*,
+	double*,
+	int*
 );
 
 NAN_METHOD(spttrf);
-extern "C" int clapack_spttrf (
-	const int,
-	const float*,
-	const float*,
-	int**
+extern "C" int spttrf_ (
+	int*,
+	float*,
+	float*,
+	int*
 );
 
 #endif
