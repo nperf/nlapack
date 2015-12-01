@@ -9,7 +9,7 @@
       m = vectorious.Matrix,
       addon = require('../addon');
 
-  const SIZE = 64,
+  const SIZE = 9,
         DIM = Math.sqrt(SIZE);
   var f64a = new Float64Array(util.randomArray(SIZE)),
       f64b = new Float64Array(util.randomArray(SIZE)),
@@ -21,11 +21,33 @@
       vecf32a = new v(Float32Array, f32a),
       vecf32b = new v(Float32Array, f32b);
 
-  describe('dgetrf, sgetrf', function () {
-    it('should work', function () {
+  describe('?getrf', function () {
+    it('works without crashing', function () {
+      var x = f64a.slice(0),
+          ipiv = new Int32Array(DIM);
+
+      console.log(addon.getrf(DIM, DIM, x));
+    });
+    it('works without crashing', function () {
       var x = f32a.slice(0),
           ipiv = new Int32Array(DIM);
+
       console.log(addon.getrf(DIM, DIM, x));
+    });
+  });
+
+  describe('?gbtrf', function () {
+    it('works without crashing', function () {
+      var x = f64a.slice(0),
+          ipiv = new Int32Array(DIM);
+
+      console.log(addon.gbtrf(DIM, DIM, DIM, DIM, x, ipiv));
+    });
+    it('works without crashing', function () {
+      var x = f32a.slice(0),
+          ipiv = new Int32Array(DIM);
+
+      console.log(addon.gbtrf(DIM, DIM, DIM, DIM, x, ipiv));
     });
   });
 }());

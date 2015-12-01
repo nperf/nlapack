@@ -24,7 +24,7 @@ NAN_METHOD(sgbtrf) {
 	int n = info[1]->Uint32Value();
  	int kl = info[2]->Uint32Value();
 	int ku = info[3]->Uint32Value();
-	assert(info[4]->IsFloat64Array());
+	assert(info[4]->IsFloat32Array());
 	void *ab_data = info[4].As<v8::Float64Array>()->Buffer()->GetContents().Data();
 	double *ab = reinterpret_cast<double*>(ab_data);
 	int ldab = info[5]->Uint32Value();
