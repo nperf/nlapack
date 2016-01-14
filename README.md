@@ -8,7 +8,7 @@ $ npm test
 ```
 
 * **[Matrix Factorization Routines](https://software.intel.com/en-us/node/468680)**
-  - [x] [`?getrf`](https://software.intel.com/node/42740a2c-4898-4efa-88b9-94ca6eaac4db)
+  - [x] [`?getrf(m, n, a, ipiv)`](https://software.intel.com/node/42740a2c-4898-4efa-88b9-94ca6eaac4db)
   - [x] [`?gbtrf`](https://software.intel.com/node/045b7e16-b40d-4440-80fb-e0e406544c5d)
   - [x] [`?gttrf`](https://software.intel.com/node/20841474-62ac-440c-a4a6-4a750ebe3468)
   - [x] [`?potrf`](https://software.intel.com/node/526c0ad5-b853-4aac-b27a-e631ee80f066)
@@ -22,6 +22,7 @@ $ npm test
 
 
 * **[Routines for Solving Systems of Linear Equations](https://software.intel.com/en-us/node/520891)**
+  - [x] [`?getrs(n, nhrs, a, ipiv, b, [trans = 0])`](https://software.intel.com/en-us/node/520892#642A8C07-088C-408D-BC89-D0F2A6E75416)
   - [x] [`?gbtrs`](https://software.intel.com/en-us/node/520893)
   - [x] [`?gttrs`](https://software.intel.com/en-us/node/520894)
   - [x] [`?dttrsb`](https://software.intel.com/en-us/node/520895)

@@ -48,14 +48,14 @@
 
   // Routines for Solving Systems of Linear Equations
   addon.getrs =
-    (n, nrhs, a, lda, ipiv, b, ldb, trans) => {
+    (n, nrhs, a, ipiv, b, trans) => {
       fortran(a, n, n);
       fortran(b, 1, n);
       var info =
         a.constructor === Float64Array ?
-          addon.dgetrs(trans || 30, n, nrhs, a, lda, ipiv, b, ldb) :
-          addon.sgetrs(trans || 30, n, nrhs, a, lda, ipiv, b, ldb);
-      fortran(a, lda, n);
+          addon.dgetrs(trans || 0, n, nrhs, a, n, ipiv, b, n) :
+          addon.sgetrs(trans || 0, n, nrhs, a, n, ipiv, b, n);
+      fortran(a, n, n);
       fortran(b, 1, n);
       return info;
     };
