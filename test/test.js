@@ -2,43 +2,27 @@
   'use strict';
 
   var assert = require('assert'),
-      addon = require('../addon'),
-      util = require('../util');
-
-  const SIZE = 9,
-        DIM = Math.sqrt(SIZE);
-  var f64a = new Float64Array(util.randomArray(SIZE)),
-      f64b = new Float64Array(util.randomArray(SIZE)),
-      f32a = new Float32Array(util.randomArray(SIZE)),
-      f32b = new Float32Array(util.randomArray(SIZE));
+      addon = require('../addon');
 
   describe('?getrf', function () {
-    it('works without crashing', function () {
-      var x = f64a.slice(0),
-          ipiv = new Int32Array(DIM);
+    it('works for 2x2 matrix', function () {
+      var x = new Float64Array([1, 1, 1, -1]),
+          y = new Float64Array([1, 1, 1, -2]),
+          ipiv = new Int32Array(2);
 
-      console.log(addon.getrf(DIM, DIM, x));
+      addon.getrf(2, 2, x, ipiv);
+      assert.deepEqual(y, x);
+      assert.deepEqual(new Int32Array([1, 2]), ipiv);
     });
-    it('works without crashing', function () {
-      var x = f32a.slice(0),
-          ipiv = new Int32Array(DIM);
 
-      console.log(addon.getrf(DIM, DIM, x));
-    });
-  });
+    it('works for 3x3 matrix', function () {
+      var x = new Float64Array([1, 3, 5, 2, 4, 7, 1, 1, 0]),
+          y = new Float64Array([2, 4, 7, 0.5, 1, 1.5, 0.5, -1, -2]),
+          ipiv = new Int32Array(3);
 
-  describe('?gbtrf', function () {
-    it('works without crashing', function () {
-      var x = f64a.slice(0),
-          ipiv = new Int32Array(DIM);
-
-      console.log(addon.gbtrf(DIM, DIM, DIM, DIM, x, ipiv));
-    });
-    it('works without crashing', function () {
-      var x = f32a.slice(0),
-          ipiv = new Int32Array(DIM);
-
-      console.log(addon.gbtrf(DIM, DIM, DIM, DIM, x, ipiv));
+      addon.getrf(3, 3, x, ipiv);
+      assert.deepEqual(y, x);
+      assert.deepEqual(new Int32Array([2, 2, 3]), ipiv);
     });
   });
 }());
