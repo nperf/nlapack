@@ -14,14 +14,14 @@
         "functions/pbtrf.cc",
         "functions/pttrf.cc",
         "functions/sytrf.cc",
-        "functions/sptrf.cc"
+        "functions/sptrf.cc",
+        "functions/getrs.cc"
       ],
       "include_dirs" : [
         "<!(node -e \"require('nan')\")"
       ],
       "libraries": [
-        "-llapack",
-        "-lblas"
+        "-llapack"
       ]
     }
   ]

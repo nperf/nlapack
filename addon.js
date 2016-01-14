@@ -17,31 +17,48 @@
       data[i] = copy[i];
   }
 
+  // Matrix Factorization Routines
   addon.gbtrf =
     (m, n, kl, ku, ab, ipiv) => {
       fortran(ab, m, n);
-      var info = ab.constructor === Float64Array ?
-        addon.dgbtrf(m, n, kl, ku, ab, n, ipiv || new Int32Array(Math.min(m, n))) :
-        addon.sgbtrf(m, n, kl, ku, ab, n, ipiv || new Int32Array(Math.min(m, n)));
+      var info =
+        ab.constructor === Float64Array ?
+          addon.dgbtrf(n, m, kl, ku, ab, m, ipiv) :
+          addon.sgbtrf(n, m, kl, ku, ab, m, ipiv);
       fortran(ab, m, n);
       return info;
     };
 
   addon.getrf =
-    (m, n, x, ipiv) => {
-      fortran(x, m, n);
-      var info = x.constructor === Float64Array ?
-        addon.dgetrf(n, m, x, m, ipiv || new Int32Array(Math.min(m, n))) :
-        addon.sgetrf(n, m, x, m, ipiv || new Int32Array(Math.min(m, n)));
-      fortran(x, m, n);
+    (m, n, a, ipiv) => {
+      fortran(a, m, n);
+      var info =
+        a.constructor === Float64Array ?
+          addon.dgetrf(n, m, a, m, ipiv) :
+          addon.sgetrf(n, m, a, m, ipiv);
+      fortran(a, m, n);
       return info;
     };
 
   addon.gttrf =
     (n, dl, d, du, du2, ipiv) =>
       dl.constructor === Float64Array ?
-        addon.dgttrf(n, dl, d, du, du2, ipiv || new Int32Array(Math.min(m, n))) :
-        addon.sgttrf(n, dl, d, du, du2, ipiv || new Int32Array(Math.min(m, n)));
+        addon.dgttrf(n, dl, d, du, du2, ipiv) :
+        addon.sgttrf(n, dl, d, du, du2, ipiv);
+
+  // Routines for Solving Systems of Linear Equations
+  addon.getrs =
+    (n, nrhs, a, lda, ipiv, b, ldb, trans) => {
+      fortran(a, n, n);
+      fortran(b, 1, n);
+      var info =
+        a.constructor === Float64Array ?
+          addon.dgetrs(trans || 30, n, nrhs, a, lda, ipiv, b, ldb) :
+          addon.sgetrs(trans || 30, n, nrhs, a, lda, ipiv, b, ldb);
+      fortran(a, lda, n);
+      fortran(b, 1, n);
+      return info;
+    };
 
   module.exports = addon;
 }());

@@ -3,6 +3,7 @@
 
 #include <nan.h>
 
+// LAPACK Matrix Factorization Routines
 #include "functions/getrf.h"
 #include "functions/gbtrf.h"
 #include "functions/gttrf.h"
@@ -14,5 +15,8 @@
 #include "functions/pttrf.h"
 #include "functions/sytrf.h"
 #include "functions/sptrf.h"
+
+// LAPACK Routines for Solving Systems of Linear Equations
+#include "functions/getrs.h"
 
 #endif
