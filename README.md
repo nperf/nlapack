@@ -22,7 +22,7 @@ $ npm test
 
 
 * **[Routines for Solving Systems of Linear Equations](https://software.intel.com/en-us/node/520891)**
-  - [x] [`?getrs(n, nhrs, a, ipiv, b, [trans = 0])`](https://software.intel.com/en-us/node/520892#642A8C07-088C-408D-BC89-D0F2A6E75416)
+  - [x] [`?getrs(n, a, b, ipiv, [nhrs = 1], [trans = 0])`](https://software.intel.com/en-us/node/520892#642A8C07-088C-408D-BC89-D0F2A6E75416)
   - [ ] [`?gbtrs`](https://software.intel.com/en-us/node/520893)
   - [ ] [`?gttrs`](https://software.intel.com/en-us/node/520894)
   - [ ] [`?dttrsb`](https://software.intel.com/en-us/node/520895)
