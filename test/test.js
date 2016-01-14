@@ -79,7 +79,7 @@
       var ipiv = new Int32Array(3);
 
       addon.getrf(3, 3, a, ipiv);
-      addon.getrs(3, 3, a, ipiv, b);
+      addon.getrs(3, 2, a, ipiv, b);
       assert.deepEqual(new Float64Array([-3, 7, 0]), b);
     });
   });
