@@ -83,4 +83,26 @@
       assert.deepEqual(new Float64Array([-3, 7, 0]), b);
     });
   });
+
+  describe('?potrf', function () {
+    it('works for 2x2 matrix', function () {
+      var a = new Float64Array([
+        2, -1, 0,
+        -1, 2, -1,
+        0, -1, 2
+      ]);
+
+      addon.potrf(3, 3, a, 'U');
+    });
+
+    it('works for 3x3 matrix', function () {
+      var a = new Float64Array([
+        2, -1, 0,
+        -1, 2, -1,
+        0, -1, 2
+      ]);
+
+      addon.potrf(3, 3, a, 'U');
+    });
+  });
 }());

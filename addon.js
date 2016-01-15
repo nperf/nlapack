@@ -46,15 +46,29 @@
         addon.dgttrf(n, dl, d, du, du2, ipiv) :
         addon.sgttrf(n, dl, d, du, du2, ipiv);
 
+  addon.potrf =
+    (m, n, a, uplo) => {
+      fortran(a, m, n);
+      uplo = (uplo || 'U').charCodeAt(0);
+      var info =
+        a.constructor === Float64Array ?
+          addon.dpotrf(uplo, n, a, m) :
+          addon.spotrf(uplo, n, a, m);
+      fortran(a, m, n);
+      return info;
+    };
+
   // Routines for Solving Systems of Linear Equations
   addon.getrs =
     (n, a, b, ipiv, nrhs, trans) => {
       fortran(a, n, n);
       fortran(b, 1, n);
+      trans = (trans || 'N').charCodeAt(0);
+      nrhs = nrhs || 1;
       var info =
         a.constructor === Float64Array ?
-          addon.dgetrs(trans || 0, n, nrhs || 1, a, n, ipiv, b, n) :
-          addon.sgetrs(trans || 0, n, nrhs || 1, a, n, ipiv, b, n);
+          addon.dgetrs(trans, n, nrhs, a, n, ipiv, b, n) :
+          addon.sgetrs(trans, n, nrhs, a, n, ipiv, b, n);
       fortran(a, n, n);
       fortran(b, 1, n);
       return info;

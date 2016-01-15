@@ -1,7 +1,7 @@
 #include "getrs.h"
 
 NAN_METHOD(dgetrs) {
-	char trans = info[0]->Uint32Value() ? 'T' : 'N';
+	char trans = info[0]->Uint32Value();
  	int n = info[1]->Uint32Value();
 	int nrhs = info[2]->Uint32Value();
 	assert(info[3]->IsFloat64Array());
@@ -22,7 +22,7 @@ NAN_METHOD(dgetrs) {
 }
 
 NAN_METHOD(sgetrs) {
-	char trans = info[0]->Uint32Value() ? 'T' : 'N';
+	char trans = info[0]->Uint32Value();
  	int n = info[1]->Uint32Value();
 	int nrhs = info[2]->Uint32Value();
 	assert(info[3]->IsFloat32Array());
