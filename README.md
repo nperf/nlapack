@@ -15,7 +15,7 @@ $ npm test
   - [x] [`?pstrf(m, n, a, piv, rank, tol, work, [uplo = 'U'])`](https://software.intel.com/node/e061ee7e-9e3a-485f-bc08-6255ea926250)
   - [x] [`?pftrf(n, a, [transr = 'N'], [uplo = 'U'])`](https://software.intel.com/node/baf8fa42-4089-4a7f-b458-90579ef970f8)
   - [x] [`?pptrf(n, a, [uplo = 'U'])`](https://software.intel.com/node/a2934477-60d2-40b4-b07d-2ad982989c47)
-  - [ ] [`?pbtrf`](https://software.intel.com/node/bc3b6a9a-6ac2-4054-aab1-f2cd32f1b051)
+  - [x] [`?pbtrf(m, n, a, kd, [uplo = 'U'])`](https://software.intel.com/node/bc3b6a9a-6ac2-4054-aab1-f2cd32f1b051)
   - [ ] [`?pttrf`](https://software.intel.com/node/9ec992f0-6e90-4ae6-8a4e-b02976e4c06a)
   - [ ] [`?sytrf`](https://software.intel.com/node/3aae6840-280f-44c9-9865-38ad3a13285c)
   - [ ] [`?sptrf`](https://software.intel.com/node/944f7cc2-ee39-40e8-82e1-0adeca0dd455)
