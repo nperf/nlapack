@@ -143,12 +143,12 @@
         0, -1, 2
       ]);
 
-      addon.pftrf(3, a);
+      addon.pptrf(3, a);
     });
   });
 
   describe('?pbtrf', function () {
-    it('works for 3x3 matrix', function () {
+    it('runs for 3x3 matrix', function () {
       var a = new Float64Array([
         2, -1, 0,
         -1, 2, -1,
@@ -156,6 +156,18 @@
       ]);
 
       assert.equal(0, addon.pbtrf(3, 3, a, 2));
+    });
+  });
+
+  describe('?pttrf', function () {
+    it('works for 3x3 matrix', function () {
+      var a = new Float64Array([
+        2, -1, 0,
+        -1, 2, -1,
+        0, -1, 2
+      ]);
+
+      assert.equal(0, addon.pttrf(3, a, 2));
     });
   });
 }());
