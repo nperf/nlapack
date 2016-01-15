@@ -66,6 +66,22 @@
     });
   });
 
+  describe('?gbtrf', function () {
+    it('works for 3x3 matrix', function () {
+      var a = new Float64Array([
+        2, -1, 0,
+        -1, 2, -1,
+        0, -1, 2
+      ]);
+
+      var ipiv = new Int32Array(3),
+          kl = 0,
+          ku = 1;
+
+      assert.equal(0, addon.gbtrf(3, 3, kl, ku, a, ipiv));
+    });
+  });
+
   describe('?pstrf', function () {
     it('works for 3x3 matrix', function () {
       var a = new Float64Array([

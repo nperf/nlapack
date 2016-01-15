@@ -155,5 +155,20 @@
       return info;
     };
 
+  addon.gbtrs =
+    (m, n, kl, ku, ab, b, ipiv, nrhs, trans) => {
+      nrhs = nrhs || 1;
+      fortran(ab, n, n);
+      fortran(b, nrhs, n);
+      trans = (trans || 'N').charCodeAt(0);
+      var info =
+        ab.constructor === Float64Array ?
+          addon.dgbtrs(trans, m, kl, ku, nrhs, ab, n, ipiv, b, n) :
+          addon.sgbtrs(trans, m, kl, ku, nrhs, ab, n, ipiv, b, n);
+      fortran(ab, n, n);
+      fortran(b, nrhs, n);
+      return info;
+    };
+
   module.exports = addon;
 }());

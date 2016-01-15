@@ -15,7 +15,8 @@
         "functions/pttrf.cc",
         "functions/sytrf.cc",
         "functions/sptrf.cc",
-        "functions/getrs.cc"
+        "functions/getrs.cc",
+        "functions/gbtrs.cc"
       ],
       "include_dirs" : [
         "<!(node -e \"require('nan')\")"

@@ -18,5 +18,6 @@
 
 // LAPACK Routines for Solving Systems of Linear Equations
 #include "functions/getrs.h"
+#include "functions/gbtrs.h"
 
 #endif

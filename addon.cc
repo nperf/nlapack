@@ -35,6 +35,8 @@ NAN_MODULE_INIT(init) {
   // LAPACK Routines for Solving Systems of Linear Equations
   Set(target, New<String>("dgetrs").ToLocalChecked(), GetFunction(New<FunctionTemplate>(dgetrs)).ToLocalChecked());
   Set(target, New<String>("sgetrs").ToLocalChecked(), GetFunction(New<FunctionTemplate>(sgetrs)).ToLocalChecked());
+  Set(target, New<String>("dgbtrs").ToLocalChecked(), GetFunction(New<FunctionTemplate>(dgbtrs)).ToLocalChecked());
+  Set(target, New<String>("sgbtrs").ToLocalChecked(), GetFunction(New<FunctionTemplate>(sgbtrs)).ToLocalChecked());
 }
 
 NODE_MODULE(addon, init)
