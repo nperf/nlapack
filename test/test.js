@@ -92,7 +92,7 @@
         0, -1, 2
       ]);
 
-      addon.potrf(3, 3, a, 'U');
+      addon.potrf(3, 3, a);
     });
 
     it('works for 3x3 matrix', function () {
@@ -102,7 +102,24 @@
         0, -1, 2
       ]);
 
-      addon.potrf(3, 3, a, 'U');
+      addon.potrf(3, 3, a);
+    });
+  });
+
+  describe('?pstrf', function () {
+    it('works for 3x3 matrix', function () {
+      var a = new Float64Array([
+        2, -1, 0,
+        -1, 2, -1,
+        0, -1, 2
+      ]);
+
+      var piv = new Int32Array(3),
+          work = new Float64Array(9),
+          tol = 1,
+          rank;
+
+      assert.equal(0, addon.pstrf(3, 3, a, piv, rank, tol, work));
     });
   });
 }());

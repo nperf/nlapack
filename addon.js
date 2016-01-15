@@ -58,6 +58,18 @@
       return info;
     };
 
+  addon.pstrf =
+    (m, n, a, piv, rank, tol, work, uplo) => {
+      fortran(a, m, n);
+      uplo = (uplo || 'U').charCodeAt(0);
+      var info =
+        a.constructor === Float64Array ?
+          addon.dpstrf(uplo, n, a, m, piv, rank, tol, work) :
+          addon.spstrf(uplo, n, a, m, piv, rank, tol, work);
+      fortran(a, m, n);
+      return info;
+    };
+
   // Routines for Solving Systems of Linear Equations
   addon.getrs =
     (n, a, b, ipiv, nrhs, trans) => {
