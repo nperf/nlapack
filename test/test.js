@@ -137,13 +137,14 @@
 
   describe('?pptrf', function () {
     it('runs for 3x3 matrix', function () {
-      var a = new Float64Array([
+      // should be packed
+      var ap = new Float64Array([
         2, -1, 0,
         -1, 2, -1,
         0, -1, 2
       ]);
 
-      addon.pptrf(3, a);
+      addon.pptrf(3, ap);
     });
   });
 
@@ -183,6 +184,21 @@
           work = new Float64Array(9);
 
       assert.equal(0, addon.sytrf(3, 3, a, piv, work, 3));
+    });
+  });
+
+  describe('?sptrf', function () {
+    it('runs for 3x3 matrix', function () {
+      // should be packed
+      var ap = new Float64Array([
+        2, -1, 0,
+        -1, 2, -1,
+        0, -1, 2
+      ]);
+
+      var piv = new Int32Array(3);
+
+      addon.sptrf(3, ap, piv);
     });
   });
 }());

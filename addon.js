@@ -85,13 +85,11 @@
 
   addon.pptrf =
     (n, ap, uplo) => {
-      fortran(ap, n, n);
       uplo = (uplo || 'U').charCodeAt(0);
       var info =
         ap.constructor === Float64Array ?
           addon.dpptrf(uplo, n, ap) :
           addon.spptrf(uplo, n, ap);
-      fortran(ap, n, n);
       return info;
     };
 
@@ -128,6 +126,16 @@
           addon.dsytrf(uplo, m, a, n, ipiv, work, lwork) :
           addon.ssytrf(uplo, m, a, n, ipiv, work, lwork);
       fortran(a, m, n);
+      return info;
+    };
+
+  addon.sptrf =
+    (n, ap, ipiv, uplo) => {
+      uplo = (uplo || 'U').charCodeAt(0);
+      var info =
+        ap.constructor === Float64Array ?
+          addon.dsptrf(uplo, n, ap, ipiv) :
+          addon.ssptrf(uplo, n, ap, ipiv);
       return info;
     };
 
