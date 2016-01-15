@@ -44,6 +44,22 @@
     });
   });
 
+  describe('?gbtrf', function () {
+    it('works for 3x3 matrix', function () {
+      var ab = new Float64Array([
+        2, -1, 0,
+        -1, 2, -1,
+        0, -1, 2
+      ]);
+
+      var ipiv = new Int32Array(3),
+          kl = 1,
+          ku = 0;
+
+      assert.equal(0, addon.gbtrf(3, 3, kl, ku, ab, ipiv));
+    });
+  });
+
   describe('?potrf', function () {
     it('works for 2x2 matrix', function () {
       var a = new Float64Array([
@@ -63,22 +79,6 @@
       ]);
 
       addon.potrf(3, 3, a);
-    });
-  });
-
-  describe('?gbtrf', function () {
-    it('works for 3x3 matrix', function () {
-      var a = new Float64Array([
-        2, -1, 0,
-        -1, 2, -1,
-        0, -1, 2
-      ]);
-
-      var ipiv = new Int32Array(3),
-          kl = 0,
-          ku = 1;
-
-      assert.equal(0, addon.gbtrf(3, 3, kl, ku, a, ipiv));
     });
   });
 
@@ -215,6 +215,32 @@
       addon.getrf(3, 3, a, ipiv);
       addon.getrs(3, a, b, ipiv);
       assert.deepEqual(new Float64Array([-3, 7, 0]), b);
+    });
+  });
+
+  describe('?gbtrs', function () {
+    it('works for 3x3 matrix', function () {
+      var ab = new Float64Array([
+        2, -1, 0,
+        -1, 2, -1,
+        0, -1, 2
+      ]);
+
+      var b = new Float64Array([
+        1,
+        0,
+        -1
+      ]);
+
+      var x = new Float64Array([-1, 0, 1]);
+
+      var ipiv = new Int32Array(3),
+          kl = 1,
+          ku = 0;
+
+      addon.gbtrf(3, 3, kl, ku, ab, ipiv);
+      addon.gbtrs(3, 3, kl, ku, ab, b, ipiv);
+      assert.deepEqual(x, b);
     });
   });
 }());

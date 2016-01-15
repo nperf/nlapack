@@ -14,6 +14,7 @@ extern "C" int dgbtrs_ (
 	int*,
 	int*,
 	double*,
+	int*,
 	int*
 );
 
@@ -28,6 +29,7 @@ extern "C" int sgbtrs_ (
 	int*,
 	int*,
 	float*,
+	int*,
 	int*
 );
 

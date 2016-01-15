@@ -1,4 +1,5 @@
 #include "gbtrs.h"
+#include <stdio.h>
 
 NAN_METHOD(dgbtrs) {
 	int trans = info[0]->Uint32Value();
@@ -17,7 +18,8 @@ NAN_METHOD(dgbtrs) {
 	void *b_data = info[8].As<v8::Float64Array>()->Buffer()->GetContents().Data();
 	double *b = reinterpret_cast<double*>(b_data);
 	int ldb = info[9]->Uint32Value();
-	int i = dgbtrs_(&trans, &n, &kl, &ku, &nrhs, ab, &ldab, ipiv, b, &ldb);
+	int i;
+	dgbtrs_(&trans, &n, &kl, &ku, &nrhs, ab, &ldab, ipiv, b, &ldb, &i);
 	info.GetReturnValue().Set(
 		Nan::New<v8::Number>(i)
 	);
@@ -40,7 +42,8 @@ NAN_METHOD(sgbtrs) {
 	void *b_data = info[8].As<v8::Float32Array>()->Buffer()->GetContents().Data();
 	float *b = reinterpret_cast<float*>(b_data);
 	int ldb = info[9]->Uint32Value();
-	int i = sgbtrs_(&trans, &n, &kl, &ku, &nrhs, ab, &ldab, ipiv, b, &ldb);
+	int i;
+	sgbtrs_(&trans, &n, &kl, &ku, &nrhs, ab, &ldab, ipiv, b, &ldb, &i);
 	info.GetReturnValue().Set(
 		Nan::New<v8::Number>(i)
 	);
