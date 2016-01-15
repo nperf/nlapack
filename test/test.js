@@ -122,4 +122,16 @@
       assert.equal(0, addon.pstrf(3, 3, a, piv, rank, tol, work));
     });
   });
+
+  describe('?pftrf', function () {
+    it('runs for 3x3 matrix', function () {
+      var a = new Float64Array([
+        2, -1, 0,
+        -1, 2, -1,
+        0, -1, 2
+      ]);
+
+      addon.pftrf(3, a);
+    });
+  });
 }());

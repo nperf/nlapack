@@ -70,6 +70,19 @@
       return info;
     };
 
+  addon.pftrf =
+    (n, a, transr, uplo) => {
+      fortran(a, n, n);
+      transr = (uplo || 'N').charCodeAt(0);
+      uplo = (uplo || 'U').charCodeAt(0);
+      var info =
+        a.constructor === Float64Array ?
+          addon.dpftrf(transr, uplo, n, a) :
+          addon.spftrf(transr, uplo, n, a);
+      fortran(a, n, n);
+      return info;
+    };
+
   // Routines for Solving Systems of Linear Equations
   addon.getrs =
     (n, a, b, ipiv, nrhs, trans) => {

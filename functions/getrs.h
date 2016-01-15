@@ -5,7 +5,7 @@
 
 NAN_METHOD(dgetrs);
 extern "C" int dgetrs_ (
-	char*,
+	int*,
 	int*,
 	int*,
 	double*,
@@ -18,7 +18,7 @@ extern "C" int dgetrs_ (
 
 NAN_METHOD(sgetrs);
 extern "C" int sgetrs_ (
-	char*,
+	int*,
 	int*,
 	int*,
 	float*,
