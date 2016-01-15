@@ -119,6 +119,18 @@
       return info;
     };
 
+  addon.sytrf =
+    (m, n, a, ipiv, work, lwork, uplo) => {
+      fortran(a, m, n);
+      uplo = (uplo || 'U').charCodeAt(0);
+      var info =
+        a.constructor === Float64Array ?
+          addon.dsytrf(uplo, m, a, n, ipiv, work, lwork) :
+          addon.ssytrf(uplo, m, a, n, ipiv, work, lwork);
+      fortran(a, m, n);
+      return info;
+    };
+
   // Routines for Solving Systems of Linear Equations
   addon.getrs =
     (n, a, b, ipiv, nrhs, trans) => {

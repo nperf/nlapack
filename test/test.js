@@ -170,4 +170,19 @@
       assert.equal(0, addon.pttrf(3, a, 2));
     });
   });
+
+  describe('?sytrf', function () {
+    it('works for 3x3 matrix', function () {
+      var a = new Float64Array([
+        2, -1, 0,
+        -1, 2, -1,
+        0, -1, 2
+      ]);
+
+      var piv = new Int32Array(3),
+          work = new Float64Array(9);
+
+      assert.equal(0, addon.sytrf(3, 3, a, piv, work, 3));
+    });
+  });
 }());
