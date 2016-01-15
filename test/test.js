@@ -134,4 +134,16 @@
       addon.pftrf(3, a);
     });
   });
+
+  describe('?pptrf', function () {
+    it('runs for 3x3 matrix', function () {
+      var a = new Float64Array([
+        2, -1, 0,
+        -1, 2, -1,
+        0, -1, 2
+      ]);
+
+      addon.pftrf(3, a);
+    });
+  });
 }());

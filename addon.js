@@ -83,6 +83,18 @@
       return info;
     };
 
+  addon.pptrf =
+    (n, ap, uplo) => {
+      fortran(ap, n, n);
+      uplo = (uplo || 'U').charCodeAt(0);
+      var info =
+        a.constructor === Float64Array ?
+          addon.dpptrf(uplo, n, a) :
+          addon.spptrf(uplo, n, a);
+      fortran(ap, n, n);
+      return info;
+    };
+
   // Routines for Solving Systems of Linear Equations
   addon.getrs =
     (n, a, b, ipiv, nrhs, trans) => {
