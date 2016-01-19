@@ -12,9 +12,9 @@ NAN_METHOD(dgetrf) {
 	int *ipiv = reinterpret_cast<int*>(ipiv_data);
 	int i;
 	FORTRAN_DOUBLE_ORDER(m, n, a);
-	IPIV_FORTRAN(ipiv);
+	IPIV_FORTRAN(lda, ipiv);
 	dgetrf_(&m, &n, a, &lda, ipiv, &i);
-	IPIV_C(ipiv);
+	IPIV_C(lda, ipiv);
 	FORTRAN_DOUBLE_ORDER(m, n, a);
 	info.GetReturnValue().Set(
 		Nan::New<v8::Number>(i)
@@ -32,9 +32,9 @@ NAN_METHOD(sgetrf) {
 	int *ipiv = reinterpret_cast<int*>(ipiv_data);
 	int i;
 	FORTRAN_SINGLE_ORDER(m, n, a);
-	IPIV_FORTRAN(ipiv);
+	IPIV_FORTRAN(lda, ipiv);
 	sgetrf_(&m, &n, a, &lda, ipiv, &i);
-	IPIV_C(ipiv);
+	IPIV_C(lda, ipiv);
 	FORTRAN_SINGLE_ORDER(m, n, a);
 	info.GetReturnValue().Set(
 		Nan::New<v8::Number>(i)

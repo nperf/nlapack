@@ -19,14 +19,14 @@
 }
 
 // fortran array indexing <=> c
-#define IPIV_FORTRAN(ipiv) {																				\
-	for (int i = 0; i <= (int) (sizeof(ipiv) / sizeof(ipiv[0])); i++)	\
-		ipiv[i] = ipiv[i] + 1;																					\
+#define IPIV_FORTRAN(n, ipiv) {	\
+	for (int i = 0; i < n; i++)		\
+		ipiv[i] = ipiv[i] + 1;			\
 }
 
-#define IPIV_C(ipiv) {																							\
-	for (int i = 0; i <= (int) (sizeof(ipiv) / sizeof(ipiv[0])); i++)	\
-		ipiv[i] = ipiv[i] - 1;																					\
+#define IPIV_C(n, ipiv) {				\
+	for (int i = 0; i < n; i++)		\
+		ipiv[i] = ipiv[i] - 1;			\
 }
 
 #endif

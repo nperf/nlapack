@@ -19,9 +19,9 @@ NAN_METHOD(dgttrf) {
 	void *ipiv_data = info[5].As<v8::Int32Array>()->Buffer()->GetContents().Data();
 	int *ipiv = reinterpret_cast<int*>(ipiv_data);
 	int i;
-	IPIV_FORTRAN(ipiv);
+	IPIV_FORTRAN(n, ipiv);
 	dgttrf_(&n, dl, d, du, du2, ipiv, &i);
-	IPIV_C(ipiv);
+	IPIV_C(n, ipiv);
 	info.GetReturnValue().Set(
 		Nan::New<v8::Number>(i)
 	);
@@ -45,9 +45,9 @@ NAN_METHOD(sgttrf) {
 	void *ipiv_data = info[5].As<v8::Int32Array>()->Buffer()->GetContents().Data();
 	int *ipiv = reinterpret_cast<int*>(ipiv_data);
 	int i;
-	IPIV_FORTRAN(ipiv);
+	IPIV_FORTRAN(n, ipiv);
 	sgttrf_(&n, dl, d, du, du2, ipiv, &i);
-	IPIV_C(ipiv);
+	IPIV_C(n, ipiv);
 	info.GetReturnValue().Set(
 		Nan::New<v8::Number>(i)
 	);

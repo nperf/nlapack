@@ -17,9 +17,9 @@ NAN_METHOD(dsytrf) {
 	int lwork = info[6]->Uint32Value();
 	int i;
 	FORTRAN_DOUBLE_ORDER(lda, n, a);
-	IPIV_FORTRAN(ipiv);
+	IPIV_FORTRAN(lda, ipiv);
 	dsytrf_(&uplo, &n, a, &lda, ipiv, work, &lwork, &i);
-	IPIV_C(ipiv);
+	IPIV_C(lda, ipiv);
 	FORTRAN_DOUBLE_ORDER(lda, n, a);
 	info.GetReturnValue().Set(
 		Nan::New<v8::Number>(i)
@@ -42,9 +42,9 @@ NAN_METHOD(ssytrf) {
 	int lwork = info[6]->Uint32Value();
 	int i;
 	FORTRAN_SINGLE_ORDER(lda, n, a);
-	IPIV_FORTRAN(ipiv);
+	IPIV_FORTRAN(lda, ipiv);
 	ssytrf_(&uplo, &n, a, &lda, ipiv, work, &lwork, &i);
-	IPIV_C(ipiv);
+	IPIV_C(lda, ipiv);
 	FORTRAN_SINGLE_ORDER(lda, n, a);
 	info.GetReturnValue().Set(
 		Nan::New<v8::Number>(i)

@@ -11,9 +11,9 @@ NAN_METHOD(dsptrf) {
 	void *ipiv_data = info[3].As<v8::Int32Array>()->Buffer()->GetContents().Data();
 	int *ipiv = reinterpret_cast<int*>(ipiv_data);
 	int i;
-	IPIV_FORTRAN(ipiv);
+	IPIV_FORTRAN(n, ipiv);
 	dsptrf_(&uplo, &n, ap, ipiv, &i);
-	IPIV_C(ipiv);
+	IPIV_C(n, ipiv);
 	info.GetReturnValue().Set(
 		Nan::New<v8::Number>(i)
 	);
@@ -29,9 +29,9 @@ NAN_METHOD(ssptrf) {
 	void *ipiv_data = info[3].As<v8::Int32Array>()->Buffer()->GetContents().Data();
 	int *ipiv = reinterpret_cast<int*>(ipiv_data);
 	int i;
-	IPIV_FORTRAN(ipiv);
+	IPIV_FORTRAN(n, ipiv);
 	ssptrf_(&uplo, &n, ap, ipiv, &i);
-	IPIV_C(ipiv);
+	IPIV_C(n, ipiv);
 	info.GetReturnValue().Set(
 		Nan::New<v8::Number>(i)
 	);

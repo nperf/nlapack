@@ -15,9 +15,9 @@ NAN_METHOD(dgbtrf) {
 	int *ipiv = reinterpret_cast<int*>(ipiv_data);
 	int i;
 	FORTRAN_DOUBLE_ORDER(m, n, ab);
-	IPIV_FORTRAN(ipiv);
+	IPIV_FORTRAN(m, ipiv);
 	dgbtrf_(&m, &n, &kl, &ku, ab, &ldab, ipiv, &i);
-	IPIV_C(ipiv);
+	IPIV_C(m, ipiv);
 	FORTRAN_DOUBLE_ORDER(m, n, ab);
 	info.GetReturnValue().Set(
 		Nan::New<v8::Number>(i)
@@ -38,9 +38,9 @@ NAN_METHOD(sgbtrf) {
 	int *ipiv = reinterpret_cast<int*>(ipiv_data);
 	int i;
 	FORTRAN_SINGLE_ORDER(m, n, ab);
-	IPIV_FORTRAN(ipiv);
+	IPIV_FORTRAN(m, ipiv);
 	sgbtrf_(&m, &n, &kl, &ku, ab, &ldab, ipiv, &i);
-	IPIV_C(ipiv);
+	IPIV_C(m, ipiv);
 	FORTRAN_SINGLE_ORDER(m, n, ab);
 	info.GetReturnValue().Set(
 		Nan::New<v8::Number>(i)

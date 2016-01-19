@@ -18,9 +18,9 @@ NAN_METHOD(dgetrs) {
 	int i;
 	FORTRAN_DOUBLE_ORDER(lda, n, a);
 	FORTRAN_DOUBLE_ORDER(ldb, n, b);
-	IPIV_FORTRAN(ipiv);
+	IPIV_FORTRAN(lda, ipiv);
 	dgetrs_(&trans, &n, &nrhs, a, &lda, ipiv, b, &ldb, &i);
-	IPIV_C(ipiv);
+	IPIV_C(lda, ipiv);
 	FORTRAN_DOUBLE_ORDER(lda, n, a);
 	FORTRAN_DOUBLE_ORDER(ldb, n, b);
 	info.GetReturnValue().Set(
@@ -45,9 +45,9 @@ NAN_METHOD(sgetrs) {
 	int i;
 	FORTRAN_SINGLE_ORDER(lda, n, a);
 	FORTRAN_SINGLE_ORDER(ldb, n, b);
-	IPIV_FORTRAN(ipiv);
+	IPIV_FORTRAN(lda, ipiv);
 	sgetrs_(&trans, &n, &nrhs, a, &lda, ipiv, b, &ldb, &i);
-	IPIV_C(ipiv);
+	IPIV_C(lda, ipiv);
 	FORTRAN_SINGLE_ORDER(lda, n, a);
 	FORTRAN_SINGLE_ORDER(ldb, n, b);
 	info.GetReturnValue().Set(
