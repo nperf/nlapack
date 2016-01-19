@@ -42,6 +42,7 @@
       assert.deepEqual(b, a);
       assert.deepEqual(new Int32Array([1, 1, 2]), ipiv);
     });
+  });
 
   describe('?gbtrf', function () {
     it('works for 3x3 matrix', function () {
