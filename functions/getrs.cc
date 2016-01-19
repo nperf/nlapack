@@ -1,4 +1,5 @@
 #include "getrs.h"
+#include "fortran.h"
 
 NAN_METHOD(dgetrs) {
 	int trans = info[0]->Uint32Value();
@@ -15,7 +16,13 @@ NAN_METHOD(dgetrs) {
 	double *b = reinterpret_cast<double*>(b_data);
 	int ldb = info[7]->Uint32Value();
 	int i;
+	FORTRAN_DOUBLE_ORDER(lda, n, a);
+	FORTRAN_DOUBLE_ORDER(ldb, n, b);
+	IPIV_FORTRAN(ipiv);
 	dgetrs_(&trans, &n, &nrhs, a, &lda, ipiv, b, &ldb, &i);
+	IPIV_C(ipiv);
+	FORTRAN_DOUBLE_ORDER(lda, n, a);
+	FORTRAN_DOUBLE_ORDER(ldb, n, b);
 	info.GetReturnValue().Set(
 		Nan::New<v8::Number>(i)
 	);
@@ -36,7 +43,13 @@ NAN_METHOD(sgetrs) {
 	float *b = reinterpret_cast<float*>(b_data);
 	int ldb = info[7]->Uint32Value();
 	int i;
+	FORTRAN_SINGLE_ORDER(lda, n, a);
+	FORTRAN_SINGLE_ORDER(ldb, n, b);
+	IPIV_FORTRAN(ipiv);
 	sgetrs_(&trans, &n, &nrhs, a, &lda, ipiv, b, &ldb, &i);
+	IPIV_C(ipiv);
+	FORTRAN_SINGLE_ORDER(lda, n, a);
+	FORTRAN_SINGLE_ORDER(ldb, n, b);
 	info.GetReturnValue().Set(
 		Nan::New<v8::Number>(i)
 	);

@@ -20,7 +20,7 @@
 
       addon.getrf(2, 2, a, ipiv);
       assert.deepEqual(b, a);
-      assert.deepEqual(new Int32Array([1, 2]), ipiv);
+      assert.deepEqual(new Int32Array([0, 1]), ipiv);
     });
 
     it('works for 3x3 matrix', function () {
@@ -40,7 +40,7 @@
 
       addon.getrf(3, 3, a, ipiv);
       assert.deepEqual(b, a);
-      assert.deepEqual(new Int32Array([2, 2, 3]), ipiv);
+      assert.deepEqual(new Int32Array([1, 1, 2]), ipiv);
     });
   });
 

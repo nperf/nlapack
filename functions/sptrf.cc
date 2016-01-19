@@ -1,4 +1,5 @@
 #include "sptrf.h"
+#include "fortran.h"
 
 NAN_METHOD(dsptrf) {
 	int uplo = info[0]->Uint32Value();
@@ -10,7 +11,9 @@ NAN_METHOD(dsptrf) {
 	void *ipiv_data = info[3].As<v8::Int32Array>()->Buffer()->GetContents().Data();
 	int *ipiv = reinterpret_cast<int*>(ipiv_data);
 	int i;
+	IPIV_FORTRAN(ipiv);
 	dsptrf_(&uplo, &n, ap, ipiv, &i);
+	IPIV_C(ipiv);
 	info.GetReturnValue().Set(
 		Nan::New<v8::Number>(i)
 	);
@@ -26,7 +29,9 @@ NAN_METHOD(ssptrf) {
 	void *ipiv_data = info[3].As<v8::Int32Array>()->Buffer()->GetContents().Data();
 	int *ipiv = reinterpret_cast<int*>(ipiv_data);
 	int i;
+	IPIV_FORTRAN(ipiv);
 	ssptrf_(&uplo, &n, ap, ipiv, &i);
+	IPIV_C(ipiv);
 	info.GetReturnValue().Set(
 		Nan::New<v8::Number>(i)
 	);

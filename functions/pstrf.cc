@@ -1,4 +1,5 @@
 #include "pstrf.h"
+#include "fortran.h"
 
 NAN_METHOD(dpstrf) {
 	int uplo = info[0]->Uint32Value();
@@ -16,7 +17,11 @@ NAN_METHOD(dpstrf) {
 	void *work_data = info[7].As<v8::Float64Array>()->Buffer()->GetContents().Data();
 	double *work = reinterpret_cast<double*>(work_data);
 	int i;
+	FORTRAN_DOUBLE_ORDER(lda, n, a);
+	IPIV_FORTRAN(piv);
 	dpstrf_(&uplo, &n, a, &lda, piv, &rank, &tol, work, &i);
+	IPIV_C(piv);
+	FORTRAN_DOUBLE_ORDER(lda, n, a);
 	info.GetReturnValue().Set(
 		Nan::New<v8::Number>(i)
 	);
@@ -38,7 +43,11 @@ NAN_METHOD(spstrf) {
 	void *work_data = info[7].As<v8::Float32Array>()->Buffer()->GetContents().Data();
 	float *work = reinterpret_cast<float*>(work_data);
 	int i;
+	FORTRAN_SINGLE_ORDER(lda, n, a);
+	IPIV_FORTRAN(piv);
 	spstrf_(&uplo, &n, a, &lda, piv, &rank, &tol, work, &i);
+	IPIV_C(piv);
+	FORTRAN_SINGLE_ORDER(lda, n, a);
 	info.GetReturnValue().Set(
 		Nan::New<v8::Number>(i)
 	);

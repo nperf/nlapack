@@ -1,4 +1,5 @@
 #include "gttrf.h"
+#include "fortran.h"
 
 NAN_METHOD(dgttrf) {
 	int n = info[0]->Uint32Value();
@@ -18,7 +19,9 @@ NAN_METHOD(dgttrf) {
 	void *ipiv_data = info[5].As<v8::Int32Array>()->Buffer()->GetContents().Data();
 	int *ipiv = reinterpret_cast<int*>(ipiv_data);
 	int i;
+	IPIV_FORTRAN(ipiv);
 	dgttrf_(&n, dl, d, du, du2, ipiv, &i);
+	IPIV_C(ipiv);
 	info.GetReturnValue().Set(
 		Nan::New<v8::Number>(i)
 	);
@@ -42,7 +45,9 @@ NAN_METHOD(sgttrf) {
 	void *ipiv_data = info[5].As<v8::Int32Array>()->Buffer()->GetContents().Data();
 	int *ipiv = reinterpret_cast<int*>(ipiv_data);
 	int i;
+	IPIV_FORTRAN(ipiv);
 	sgttrf_(&n, dl, d, du, du2, ipiv, &i);
+	IPIV_C(ipiv);
 	info.GetReturnValue().Set(
 		Nan::New<v8::Number>(i)
 	);

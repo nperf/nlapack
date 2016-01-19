@@ -1,4 +1,5 @@
 #include "gbtrf.h"
+#include "fortran.h"
 
 NAN_METHOD(dgbtrf) {
 	int m = info[0]->Uint32Value();
@@ -13,7 +14,11 @@ NAN_METHOD(dgbtrf) {
 	void *ipiv_data = info[6].As<v8::Int32Array>()->Buffer()->GetContents().Data();
 	int *ipiv = reinterpret_cast<int*>(ipiv_data);
 	int i;
+	FORTRAN_DOUBLE_ORDER(m, n, ab);
+	IPIV_FORTRAN(ipiv);
 	dgbtrf_(&m, &n, &kl, &ku, ab, &ldab, ipiv, &i);
+	IPIV_C(ipiv);
+	FORTRAN_DOUBLE_ORDER(m, n, ab);
 	info.GetReturnValue().Set(
 		Nan::New<v8::Number>(i)
 	);
@@ -32,7 +37,11 @@ NAN_METHOD(sgbtrf) {
 	void *ipiv_data = info[6].As<v8::Int32Array>()->Buffer()->GetContents().Data();
 	int *ipiv = reinterpret_cast<int*>(ipiv_data);
 	int i;
+	FORTRAN_SINGLE_ORDER(m, n, ab);
+	IPIV_FORTRAN(ipiv);
 	sgbtrf_(&m, &n, &kl, &ku, ab, &ldab, ipiv, &i);
+	IPIV_C(ipiv);
+	FORTRAN_SINGLE_ORDER(m, n, ab);
 	info.GetReturnValue().Set(
 		Nan::New<v8::Number>(i)
 	);

@@ -1,5 +1,5 @@
 #include "gbtrs.h"
-#include <stdio.h>
+#include "fortran.h"
 
 NAN_METHOD(dgbtrs) {
 	int trans = info[0]->Uint32Value();
@@ -19,7 +19,13 @@ NAN_METHOD(dgbtrs) {
 	double *b = reinterpret_cast<double*>(b_data);
 	int ldb = info[9]->Uint32Value();
 	int i;
+	FORTRAN_DOUBLE_ORDER(ldab, n, ab);
+	FORTRAN_DOUBLE_ORDER(ldb, n, b);
+	IPIV_FORTRAN(ipiv);
 	dgbtrs_(&trans, &n, &kl, &ku, &nrhs, ab, &ldab, ipiv, b, &ldb, &i);
+	IPIV_C(ipiv);
+	FORTRAN_DOUBLE_ORDER(ldab, n, ab);
+	FORTRAN_DOUBLE_ORDER(ldb, n, b);
 	info.GetReturnValue().Set(
 		Nan::New<v8::Number>(i)
 	);
@@ -43,7 +49,13 @@ NAN_METHOD(sgbtrs) {
 	float *b = reinterpret_cast<float*>(b_data);
 	int ldb = info[9]->Uint32Value();
 	int i;
+	FORTRAN_SINGLE_ORDER(ldab, n, ab);
+	FORTRAN_SINGLE_ORDER(ldb, n, b);
+	IPIV_FORTRAN(ipiv);
 	sgbtrs_(&trans, &n, &kl, &ku, &nrhs, ab, &ldab, ipiv, b, &ldb, &i);
+	IPIV_C(ipiv);
+	FORTRAN_SINGLE_ORDER(ldab, n, ab);
+	FORTRAN_SINGLE_ORDER(ldb, n, b);
 	info.GetReturnValue().Set(
 		Nan::New<v8::Number>(i)
 	);

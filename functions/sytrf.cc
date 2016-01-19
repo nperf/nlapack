@@ -1,4 +1,5 @@
 #include "sytrf.h"
+#include "fortran.h"
 
 NAN_METHOD(dsytrf) {
 	int uplo = info[0]->Uint32Value();
@@ -15,7 +16,11 @@ NAN_METHOD(dsytrf) {
 	double *work = reinterpret_cast<double*>(work_data);
 	int lwork = info[6]->Uint32Value();
 	int i;
+	FORTRAN_DOUBLE_ORDER(lda, n, a);
+	IPIV_FORTRAN(ipiv);
 	dsytrf_(&uplo, &n, a, &lda, ipiv, work, &lwork, &i);
+	IPIV_C(ipiv);
+	FORTRAN_DOUBLE_ORDER(lda, n, a);
 	info.GetReturnValue().Set(
 		Nan::New<v8::Number>(i)
 	);
@@ -36,7 +41,11 @@ NAN_METHOD(ssytrf) {
 	double *work = reinterpret_cast<double*>(work_data);
 	int lwork = info[6]->Uint32Value();
 	int i;
+	FORTRAN_SINGLE_ORDER(lda, n, a);
+	IPIV_FORTRAN(ipiv);
 	ssytrf_(&uplo, &n, a, &lda, ipiv, work, &lwork, &i);
+	IPIV_C(ipiv);
+	FORTRAN_SINGLE_ORDER(lda, n, a);
 	info.GetReturnValue().Set(
 		Nan::New<v8::Number>(i)
 	);
