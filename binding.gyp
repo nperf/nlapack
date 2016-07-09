@@ -4,22 +4,25 @@
       "target_name": "addon",
       "sources": [
         "addon.cc",
-        "functions/getrf.cc",
-        "functions/gbtrf.cc",
-        "functions/gttrf.cc",
-        "functions/potrf.cc",
-        "functions/pstrf.cc",
-        "functions/pftrf.cc",
-        "functions/pptrf.cc",
-        "functions/pbtrf.cc",
-        "functions/pttrf.cc",
-        "functions/sytrf.cc",
-        "functions/sptrf.cc",
-        "functions/getrs.cc",
-        "functions/gbtrs.cc"
+        "routines/getrf.cc",
+        "routines/gbtrf.cc",
+        "routines/gttrf.cc",
+        "routines/potrf.cc",
+        "routines/pstrf.cc",
+        "routines/pftrf.cc",
+        "routines/pptrf.cc",
+        "routines/pbtrf.cc",
+        "routines/pttrf.cc",
+        "routines/sytrf.cc",
+        "routines/sptrf.cc",
+        "routines/getrs.cc",
+        "routines/gbtrs.cc",
+        "routines/gttrs.cc",
+        "routines/dttrsb.cc",
+        "routines/potrs.cc"
       ],
       "include_dirs" : [
-        "<!(node -e \"require('nan')\")"
+        "lib"
       ],
       "libraries": [
         "-llapack"

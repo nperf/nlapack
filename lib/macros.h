@@ -1,7 +1,9 @@
-#ifndef FORTRAN_H
-#define FORTRAN_H
+#ifndef MACROS_H
+#define MACROS_H
 
-// fortran column-major <=> c row-major
+#include <cstring>
+
+// FORTRAN <=> C macros
 #define FORTRAN_DOUBLE_ORDER(m, n, a) {\
 	double* b = new double[m * n];\
 	for (int i = 0; i < m; i++)\
@@ -18,7 +20,6 @@
 	memmove(a, b, m * n * sizeof(float));\
 }
 
-// fortran array indexing <=> c
 #define IPIV_FORTRAN(n, ipiv)\
 	for (int i = 0; i < n; i++)\
 		ipiv[i] = ipiv[i] + 1;

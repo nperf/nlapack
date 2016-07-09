@@ -1,42 +1,42 @@
-#include "addon.h"
+#include <node.h>
+#include "routines.h"
 
-using v8::String;
-using v8::FunctionTemplate;
-
-using Nan::GetFunction;
-using Nan::New;
-using Nan::Set;
-
-NAN_MODULE_INIT(init) {
+void Init(v8::Local<v8::Object> exports) {
   // LAPACK Matrix Factorization Routines
-  Set(target, New<String>("dgetrf").ToLocalChecked(), GetFunction(New<FunctionTemplate>(dgetrf)).ToLocalChecked());
-  Set(target, New<String>("sgetrf").ToLocalChecked(), GetFunction(New<FunctionTemplate>(sgetrf)).ToLocalChecked());
-  Set(target, New<String>("dgbtrf").ToLocalChecked(), GetFunction(New<FunctionTemplate>(dgbtrf)).ToLocalChecked());
-  Set(target, New<String>("sgbtrf").ToLocalChecked(), GetFunction(New<FunctionTemplate>(sgbtrf)).ToLocalChecked());
-  Set(target, New<String>("dgttrf").ToLocalChecked(), GetFunction(New<FunctionTemplate>(dgttrf)).ToLocalChecked());
-  Set(target, New<String>("sgttrf").ToLocalChecked(), GetFunction(New<FunctionTemplate>(sgttrf)).ToLocalChecked());
-  Set(target, New<String>("dpotrf").ToLocalChecked(), GetFunction(New<FunctionTemplate>(dpotrf)).ToLocalChecked());
-  Set(target, New<String>("spotrf").ToLocalChecked(), GetFunction(New<FunctionTemplate>(spotrf)).ToLocalChecked());
-  Set(target, New<String>("dpstrf").ToLocalChecked(), GetFunction(New<FunctionTemplate>(dpstrf)).ToLocalChecked());
-  Set(target, New<String>("spstrf").ToLocalChecked(), GetFunction(New<FunctionTemplate>(spstrf)).ToLocalChecked());
-  Set(target, New<String>("dpftrf").ToLocalChecked(), GetFunction(New<FunctionTemplate>(dpftrf)).ToLocalChecked());
-  Set(target, New<String>("spftrf").ToLocalChecked(), GetFunction(New<FunctionTemplate>(spftrf)).ToLocalChecked());
-  Set(target, New<String>("dpptrf").ToLocalChecked(), GetFunction(New<FunctionTemplate>(dpptrf)).ToLocalChecked());
-  Set(target, New<String>("spptrf").ToLocalChecked(), GetFunction(New<FunctionTemplate>(spptrf)).ToLocalChecked());
-  Set(target, New<String>("dpbtrf").ToLocalChecked(), GetFunction(New<FunctionTemplate>(dpbtrf)).ToLocalChecked());
-  Set(target, New<String>("spbtrf").ToLocalChecked(), GetFunction(New<FunctionTemplate>(spbtrf)).ToLocalChecked());
-  Set(target, New<String>("dpttrf").ToLocalChecked(), GetFunction(New<FunctionTemplate>(dpttrf)).ToLocalChecked());
-  Set(target, New<String>("spttrf").ToLocalChecked(), GetFunction(New<FunctionTemplate>(spttrf)).ToLocalChecked());
-  Set(target, New<String>("dsytrf").ToLocalChecked(), GetFunction(New<FunctionTemplate>(dsytrf)).ToLocalChecked());
-  Set(target, New<String>("ssytrf").ToLocalChecked(), GetFunction(New<FunctionTemplate>(ssytrf)).ToLocalChecked());
-  Set(target, New<String>("dsptrf").ToLocalChecked(), GetFunction(New<FunctionTemplate>(dsptrf)).ToLocalChecked());
-  Set(target, New<String>("ssptrf").ToLocalChecked(), GetFunction(New<FunctionTemplate>(ssptrf)).ToLocalChecked());
+  NODE_SET_METHOD(exports, "dgetrf", dgetrf);
+  NODE_SET_METHOD(exports, "sgetrf", sgetrf);
+  NODE_SET_METHOD(exports, "dgbtrf", dgbtrf);
+  NODE_SET_METHOD(exports, "sgbtrf", sgbtrf);
+  NODE_SET_METHOD(exports, "dgttrf", dgttrf);
+  NODE_SET_METHOD(exports, "sgttrf", sgttrf);
+  NODE_SET_METHOD(exports, "dpotrf", dpotrf);
+  NODE_SET_METHOD(exports, "spotrf", spotrf);
+  NODE_SET_METHOD(exports, "dpstrf", dpstrf);
+  NODE_SET_METHOD(exports, "spstrf", spstrf);
+  NODE_SET_METHOD(exports, "dpftrf", dpftrf);
+  NODE_SET_METHOD(exports, "spftrf", spftrf);
+  NODE_SET_METHOD(exports, "dpptrf", dpptrf);
+  NODE_SET_METHOD(exports, "spptrf", spptrf);
+  NODE_SET_METHOD(exports, "dpbtrf", dpbtrf);
+  NODE_SET_METHOD(exports, "spbtrf", spbtrf);
+  NODE_SET_METHOD(exports, "dpttrf", dpttrf);
+  NODE_SET_METHOD(exports, "spttrf", spttrf);
+  NODE_SET_METHOD(exports, "dsytrf", dsytrf);
+  NODE_SET_METHOD(exports, "ssytrf", ssytrf);
+  NODE_SET_METHOD(exports, "dsptrf", dsptrf);
+  NODE_SET_METHOD(exports, "ssptrf", ssptrf);
 
   // LAPACK Routines for Solving Systems of Linear Equations
-  Set(target, New<String>("dgetrs").ToLocalChecked(), GetFunction(New<FunctionTemplate>(dgetrs)).ToLocalChecked());
-  Set(target, New<String>("sgetrs").ToLocalChecked(), GetFunction(New<FunctionTemplate>(sgetrs)).ToLocalChecked());
-  Set(target, New<String>("dgbtrs").ToLocalChecked(), GetFunction(New<FunctionTemplate>(dgbtrs)).ToLocalChecked());
-  Set(target, New<String>("sgbtrs").ToLocalChecked(), GetFunction(New<FunctionTemplate>(sgbtrs)).ToLocalChecked());
+  NODE_SET_METHOD(exports, "dgetrs", dgetrs);
+  NODE_SET_METHOD(exports, "sgetrs", sgetrs);
+  NODE_SET_METHOD(exports, "dgbtrs", dgbtrs);
+  NODE_SET_METHOD(exports, "sgbtrs", sgbtrs);
+  NODE_SET_METHOD(exports, "dgttrs", dgttrs);
+  NODE_SET_METHOD(exports, "sgttrs", sgttrs);
+  NODE_SET_METHOD(exports, "ddttrsb", ddttrsb);
+  NODE_SET_METHOD(exports, "sdttrsb", sdttrsb);
+  NODE_SET_METHOD(exports, "dpotrs", dpotrs);
+  NODE_SET_METHOD(exports, "spotrs", spotrs);
 }
 
-NODE_MODULE(addon, init)
+NODE_MODULE(addon, Init)

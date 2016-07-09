@@ -197,6 +197,24 @@
       assert.deepEqual(new Float64Array([1, 1]), b);
     });
 
+    it('works for 2x2 matrix with multiple right hand sides', function () {
+      var a = new Float64Array([
+        1, 1,
+        1, -1
+      ]);
+
+      var b = new Float64Array([
+        2, 0,
+        0, 1
+      ]);
+
+      var ipiv = new Int32Array(2);
+
+      addon.getrf(2, 2, a, ipiv);
+      addon.getrs(2, a, b, ipiv, 2);
+      assert.deepEqual(new Float64Array([1, 1, 0.5, -0.5]), b);
+    });
+
     it('works for 3x3 matrix', function () {
       var a = new Float64Array([
         -1, 0, 1,
