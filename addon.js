@@ -74,8 +74,8 @@
       uplo = (uplo || 'U').charCodeAt(0);
       var info =
         a.constructor === Float64Array ?
-          addon.dpotrf(uplo, m, a, n) :
-          addon.spotrf(uplo, m, a, n);
+          addon.dpbtrf(uplo, m, kd, a, m) :
+          addon.spbtrf(uplo, m, kd, a, m);
       return info;
     };
 
