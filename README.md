@@ -8,36 +8,56 @@ $ npm install mateogianolio/nlapack
 $ npm test
 ```
 
-* **[Matrix Factorization Routines](https://software.intel.com/en-us/node/468680)**
-  - [x] [`?getrf(m, n, a, ipiv)`](https://software.intel.com/node/42740a2c-4898-4efa-88b9-94ca6eaac4db)
-  - [x] [`?gbtrf(m, n, kl, ku, ab, ipiv)`](https://software.intel.com/node/045b7e16-b40d-4440-80fb-e0e406544c5d)
-  - [x] [`?gttrf(n, dl, d, du, du2, ipiv)`](https://software.intel.com/node/20841474-62ac-440c-a4a6-4a750ebe3468)
-  - [ ] [`?potrf(m, n, a, [uplo = 'U'])`](https://software.intel.com/node/526c0ad5-b853-4aac-b27a-e631ee80f066)
-  - [ ] [`?pstrf(m, n, a, piv, rank, tol, work, [uplo = 'U'])`](https://software.intel.com/node/e061ee7e-9e3a-485f-bc08-6255ea926250)
-  - [ ] [`?pftrf(n, a, [transr = 'N'], [uplo = 'U'])`](https://software.intel.com/node/baf8fa42-4089-4a7f-b458-90579ef970f8)
-  - [ ] [`?pptrf(n, ap, [uplo = 'U'])`](https://software.intel.com/node/a2934477-60d2-40b4-b07d-2ad982989c47)
-  - [x] [`?pbtrf(m, n, a, kd, [uplo = 'U'])`](https://software.intel.com/node/bc3b6a9a-6ac2-4054-aab1-f2cd32f1b051)
-  - [ ] [`?pttrf(n, a, kd, [uplo = 'U'])`](https://software.intel.com/node/9ec992f0-6e90-4ae6-8a4e-b02976e4c06a)
-  - [ ] [`?sytrf(m, n, a, ipiv, work, lwork, [uplo = 'U'])`](https://software.intel.com/node/3aae6840-280f-44c9-9865-38ad3a13285c)
-  - [ ] [`?sptrf(n, ap, ipiv, [uplo = 'U'])`](https://software.intel.com/node/944f7cc2-ee39-40e8-82e1-0adeca0dd455)
 
+### [LAPACK Linear Equation Computational Routines](https://software.intel.com/en-us/mkl-developer-reference-fortran-lapack-linear-equation-computational-routines)
 
-* **[Routines for Solving Systems of Linear Equations](https://software.intel.com/en-us/node/520891)**
-  - [ ] [`?getrs(n, a, b, ipiv, [nhrs = 1], [trans = 'N'])`](https://software.intel.com/en-us/node/520892#642A8C07-088C-408D-BC89-D0F2A6E75416)
-  - [ ] [`?gbtrs(m, n, kl, ku, ab, b, ipiv, [nrhs = 1], [trans = 'N'])`](https://software.intel.com/en-us/node/520893)
-  - [ ] [`?gttrs`](https://software.intel.com/en-us/node/520894)
-  - [ ] [`?dttrsb`](https://software.intel.com/en-us/node/520895)
-  - [ ] [`?potrs`](https://software.intel.com/en-us/node/520896)
-  - [ ] [`?pftrs`](https://software.intel.com/en-us/node/520897)
-  - [ ] [`?pptrs`](https://software.intel.com/en-us/node/520898)
-  - [ ] [`?pbtrs`](https://software.intel.com/en-us/node/520899)
-  - [ ] [`?pttrs`](https://software.intel.com/en-us/node/520900)
-  - [ ] [`?sytrs`](https://software.intel.com/en-us/node/520901)
-  - [ ] [`?sytrs2`](https://software.intel.com/en-us/node/520903)
-  - [ ] [`?sptrs`](https://software.intel.com/en-us/node/520905)
-  - [ ] [`?trtrs`](https://software.intel.com/en-us/node/520907)
-  - [ ] [`?tptrs`](https://software.intel.com/en-us/node/520908)
-  - [ ] [`?tbtrs`](https://software.intel.com/en-us/node/520909)
+#### [Matrix Factorization](https://software.intel.com/en-us/node/468680)
+
+- [x] `?getrf(m, n, a, lda, ipiv)`
+- [x] `?getrf2(m, n, a, lda, ipiv)`
+- [x] `?gbtrf(m, n, kl, ku, ab, ldab, ipiv)`
+- [x] `?gttrf(n, dl, d, du, du2, ipiv)`
+- [ ] `?dttrfb(n, dl, d, du)`
+- [x] `?potrf(uplo, n, a, lda)`
+- [x] `?potrf2(uplo, n, a, lda)`
+- [x] `?pstrf(uplo, n, a, lda, piv, rank, tol)`
+- [x] `?pftrf(transr, uplo, n, a)`
+- [x] `?pptrf(uplo, n, ap)`
+- [x] `?pbtrf(uplo, n, kd, ab, ldab)`
+- [x] `?pttrf(n, d, e)`
+- [x] `?sytrf(uplo, n, a, lda, ipiv)`
+- [x] `?sytrf_aa(uplo, n, a, lda, ipiv)`
+- [x] `?sytrf_rook(uplo, n, a, lda, ipiv)`
+- [ ] `?hetrf(uplo, n, a, lda, ipiv)`
+- [ ] `?hetrf_aa(uplo, n, a, lda, ipiv)`
+- [ ] `?hetrf_rook(uplo, n, a, lda, ipiv)`
+- [x] `?sptrf(uplo, n, ap, ipiv)`
+- [ ] `?hptrf(uplo, n, ap, ipiv)`
+
+#### [Solving Systems of Linear Equations](https://software.intel.com/en-us/node/520891)
+
+- [x] `?getrs(trans, n, nrhs, a, lda, ipiv, b, ldb)`
+- [x] `?gbtrs(trans, n, kl, ku, nrhs, ab, ldab, ipiv, b, ldb)`
+- [x] `?gttrs(trans, n, nrhs, dl, d, du du2, ipiv, b, ldb)`
+- [ ] `?dttrsb(trans, n, nrhs, dl, d, du, b, ldb)`
+- [x] `?potrs(uplo, n, nrhs, a, lda, b, ldb)`
+- [x] `?pftrs(transr, uplo, n, nrhs, a, b, ldb)`
+- [x] `?pptrs(uplo, n, nrhs, ap, b, ldb)`
+- [x] `?pbtrs(uplo, n, kd, nrhs, ab, ldab, b, ldb)`
+- [x] `?pttrs(n, nrhs, d, e, b, ldb)`
+- [x] `?sytrs(uplo, n, nrhs, a, lda, ipiv, b, ldb)`
+- [x] `?sytrs_aa(uplo, n, nrhs, a, lda, ipiv, b, ldb)`
+- [x] `?sytrs_rook(uplo, n, nrhs, a, lda, ipiv, b, ldb)`
+- [ ] `?hetrs()`
+- [ ] `?hetrs_aa()`
+- [ ] `?hetrs_rook()`
+- [x] `?sytrs2(uplo, n, nrhs, a, lda, ipiv, b, ldb)`
+- [ ] `?hetrs2()`
+- [x] `?sptrs(uplo, n, nrhs, ap, ipiv, b, ldb)`
+- [ ] `?hptrs()`
+- [x] `?trtrs(uplo, trans, diag, n, nrhs, a, lda, b, ldb)`
+- [x] `?tptrs(uplo, trans, diag, n, nrhs, ap, b, ldb)`
+- [x] `?tbtrs(uplo, trans, diag, n, kd, nrhs, ab, ldab, b, ldb)`
 
 Works out of the box with OSX since CLAPACK is included in the standard Accelerate framework. You might have to download and build [LAPACK](http://www.netlib.org/lapack/#_lapack_version_3_6_0) from source on other operating systems (**LINUX:** `sudo apt-get liblapack-dev`).
 
