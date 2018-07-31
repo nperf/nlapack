@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "4.0"
+  - "8.11.3"
 before_install:
   - sudo apt-get install liblapack-dev liblapacke-dev
 env:
