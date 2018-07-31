@@ -4,6 +4,7 @@ Node `>=4.0` C++ bindings for all single- and double-precision CLAPACK (Linear A
 
 ```bash
 $ brew install lapack # OSX
+$ brew link lapack --force # OSX
 $ npm install mateogianolio/nlapack
 $ npm test
 ```

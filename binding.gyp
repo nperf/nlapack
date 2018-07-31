@@ -48,7 +48,8 @@
         "routines/lineq/solve/tbtrs.cc"
       ],
       "include_dirs" : [
-        "lib"
+        "lib",
+        "/usr/local/include"
       ],
       "libraries": [
         "-llapacke",
