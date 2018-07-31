@@ -51,8 +51,6 @@
         "lib"
       ],
       "libraries": [
-        "-L/usr/local/opt/lapack/lib",
-        "-I/usr/local/opt/lapack/include",
         "-llapacke",
         "-llapack",
         "-lblas"
