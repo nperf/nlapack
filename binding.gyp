@@ -49,7 +49,8 @@
       ],
       "include_dirs" : [
         "lib",
-        "/usr/local/include"
+        "/usr/local/include",
+        "/usr/include"
       ],
       "libraries": [
         "-llapacke",
