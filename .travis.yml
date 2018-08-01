@@ -4,10 +4,10 @@ node_js:
 before_install:
   - sudo apt-get install liblapack-dev liblapacke-dev
 env:
-  - CXX=g++-6.1
+  - CXX=g++-4.8
 addons:
   apt:
     sources:
     - ubuntu-toolchain-r-test
     packages:
-    - g++-6.1
+    - g++-4.8

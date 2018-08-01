@@ -1,4 +1,3 @@
-#include "lapacke.h"
 #include "routines.h"
 
 void dsytrs2(const v8::FunctionCallbackInfo<v8::Value>& info) {

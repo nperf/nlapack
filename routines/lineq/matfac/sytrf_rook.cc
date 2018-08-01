@@ -1,4 +1,3 @@
-#include "lapacke.h"
 #include "routines.h"
 
 void dsytrf_rook(const v8::FunctionCallbackInfo<v8::Value>& info) {

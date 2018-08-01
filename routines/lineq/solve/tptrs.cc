@@ -1,4 +1,3 @@
-#include "lapacke.h"
 #include "routines.h"
 
 void dtptrs(const v8::FunctionCallbackInfo<v8::Value>& info) {

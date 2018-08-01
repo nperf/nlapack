@@ -1,4 +1,3 @@
-#include "lapacke.h"
 #include "routines.h"
 
 void dgbtrf(const v8::FunctionCallbackInfo<v8::Value>& info) {
