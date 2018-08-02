@@ -49,7 +49,8 @@
         "routines/lineq/solve/tbtrs.cc",
 
         "routines/lineq/cond/gecon.cc",
-        "routines/lineq/cond/gbcon.cc"
+        "routines/lineq/cond/gbcon.cc",
+        "routines/lineq/cond/gtcon.cc"
       ],
       "include_dirs" : [
         "lib",

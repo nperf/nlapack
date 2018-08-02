@@ -105,5 +105,7 @@ void dgecon(const v8::FunctionCallbackInfo<v8::Value>& info);
 void sgecon(const v8::FunctionCallbackInfo<v8::Value>& info);
 void dgbcon(const v8::FunctionCallbackInfo<v8::Value>& info);
 void sgbcon(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dgtcon(const v8::FunctionCallbackInfo<v8::Value>& info);
+void sgtcon(const v8::FunctionCallbackInfo<v8::Value>& info);
 
 #endif
