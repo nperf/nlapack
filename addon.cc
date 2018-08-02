@@ -94,6 +94,8 @@ void Init(v8::Local<v8::Object> exports) {
   // LAPACK Routines for Estimating the Condition Number
   NODE_SET_METHOD(exports, "dgecon", dgecon);
   NODE_SET_METHOD(exports, "sgecon", sgecon);
+  NODE_SET_METHOD(exports, "dgbcon", dgbcon);
+  NODE_SET_METHOD(exports, "sgbcon", sgbcon);
 }
 
 NODE_MODULE(addon, Init)

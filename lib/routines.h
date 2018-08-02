@@ -103,5 +103,7 @@ void stbtrs(const v8::FunctionCallbackInfo<v8::Value>& info);
 // LAPACK Routines for Estimating the Condition Number
 void dgecon(const v8::FunctionCallbackInfo<v8::Value>& info);
 void sgecon(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dgbcon(const v8::FunctionCallbackInfo<v8::Value>& info);
+void sgbcon(const v8::FunctionCallbackInfo<v8::Value>& info);
 
 #endif

@@ -62,6 +62,9 @@ $ npm test
 
 #### [Estimating the Condition Number](https://software.intel.com/en-us/mkl-developer-reference-fortran-estimating-the-condition-number-lapack-computational-routines)
 
+- [x] `?gecon(norm, n, a, lda, anorm, rcond)`
+- [x] `?gbcon(norm, n, kl, ku, ab, ldab, ipiv, anorm, rcond)`
+
 Works out of the box with OSX since CLAPACK is included in the standard Accelerate framework. You might have to download and build [LAPACK](http://www.netlib.org/lapack/#_lapack_version_3_6_0) from source on other operating systems (**LINUX:** `sudo apt-get liblapack-dev`).
 
 Double precision functions expect `Float64Array` vectors, single precision functions expect `Float32Array` vectors.
