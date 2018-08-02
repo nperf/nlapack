@@ -46,7 +46,23 @@
         # "routines/lineq/solve/hptrs.cc",
         "routines/lineq/solve/trtrs.cc",
         "routines/lineq/solve/tptrs.cc",
-        "routines/lineq/solve/tbtrs.cc"
+        "routines/lineq/solve/tbtrs.cc",
+
+        "routines/lineq/cond/gecon.cc",
+        "routines/lineq/cond/gbcon.cc",
+        "routines/lineq/cond/gtcon.cc",
+        "routines/lineq/cond/pocon.cc",
+        "routines/lineq/cond/ppcon.cc",
+        "routines/lineq/cond/pbcon.cc",
+        "routines/lineq/cond/ptcon.cc",
+        "routines/lineq/cond/sycon.cc",
+        # "routines/lineq/cond/sycon_rook.cc",
+        # "routines/lineq/cond/hecon.cc",
+        # "routines/lineq/cond/hecon_rook.cc",
+        "routines/lineq/cond/spcon.cc",
+        "routines/lineq/cond/trcon.cc",
+        "routines/lineq/cond/tpcon.cc",
+        "routines/lineq/cond/tbcon.cc"
       ],
       "include_dirs" : [
         "lib",

@@ -90,6 +90,38 @@ void Init(v8::Local<v8::Object> exports) {
   NODE_SET_METHOD(exports, "stptrs", stptrs);
   NODE_SET_METHOD(exports, "dtbtrs", dtbtrs);
   NODE_SET_METHOD(exports, "stbtrs", stbtrs);
+
+  // LAPACK Routines for Estimating the Condition Number
+  NODE_SET_METHOD(exports, "dgecon", dgecon);
+  NODE_SET_METHOD(exports, "sgecon", sgecon);
+  NODE_SET_METHOD(exports, "dgbcon", dgbcon);
+  NODE_SET_METHOD(exports, "sgbcon", sgbcon);
+  NODE_SET_METHOD(exports, "dgtcon", dgtcon);
+  NODE_SET_METHOD(exports, "sgtcon", sgtcon);
+  NODE_SET_METHOD(exports, "dpocon", dpocon);
+  NODE_SET_METHOD(exports, "spocon", spocon);
+  NODE_SET_METHOD(exports, "dppcon", dppcon);
+  NODE_SET_METHOD(exports, "sppcon", sppcon);
+  NODE_SET_METHOD(exports, "dpbcon", dpbcon);
+  NODE_SET_METHOD(exports, "spbcon", spbcon);
+  NODE_SET_METHOD(exports, "dptcon", dptcon);
+  NODE_SET_METHOD(exports, "sptcon", sptcon);
+  NODE_SET_METHOD(exports, "dsycon", dsycon);
+  NODE_SET_METHOD(exports, "ssycon", ssycon);
+  // NODE_SET_METHOD(exports, "dsycon_rook", dsycon_rook);
+  // NODE_SET_METHOD(exports, "ssycon_rook", ssycon_rook);
+  // NODE_SET_METHOD(exports, "dhecon", dhecon);
+  // NODE_SET_METHOD(exports, "shecon", shecon);
+  // NODE_SET_METHOD(exports, "dhecon_rook", dhecon_rook);
+  // NODE_SET_METHOD(exports, "shecon_rook", shecon_rook);
+  NODE_SET_METHOD(exports, "dspcon", dspcon);
+  NODE_SET_METHOD(exports, "sspcon", sspcon);
+  NODE_SET_METHOD(exports, "dtrcon", dtrcon);
+  NODE_SET_METHOD(exports, "strcon", strcon);
+  NODE_SET_METHOD(exports, "dtpcon", dtpcon);
+  NODE_SET_METHOD(exports, "stpcon", stpcon);
+  NODE_SET_METHOD(exports, "dtbcon", dtbcon);
+  NODE_SET_METHOD(exports, "stbcon", stbcon);
 }
 
 NODE_MODULE(addon, Init)

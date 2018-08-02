@@ -100,5 +100,36 @@ void dtptrs(const v8::FunctionCallbackInfo<v8::Value>& info);
 void stptrs(const v8::FunctionCallbackInfo<v8::Value>& info);
 void dtbtrs(const v8::FunctionCallbackInfo<v8::Value>& info);
 void stbtrs(const v8::FunctionCallbackInfo<v8::Value>& info);
+// LAPACK Routines for Estimating the Condition Number
+void dgecon(const v8::FunctionCallbackInfo<v8::Value>& info);
+void sgecon(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dgbcon(const v8::FunctionCallbackInfo<v8::Value>& info);
+void sgbcon(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dgtcon(const v8::FunctionCallbackInfo<v8::Value>& info);
+void sgtcon(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dpocon(const v8::FunctionCallbackInfo<v8::Value>& info);
+void spocon(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dppcon(const v8::FunctionCallbackInfo<v8::Value>& info);
+void sppcon(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dpbcon(const v8::FunctionCallbackInfo<v8::Value>& info);
+void spbcon(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dptcon(const v8::FunctionCallbackInfo<v8::Value>& info);
+void sptcon(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dsycon(const v8::FunctionCallbackInfo<v8::Value>& info);
+void ssycon(const v8::FunctionCallbackInfo<v8::Value>& info);
+// void dsycon_rook(const v8::FunctionCallbackInfo<v8::Value>& info);
+// void ssycon_rook(const v8::FunctionCallbackInfo<v8::Value>& info);
+// void dhecon(const v8::FunctionCallbackInfo<v8::Value>& info);
+// void shecon(const v8::FunctionCallbackInfo<v8::Value>& info);
+// void dhecon_rook(const v8::FunctionCallbackInfo<v8::Value>& info);
+// void shecon_rook(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dspcon(const v8::FunctionCallbackInfo<v8::Value>& info);
+void sspcon(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dtrcon(const v8::FunctionCallbackInfo<v8::Value>& info);
+void strcon(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dtpcon(const v8::FunctionCallbackInfo<v8::Value>& info);
+void stpcon(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dtbcon(const v8::FunctionCallbackInfo<v8::Value>& info);
+void stbcon(const v8::FunctionCallbackInfo<v8::Value>& info);
 
 #endif

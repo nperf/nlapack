@@ -60,6 +60,24 @@ $ npm test
 - [x] `?tptrs(uplo, trans, diag, n, nrhs, ap, b, ldb)`
 - [x] `?tbtrs(uplo, trans, diag, n, kd, nrhs, ab, ldab, b, ldb)`
 
+#### [Estimating the Condition Number](https://software.intel.com/en-us/mkl-developer-reference-fortran-estimating-the-condition-number-lapack-computational-routines)
+
+- [x] `?gecon(norm, n, a, lda, anorm, rcond)`
+- [x] `?gbcon(norm, n, kl, ku, ab, ldab, ipiv, anorm, rcond)`
+- [x] `?gtcon(norm, n, dl, d, du, du2, ipiv, anorm, rcond)`
+- [x] `?pocon(uplo, n, a, lda, anorm, rcond)`
+- [x] `?ppcon(uplo, n, ap, anorm, rcond)`
+- [x] `?pbcon(uplo, n, kd, ab, ldab, anorm, rcond)`
+- [x] `?ptcon(uplo, d, e, anorm, rcond)`
+- [x] `?sycon(uplo, n, a, lda, ipiv, anorm, rcond)`
+- [ ] `?sycon_rook(uplo, n, a, lda, ipiv, anorm, rcond)`
+- [ ] `?hecon(uplo, n, a, lda, ipiv, anorm, rcond)`
+- [ ] `?hecon_rook(uplo, n, a, lda, ipiv, anorm, rcond)`
+- [x] `?spcon(uplo, n, ap, ipiv, anorm, rcond)`
+- [x] `?trcon(norm, uplo, diag, n, a, lda, rcond)`
+- [x] `?tpcon(norm, uplo, diag, n, ap, rcond)`
+- [x] `?tbcon(norm, uplo, diag, n, kd, ab, ldab, rcond)`
+
 Works out of the box with OSX since CLAPACK is included in the standard Accelerate framework. You might have to download and build [LAPACK](http://www.netlib.org/lapack/#_lapack_version_3_6_0) from source on other operating systems (**LINUX:** `sudo apt-get liblapack-dev`).
 
 Double precision functions expect `Float64Array` vectors, single precision functions expect `Float32Array` vectors.
