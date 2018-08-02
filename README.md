@@ -15,20 +15,20 @@ $ npm test
 #### [Matrix Factorization](https://software.intel.com/en-us/node/468680)
 
 - [x] `?getrf(m, n, a, lda, ipiv)`
-- [x] `?getrf2(m, n, a, lda, ipiv)`
+- [ ] `?getrf2(m, n, a, lda, ipiv)`
 - [x] `?gbtrf(m, n, kl, ku, ab, ldab, ipiv)`
 - [x] `?gttrf(n, dl, d, du, du2, ipiv)`
 - [ ] `?dttrfb(n, dl, d, du)`
 - [x] `?potrf(uplo, n, a, lda)`
-- [x] `?potrf2(uplo, n, a, lda)`
+- [ ] `?potrf2(uplo, n, a, lda)`
 - [x] `?pstrf(uplo, n, a, lda, piv, rank, tol)`
 - [x] `?pftrf(transr, uplo, n, a)`
 - [x] `?pptrf(uplo, n, ap)`
 - [x] `?pbtrf(uplo, n, kd, ab, ldab)`
 - [x] `?pttrf(n, d, e)`
 - [x] `?sytrf(uplo, n, a, lda, ipiv)`
-- [x] `?sytrf_aa(uplo, n, a, lda, ipiv)`
-- [x] `?sytrf_rook(uplo, n, a, lda, ipiv)`
+- [ ] `?sytrf_aa(uplo, n, a, lda, ipiv)`
+- [ ] `?sytrf_rook(uplo, n, a, lda, ipiv)`
 - [ ] `?hetrf(uplo, n, a, lda, ipiv)`
 - [ ] `?hetrf_aa(uplo, n, a, lda, ipiv)`
 - [ ] `?hetrf_rook(uplo, n, a, lda, ipiv)`
@@ -47,12 +47,12 @@ $ npm test
 - [x] `?pbtrs(uplo, n, kd, nrhs, ab, ldab, b, ldb)`
 - [x] `?pttrs(n, nrhs, d, e, b, ldb)`
 - [x] `?sytrs(uplo, n, nrhs, a, lda, ipiv, b, ldb)`
-- [x] `?sytrs_aa(uplo, n, nrhs, a, lda, ipiv, b, ldb)`
-- [x] `?sytrs_rook(uplo, n, nrhs, a, lda, ipiv, b, ldb)`
+- [ ] `?sytrs_aa(uplo, n, nrhs, a, lda, ipiv, b, ldb)`
+- [ ] `?sytrs_rook(uplo, n, nrhs, a, lda, ipiv, b, ldb)`
 - [ ] `?hetrs()`
 - [ ] `?hetrs_aa()`
 - [ ] `?hetrs_rook()`
-- [x] `?sytrs2(uplo, n, nrhs, a, lda, ipiv, b, ldb)`
+- [ ] `?sytrs2(uplo, n, nrhs, a, lda, ipiv, b, ldb)`
 - [ ] `?hetrs2()`
 - [x] `?sptrs(uplo, n, nrhs, ap, ipiv, b, ldb)`
 - [ ] `?hptrs()`
