@@ -19,8 +19,6 @@ void dsycon(const v8::FunctionCallbackInfo<v8::Value>& info) {
 void ssycon(const v8::FunctionCallbackInfo<v8::Value>& info) {
 	char uplo = info[0]->Uint32Value();
 	lapack_int n = info[1]->Uint32Value();
-	lapack_int kl = info[2]->Uint32Value();
-	lapack_int ku = info[3]->Uint32Value();
 	float *a = reinterpret_cast<float*>(GET_CONTENTS(info[2].As<v8::Float64Array>()));
 	lapack_int lda = info[3]->Uint32Value();
 	lapack_int *ipiv = reinterpret_cast<int*>(GET_CONTENTS(info[4].As<v8::Int32Array>()));

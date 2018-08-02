@@ -108,6 +108,8 @@ void Init(v8::Local<v8::Object> exports) {
   NODE_SET_METHOD(exports, "sptcon", sptcon);
   NODE_SET_METHOD(exports, "dsycon", dsycon);
   NODE_SET_METHOD(exports, "ssycon", ssycon);
+  NODE_SET_METHOD(exports, "dspcon", dspcon);
+  NODE_SET_METHOD(exports, "sspcon", sspcon);
 }
 
 NODE_MODULE(addon, Init)
