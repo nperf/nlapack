@@ -51,7 +51,8 @@
         "routines/lineq/cond/gecon.cc",
         "routines/lineq/cond/gbcon.cc",
         "routines/lineq/cond/gtcon.cc",
-        "routines/lineq/cond/pocon.cc"
+        "routines/lineq/cond/pocon.cc",
+        "routines/lineq/cond/ppcon.cc"
       ],
       "include_dirs" : [
         "lib",

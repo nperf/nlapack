@@ -109,5 +109,7 @@ void dgtcon(const v8::FunctionCallbackInfo<v8::Value>& info);
 void sgtcon(const v8::FunctionCallbackInfo<v8::Value>& info);
 void dpocon(const v8::FunctionCallbackInfo<v8::Value>& info);
 void spocon(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dppcon(const v8::FunctionCallbackInfo<v8::Value>& info);
+void sppcon(const v8::FunctionCallbackInfo<v8::Value>& info);
 
 #endif
