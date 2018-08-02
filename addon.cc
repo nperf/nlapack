@@ -114,6 +114,8 @@ void Init(v8::Local<v8::Object> exports) {
   NODE_SET_METHOD(exports, "strcon", strcon);
   NODE_SET_METHOD(exports, "dtpcon", dtpcon);
   NODE_SET_METHOD(exports, "stpcon", stpcon);
+  NODE_SET_METHOD(exports, "dtbcon", dtbcon);
+  NODE_SET_METHOD(exports, "stbcon", stbcon);
 }
 
 NODE_MODULE(addon, Init)
