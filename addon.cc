@@ -108,6 +108,12 @@ void Init(v8::Local<v8::Object> exports) {
   NODE_SET_METHOD(exports, "sptcon", sptcon);
   NODE_SET_METHOD(exports, "dsycon", dsycon);
   NODE_SET_METHOD(exports, "ssycon", ssycon);
+  // NODE_SET_METHOD(exports, "dsycon_rook", dsycon_rook);
+  // NODE_SET_METHOD(exports, "ssycon_rook", ssycon_rook);
+  // NODE_SET_METHOD(exports, "dhecon", dhecon);
+  // NODE_SET_METHOD(exports, "shecon", shecon);
+  // NODE_SET_METHOD(exports, "dhecon_rook", dhecon_rook);
+  // NODE_SET_METHOD(exports, "shecon_rook", shecon_rook);
   NODE_SET_METHOD(exports, "dspcon", dspcon);
   NODE_SET_METHOD(exports, "sspcon", sspcon);
   NODE_SET_METHOD(exports, "dtrcon", dtrcon);

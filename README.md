@@ -70,6 +70,9 @@ $ npm test
 - [x] `?pbcon(uplo, n, kd, ab, ldab, anorm, rcond)`
 - [x] `?ptcon(uplo, d, e, anorm, rcond)`
 - [x] `?sycon(uplo, n, a, lda, ipiv, anorm, rcond)`
+- [ ] `?sycon_rook(uplo, n, a, lda, ipiv, anorm, rcond)`
+- [ ] `?hecon(uplo, n, a, lda, ipiv, anorm, rcond)`
+- [ ] `?hecon_rook(uplo, n, a, lda, ipiv, anorm, rcond)`
 - [x] `?spcon(uplo, n, ap, ipiv, anorm, rcond)`
 - [x] `?trcon(norm, uplo, diag, n, a, lda, rcond)`
 - [x] `?tpcon(norm, uplo, diag, n, ap, rcond)`
