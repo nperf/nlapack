@@ -119,5 +119,7 @@ void dsycon(const v8::FunctionCallbackInfo<v8::Value>& info);
 void ssycon(const v8::FunctionCallbackInfo<v8::Value>& info);
 void dspcon(const v8::FunctionCallbackInfo<v8::Value>& info);
 void sspcon(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dtrcon(const v8::FunctionCallbackInfo<v8::Value>& info);
+void strcon(const v8::FunctionCallbackInfo<v8::Value>& info);
 
 #endif
