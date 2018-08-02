@@ -57,7 +57,8 @@
         "routines/lineq/cond/ptcon.cc",
         "routines/lineq/cond/sycon.cc",
         "routines/lineq/cond/spcon.cc",
-        "routines/lineq/cond/trcon.cc"
+        "routines/lineq/cond/trcon.cc",
+        "routines/lineq/cond/tpcon.cc"
       ],
       "include_dirs" : [
         "lib",
