@@ -46,7 +46,9 @@
         # "routines/lineq/solve/hptrs.cc",
         "routines/lineq/solve/trtrs.cc",
         "routines/lineq/solve/tptrs.cc",
-        "routines/lineq/solve/tbtrs.cc"
+        "routines/lineq/solve/tbtrs.cc",
+
+        "routines/lineq/cond/gecon.cc"
       ],
       "include_dirs" : [
         "lib",

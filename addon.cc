@@ -90,6 +90,10 @@ void Init(v8::Local<v8::Object> exports) {
   NODE_SET_METHOD(exports, "stptrs", stptrs);
   NODE_SET_METHOD(exports, "dtbtrs", dtbtrs);
   NODE_SET_METHOD(exports, "stbtrs", stbtrs);
+
+  // LAPACK Routines for Estimating the Condition Number
+  NODE_SET_METHOD(exports, "dgecon", dgecon);
+  NODE_SET_METHOD(exports, "sgecon", sgecon);
 }
 
 NODE_MODULE(addon, Init)
