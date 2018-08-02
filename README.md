@@ -69,6 +69,7 @@ $ npm test
 - [x] `?ppcon(uplo, n, ap, anorm, rcond)`
 - [x] `?pbcon(uplo, n, kd, ab, ldab, anorm, rcond)`
 - [x] `?ptcon(uplo, d, e, anorm, rcond)`
+- [x] `?sycon(uplo, n, a, lda, ipiv, anorm, rcond)`
 
 Works out of the box with OSX since CLAPACK is included in the standard Accelerate framework. You might have to download and build [LAPACK](http://www.netlib.org/lapack/#_lapack_version_3_6_0) from source on other operating systems (**LINUX:** `sudo apt-get liblapack-dev`).
 
