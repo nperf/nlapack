@@ -134,5 +134,7 @@ void stbcon(const v8::FunctionCallbackInfo<v8::Value>& info);
 // LAPACK Routines for Refining the Solution and Estimating Its Error
 void dgerfs(const v8::FunctionCallbackInfo<v8::Value>& info);
 void sgerfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dgerfsx(const v8::FunctionCallbackInfo<v8::Value>& info);
+void sgerfsx(const v8::FunctionCallbackInfo<v8::Value>& info);
 
 #endif

@@ -126,6 +126,8 @@ void Init(v8::Local<v8::Object> exports) {
   // LAPACK Routines for Refining the Solution and Estimating Its Error
   NODE_SET_METHOD(exports, "dgerfs", dgerfs);
   NODE_SET_METHOD(exports, "sgerfs", sgerfs);
+  NODE_SET_METHOD(exports, "dgerfsx", dgerfsx);
+  NODE_SET_METHOD(exports, "sgerfsx", sgerfsx);
 }
 
 NODE_MODULE(addon, Init)
