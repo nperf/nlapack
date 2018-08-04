@@ -148,5 +148,7 @@ void dptrfs(const v8::FunctionCallbackInfo<v8::Value>& info);
 void sptrfs(const v8::FunctionCallbackInfo<v8::Value>& info);
 void dsyrfs(const v8::FunctionCallbackInfo<v8::Value>& info);
 void ssyrfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dsyrfsx(const v8::FunctionCallbackInfo<v8::Value>& info);
+void ssyrfsx(const v8::FunctionCallbackInfo<v8::Value>& info);
 
 #endif

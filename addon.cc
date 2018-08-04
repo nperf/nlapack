@@ -146,6 +146,8 @@ void Init(v8::Local<v8::Object> exports) {
   NODE_SET_METHOD(exports, "sptrfs", sptrfs);
   NODE_SET_METHOD(exports, "dsyrfs", dsyrfs);
   NODE_SET_METHOD(exports, "ssyrfs", ssyrfs);
+  NODE_SET_METHOD(exports, "dsyrfsx", dsyrfsx);
+  NODE_SET_METHOD(exports, "ssyrfsx", ssyrfsx);
 }
 
 NODE_MODULE(addon, Init)
