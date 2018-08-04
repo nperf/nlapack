@@ -66,7 +66,8 @@
 
         "routines/lineq/refine/gerfs.cc",
         "routines/lineq/refine/gerfsx.cc",
-        "routines/lineq/refine/gbrfs.cc"
+        "routines/lineq/refine/gbrfs.cc",
+        "routines/lineq/refine/gbrfsx.cc"
       ],
       "include_dirs" : [
         "lib",
