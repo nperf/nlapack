@@ -29,7 +29,7 @@ void spbrfs(const v8::FunctionCallbackInfo<v8::Value>& info) {
  	lapack_int kd = info[2]->Uint32Value();
 	lapack_int nrhs = info[3]->Uint32Value();
 	float *ab = reinterpret_cast<float*>(GET_CONTENTS(info[4].As<v8::Float32Array>()));
-	lapack_intb lda = info[5]->Uint32Value();
+	lapack_intb ldab = info[5]->Uint32Value();
 	float *afb = reinterpret_cast<float*>(GET_CONTENTS(info[6].As<v8::Float32Array>()));
 	lapack_int ldafb = info[7]->Uint32Value();
 	float *b = reinterpret_cast<float*>(GET_CONTENTS(info[8].As<v8::Float32Array>()));

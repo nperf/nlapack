@@ -98,7 +98,7 @@ $ npm test
 - [ ] `?hprfs(uplo, n, nrhs, ap, afp, ipiv, b, ldb, x, ldx, ferr, berr)`
 - [x] `?trrfs(uplo, trans, diag, n, nrhs, a, lda, b, ldb, x, ldx, ferr, berr)`
 - [x] `?tprfs(uplo, trans, diag, n, nrhs, ap, b, ldb, x, ldx, ferr, berr)`
-- [ ] `?tbrfs(uplo, trans, diag, n, kd, nrhs, ab, ldab, b, ldb, x, ldx, ferr, berr)`
+- [x] `?tbrfs(uplo, trans, diag, n, kd, nrhs, ab, ldab, b, ldb, x, ldx, ferr, berr)`
 
 
 Works out of the box with OSX since CLAPACK is included in the standard Accelerate framework. You might have to download and build [LAPACK](http://www.netlib.org/lapack/#_lapack_version_3_6_0) from source on other operating systems (**LINUX:** `sudo apt-get liblapack-dev`).

@@ -162,5 +162,7 @@ void dtrrfs(const v8::FunctionCallbackInfo<v8::Value>& info);
 void strrfs(const v8::FunctionCallbackInfo<v8::Value>& info);
 void dtprfs(const v8::FunctionCallbackInfo<v8::Value>& info);
 void stprfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dtbrfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+void stbrfs(const v8::FunctionCallbackInfo<v8::Value>& info);
 
 #endif
