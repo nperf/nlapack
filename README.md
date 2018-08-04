@@ -78,6 +78,29 @@ $ npm test
 - [x] `?tpcon(norm, uplo, diag, n, ap, rcond)`
 - [x] `?tbcon(norm, uplo, diag, n, kd, ab, ldab, rcond)`
 
+#### [Refining the Solution and Estimating Its Error](https://software.intel.com/en-us/mkl-developer-reference-fortran-refining-the-solution-and-estimating-its-error-lapack-computational-routines)
+
+- [x] `?gerfs(trans, n, nrhs, a, lda, af, ldaf, ipiv, b, ldb, x, ldx, ferr, berr)`
+- [x] `?gerfsx(trans, equed, n, nrhs, a, lda, af, ldaf, ipiv, r, c, b, ldb, x, ldx, rcond, berr, n_err_bnds, err_bnds_norm, err_bnds_comp, nparams, params)`
+- [x] `?gbrfs(trans, n, kl, ku, nrhs, ab, ldab, afb, ldafb, ipiv, b, ldb, x, ldx, ferr, berr)`
+- [x] `?gbrfsx(trans, equed, n, kl, ku, nrhs, ab, ldab, afb, ldafb, ipiv, r, c, b, ldb, x, ldx, rcond, berr, n_err_bnds, err_bnds_norm, err_bnds_comp, nparams, params)`
+- [x] `?gtrfs(trans, n, nrhs, dl, d, du, dlf, df, duf, du2, ipiv, b, ldb, x, ldx, ferr, berr)`
+- [x] `?porfs(uplo, n, nrhs, a, lda, af, ldaf, b, ldb, x, ldx, ferr, berr)`
+- [x] `?porfsx(uplo, equed, n, nrhs, a, lda, af, ldaf, s, b, ldb, x, ldx, rcond, berr, n_err_bnds, err_bnds_norm, err_bnds_comp, nparams, params)`
+- [x] `?pprfs(uplo, n, nrhs, ap, afp, b, ldb, x, ldx, ferr, berr)`
+- [x] `?pbrfs(uplo, n, kd, nrhs, ab, ldab, afb, ldafb, b, ldb, x, ldx, ferr, berr)`
+- [x] `?ptrfs(n, nrhs, d, e, df, ef, b, ldb, x, ldx, ferr, berr)`
+- [x] `?syrfs(uplo, n, nrhs, a, lda, af, ldaf, ipiv, b, ldb, x, ldx, ferr, berr)`
+- [x] `?syrfsx(uplo, equed, n, nrhs, a, lda, af, ldaf, ipiv, s, b, ldb, x, ldx, rcond, berr, n_err_bnds, err_bnds_norm, err_bnds_comp, nparams, params)`
+- [ ] `?herfs(uplo, n, nrhs, a, lda, af, ldaf, ipiv, b, ldb, x, ldx, ferr, berr)`
+- [ ] `?herfsx(uplo, equed, n, nrhs, a, lda, af, ldaf, ipiv, s, b, ldb, x, ldx, rcond, berr, n_err_bnds, err_bnds_norm, err_bnds_comp, nparams, params)`
+- [x] `?sprfs(uplo, n, nrhs, ap, afp, ipiv, b, ldb, x, ldx, ferr, berr)`
+- [ ] `?hprfs(uplo, n, nrhs, ap, afp, ipiv, b, ldb, x, ldx, ferr, berr)`
+- [x] `?trrfs(uplo, trans, diag, n, nrhs, a, lda, b, ldb, x, ldx, ferr, berr)`
+- [x] `?tprfs(uplo, trans, diag, n, nrhs, ap, b, ldb, x, ldx, ferr, berr)`
+- [x] `?tbrfs(uplo, trans, diag, n, kd, nrhs, ab, ldab, b, ldb, x, ldx, ferr, berr)`
+
+
 Works out of the box with OSX since CLAPACK is included in the standard Accelerate framework. You might have to download and build [LAPACK](http://www.netlib.org/lapack/#_lapack_version_3_6_0) from source on other operating systems (**LINUX:** `sudo apt-get liblapack-dev`).
 
 Double precision functions expect `Float64Array` vectors, single precision functions expect `Float32Array` vectors.

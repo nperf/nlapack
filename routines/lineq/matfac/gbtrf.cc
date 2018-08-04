@@ -10,7 +10,6 @@ void dgbtrf(const v8::FunctionCallbackInfo<v8::Value>& info) {
 	lapack_int *ipiv = reinterpret_cast<int*>(GET_CONTENTS(info[6].As<v8::Int32Array>()));
 
 	lapack_int i = LAPACKE_dgbtrf(LAPACK_ROW_MAJOR, m, n, kl, ku, ab, ldab, ipiv);
-	IPIV_C(m, ipiv);
 
 	info.GetReturnValue().Set(
 		v8::Number::New(info.GetIsolate(), i)
@@ -27,7 +26,6 @@ void sgbtrf(const v8::FunctionCallbackInfo<v8::Value>& info) {
 	lapack_int *ipiv = reinterpret_cast<int*>(GET_CONTENTS(info[6].As<v8::Int32Array>()));
 
 	lapack_int i = LAPACKE_sgbtrf(LAPACK_ROW_MAJOR, m, n, kl, ku, ab, ldab, ipiv);
-	IPIV_C(m, ipiv);
 
 	info.GetReturnValue().Set(
 		v8::Number::New(info.GetIsolate(), i)

@@ -8,7 +8,6 @@ void dsytrf_aa(const v8::FunctionCallbackInfo<v8::Value>& info) {
 	lapack_int *ipiv = reinterpret_cast<int*>(GET_CONTENTS(info[4].As<v8::Int32Array>()));
 
 	lapack_int i = LAPACKE_dsytrf_aa(LAPACK_ROW_MAJOR, uplo, n, a, lda, ipiv);
-	IPIV_C(lda, ipiv);
 
 	info.GetReturnValue().Set(
 		v8::Number::New(info.GetIsolate(), i)
@@ -23,7 +22,6 @@ void ssytrf_aa(const v8::FunctionCallbackInfo<v8::Value>& info) {
 	lapack_int *ipiv = reinterpret_cast<int*>(GET_CONTENTS(info[4].As<v8::Int32Array>()));
 
 	lapack_int i = LAPACKE_ssytrf_aa(LAPACK_ROW_MAJOR, uplo, n, a, lda, ipiv);
-	IPIV_C(lda, ipiv);
 
 	info.GetReturnValue().Set(
 		v8::Number::New(info.GetIsolate(), i)

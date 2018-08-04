@@ -8,7 +8,6 @@ void dgetrf(const v8::FunctionCallbackInfo<v8::Value>& info) {
 	lapack_int *ipiv = reinterpret_cast<lapack_int*>(GET_CONTENTS(info[4].As<v8::Int32Array>()));
 
 	lapack_int i = LAPACKE_dgetrf(LAPACK_ROW_MAJOR, m, n, a, lda, ipiv);
-	IPIV_C(lda, ipiv);
 
 	info.GetReturnValue().Set(
 		v8::Number::New(info.GetIsolate(), i)
@@ -23,7 +22,6 @@ void sgetrf(const v8::FunctionCallbackInfo<v8::Value>& info) {
 	lapack_int *ipiv = reinterpret_cast<lapack_int*>(GET_CONTENTS(info[4].As<v8::Int32Array>()));
 
 	lapack_int i = LAPACKE_sgetrf(LAPACK_ROW_MAJOR, m, n, a, lda, ipiv);
-	IPIV_C(lda, ipiv);
 
 	info.GetReturnValue().Set(
 		v8::Number::New(info.GetIsolate(), i)

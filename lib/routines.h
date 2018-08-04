@@ -7,12 +7,6 @@
 #define GET_CONTENTS(view) \
 (static_cast<unsigned char*>(view->Buffer()->GetContents().Data()) + view->ByteOffset())
 
-#define IPIV_C(n, ipiv)\
-	for (int i = 0; i < n; i++)\
-		ipiv[i] = ipiv[i] - 1;\
-
-enum CBLAS_UPLO {CblasUpper=121, CblasLower=122};
-
 // LAPACK Linear Equation Computational Routines
 // LAPACK Matrix Factorization Routines
 void dgetrf(const v8::FunctionCallbackInfo<v8::Value>& info);
@@ -131,5 +125,44 @@ void dtpcon(const v8::FunctionCallbackInfo<v8::Value>& info);
 void stpcon(const v8::FunctionCallbackInfo<v8::Value>& info);
 void dtbcon(const v8::FunctionCallbackInfo<v8::Value>& info);
 void stbcon(const v8::FunctionCallbackInfo<v8::Value>& info);
+// LAPACK Routines for Refining the Solution and Estimating Its Error
+void dgerfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+void sgerfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dgerfsx(const v8::FunctionCallbackInfo<v8::Value>& info);
+void sgerfsx(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dgbrfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+void sgbrfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dgbrfsx(const v8::FunctionCallbackInfo<v8::Value>& info);
+void sgbrfsx(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dgtrfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+void sgtrfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dporfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+void sporfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dporfsx(const v8::FunctionCallbackInfo<v8::Value>& info);
+void sporfsx(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dpprfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+void spprfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dpbrfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+void spbrfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dptrfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+void sptrfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dsyrfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+void ssyrfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dsyrfsx(const v8::FunctionCallbackInfo<v8::Value>& info);
+void ssyrfsx(const v8::FunctionCallbackInfo<v8::Value>& info);
+// void dherfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+// void sherfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+// void dherfsx(const v8::FunctionCallbackInfo<v8::Value>& info);
+// void sherfsx(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dsprfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+void ssprfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+// void dhprfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+// void shprfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dtrrfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+void strrfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dtprfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+void stprfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dtbrfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+void stbrfs(const v8::FunctionCallbackInfo<v8::Value>& info);
 
 #endif

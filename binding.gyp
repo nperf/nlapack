@@ -62,7 +62,27 @@
         "routines/lineq/cond/spcon.cc",
         "routines/lineq/cond/trcon.cc",
         "routines/lineq/cond/tpcon.cc",
-        "routines/lineq/cond/tbcon.cc"
+        "routines/lineq/cond/tbcon.cc",
+
+        "routines/lineq/refine/gerfs.cc",
+        "routines/lineq/refine/gerfsx.cc",
+        "routines/lineq/refine/gbrfs.cc",
+        "routines/lineq/refine/gbrfsx.cc",
+        "routines/lineq/refine/gtrfs.cc",
+        "routines/lineq/refine/porfs.cc",
+        "routines/lineq/refine/porfsx.cc",
+        "routines/lineq/refine/pprfs.cc",
+        "routines/lineq/refine/pbrfs.cc",
+        "routines/lineq/refine/ptrfs.cc",
+        "routines/lineq/refine/syrfs.cc",
+        "routines/lineq/refine/syrfsx.cc",
+        # "routines/lineq/refine/herfs.cc",
+        # "routines/lineq/refine/herfsx.cc",
+        "routines/lineq/refine/sprfs.cc",
+        # "routines/lineq/refine/hprfs.cc",
+        "routines/lineq/refine/trrfs.cc",
+        "routines/lineq/refine/tprfs.cc",
+        "routines/lineq/refine/tbrfs.cc"
       ],
       "include_dirs" : [
         "lib",

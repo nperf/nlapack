@@ -122,6 +122,46 @@ void Init(v8::Local<v8::Object> exports) {
   NODE_SET_METHOD(exports, "stpcon", stpcon);
   NODE_SET_METHOD(exports, "dtbcon", dtbcon);
   NODE_SET_METHOD(exports, "stbcon", stbcon);
+
+  // LAPACK Routines for Refining the Solution and Estimating Its Error
+  NODE_SET_METHOD(exports, "dgerfs", dgerfs);
+  NODE_SET_METHOD(exports, "sgerfs", sgerfs);
+  NODE_SET_METHOD(exports, "dgerfsx", dgerfsx);
+  NODE_SET_METHOD(exports, "sgerfsx", sgerfsx);
+  NODE_SET_METHOD(exports, "dgbrfs", dgbrfs);
+  NODE_SET_METHOD(exports, "sgbrfs", sgbrfs);
+  NODE_SET_METHOD(exports, "dgbrfsx", dgbrfsx);
+  NODE_SET_METHOD(exports, "sgbrfsx", sgbrfsx);
+  NODE_SET_METHOD(exports, "dgtrfs", dgtrfs);
+  NODE_SET_METHOD(exports, "sgtrfs", sgtrfs);
+  NODE_SET_METHOD(exports, "dporfs", dporfs);
+  NODE_SET_METHOD(exports, "sporfs", sporfs);
+  NODE_SET_METHOD(exports, "dporfsx", dporfsx);
+  NODE_SET_METHOD(exports, "sporfsx", sporfsx);
+  NODE_SET_METHOD(exports, "dpprfs", dpprfs);
+  NODE_SET_METHOD(exports, "spprfs", spprfs);
+  NODE_SET_METHOD(exports, "dpbrfs", dpbrfs);
+  NODE_SET_METHOD(exports, "spbrfs", spbrfs);
+  NODE_SET_METHOD(exports, "dptrfs", dptrfs);
+  NODE_SET_METHOD(exports, "sptrfs", sptrfs);
+  NODE_SET_METHOD(exports, "dsyrfs", dsyrfs);
+  NODE_SET_METHOD(exports, "ssyrfs", ssyrfs);
+  NODE_SET_METHOD(exports, "dsyrfsx", dsyrfsx);
+  NODE_SET_METHOD(exports, "ssyrfsx", ssyrfsx);
+  // NODE_SET_METHOD(exports, "dherfs", dherfs);
+  // NODE_SET_METHOD(exports, "sherfs", sherfs);
+  // NODE_SET_METHOD(exports, "dherfsx", dherfsx);
+  // NODE_SET_METHOD(exports, "sherfsx", sherfsx);
+  NODE_SET_METHOD(exports, "dsprfs", dsprfs);
+  NODE_SET_METHOD(exports, "ssprfs", ssprfs);
+  // NODE_SET_METHOD(exports, "dhprfs", dhprfs);
+  // NODE_SET_METHOD(exports, "shprfs", shprfs);
+  NODE_SET_METHOD(exports, "dtrrfs", dtrrfs);
+  NODE_SET_METHOD(exports, "strrfs", strrfs);
+  NODE_SET_METHOD(exports, "dtprfs", dtprfs);
+  NODE_SET_METHOD(exports, "stprfs", stprfs);
+  NODE_SET_METHOD(exports, "dtbrfs", dtbrfs);
+  NODE_SET_METHOD(exports, "stbrfs", stbrfs);
 }
 
 NODE_MODULE(addon, Init)
