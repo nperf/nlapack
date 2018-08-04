@@ -150,5 +150,11 @@ void dsyrfs(const v8::FunctionCallbackInfo<v8::Value>& info);
 void ssyrfs(const v8::FunctionCallbackInfo<v8::Value>& info);
 void dsyrfsx(const v8::FunctionCallbackInfo<v8::Value>& info);
 void ssyrfsx(const v8::FunctionCallbackInfo<v8::Value>& info);
+// void dherfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+// void sherfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+// void dherfsx(const v8::FunctionCallbackInfo<v8::Value>& info);
+// void sherfsx(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dsprfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+void ssprfs(const v8::FunctionCallbackInfo<v8::Value>& info);
 
 #endif
