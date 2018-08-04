@@ -158,6 +158,8 @@ void Init(v8::Local<v8::Object> exports) {
   // NODE_SET_METHOD(exports, "shprfs", shprfs);
   NODE_SET_METHOD(exports, "dtrrfs", dtrrfs);
   NODE_SET_METHOD(exports, "strrfs", strrfs);
+  NODE_SET_METHOD(exports, "dtprfs", dtprfs);
+  NODE_SET_METHOD(exports, "stprfs", stprfs);
 }
 
 NODE_MODULE(addon, Init)

@@ -80,7 +80,8 @@
         # "routines/lineq/refine/herfsx.cc",
         "routines/lineq/refine/sprfs.cc",
         # "routines/lineq/refine/hprfs.cc",
-        "routines/lineq/refine/trrfs.cc"
+        "routines/lineq/refine/trrfs.cc",
+        "routines/lineq/refine/tprfs.cc"
       ],
       "include_dirs" : [
         "lib",
