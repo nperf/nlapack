@@ -7,12 +7,6 @@
 #define GET_CONTENTS(view) \
 (static_cast<unsigned char*>(view->Buffer()->GetContents().Data()) + view->ByteOffset())
 
-#define IPIV_C(n, ipiv)\
-	for (int i = 0; i < n; i++)\
-		ipiv[i] = ipiv[i] - 1;\
-
-enum CBLAS_UPLO {CblasUpper=121, CblasLower=122};
-
 // LAPACK Linear Equation Computational Routines
 // LAPACK Matrix Factorization Routines
 void dgetrf(const v8::FunctionCallbackInfo<v8::Value>& info);
@@ -140,5 +134,7 @@ void dgbrfs(const v8::FunctionCallbackInfo<v8::Value>& info);
 void sgbrfs(const v8::FunctionCallbackInfo<v8::Value>& info);
 void dgbrfsx(const v8::FunctionCallbackInfo<v8::Value>& info);
 void sgbrfsx(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dgtrfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+void sgtrfs(const v8::FunctionCallbackInfo<v8::Value>& info);
 
 #endif

@@ -132,6 +132,8 @@ void Init(v8::Local<v8::Object> exports) {
   NODE_SET_METHOD(exports, "sgbrfs", sgbrfs);
   NODE_SET_METHOD(exports, "dgbrfsx", dgbrfsx);
   NODE_SET_METHOD(exports, "sgbrfsx", sgbrfsx);
+  NODE_SET_METHOD(exports, "dgtrfs", dgtrfs);
+  NODE_SET_METHOD(exports, "sgtrfs", sgtrfs);
 }
 
 NODE_MODULE(addon, Init)

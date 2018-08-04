@@ -10,7 +10,6 @@ void dpstrf(const v8::FunctionCallbackInfo<v8::Value>& info) {
 	double tol = info[6]->NumberValue();
 
 	lapack_int i = LAPACKE_dpstrf(LAPACK_ROW_MAJOR, uplo, n, a, lda, piv, rank, tol);
-	IPIV_C(lda, piv);
 
 	info.GetReturnValue().Set(
 		v8::Number::New(info.GetIsolate(), i)
@@ -27,7 +26,6 @@ void spstrf(const v8::FunctionCallbackInfo<v8::Value>& info) {
 	float tol = info[6]->NumberValue();
 
 	lapack_int i = LAPACKE_spstrf(LAPACK_ROW_MAJOR, uplo, n, a, lda, piv, rank, tol);
-	IPIV_C(lda, piv);
 
 	info.GetReturnValue().Set(
 		v8::Number::New(info.GetIsolate(), i)

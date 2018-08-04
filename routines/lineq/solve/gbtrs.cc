@@ -13,7 +13,6 @@ void dgbtrs(const v8::FunctionCallbackInfo<v8::Value>& info) {
 	lapack_int ldb = info[9]->Uint32Value();
 
 	lapack_int i = LAPACKE_dgbtrs(LAPACK_ROW_MAJOR, trans, n, kl, ku, nrhs, ab, ldab, ipiv, b, ldb);
-	IPIV_C(ldab, ipiv);
 
 	info.GetReturnValue().Set(
 		v8::Number::New(info.GetIsolate(), i)
@@ -33,7 +32,6 @@ void sgbtrs(const v8::FunctionCallbackInfo<v8::Value>& info) {
 	lapack_int ldb = info[9]->Uint32Value();
 
 	lapack_int i = LAPACKE_sgbtrs(LAPACK_ROW_MAJOR, trans, n, kl, ku, nrhs, ab, ldab, ipiv, b, ldb);
-	IPIV_C(ldab, ipiv);
 
 	info.GetReturnValue().Set(
 		v8::Number::New(info.GetIsolate(), i)

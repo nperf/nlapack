@@ -9,7 +9,6 @@ void dgttrf(const v8::FunctionCallbackInfo<v8::Value>& info) {
 	lapack_int *ipiv = reinterpret_cast<int*>(GET_CONTENTS(info[5].As<v8::Int32Array>()));
 
 	lapack_int i = LAPACKE_dgttrf(n, dl, d, du, du2, ipiv);
-	IPIV_C(n, ipiv);
 
 	info.GetReturnValue().Set(
 		v8::Number::New(info.GetIsolate(), i)
@@ -25,7 +24,6 @@ void sgttrf(const v8::FunctionCallbackInfo<v8::Value>& info) {
 	lapack_int *ipiv = reinterpret_cast<int*>(GET_CONTENTS(info[5].As<v8::Int32Array>()));
 
 	lapack_int i = LAPACKE_sgttrf(n, dl, d, du, du2, ipiv);
-	IPIV_C(n, ipiv);
 
 	info.GetReturnValue().Set(
 		v8::Number::New(info.GetIsolate(), i)

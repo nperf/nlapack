@@ -19,7 +19,6 @@ void dgbrfs(const v8::FunctionCallbackInfo<v8::Value>& info) {
 	double *berr = reinterpret_cast<double*>(GET_CONTENTS(info[15].As<v8::Float64Array>()));
 
 	lapack_int i = LAPACKE_dgbrfs(LAPACK_ROW_MAJOR, trans, n, kl, ku, nrhs, ab, ldab, afb, ldafb, ipiv, b, ldb, x, ldx, ferr, berr);
-	IPIV_C(lda, ipiv);
 
 	info.GetReturnValue().Set(
 		v8::Number::New(info.GetIsolate(), i)
@@ -45,7 +44,6 @@ void sgbrfs(const v8::FunctionCallbackInfo<v8::Value>& info) {
 	float *berr = reinterpret_cast<float*>(GET_CONTENTS(info[15].As<v8::Float32Array>()));
 
 	lapack_int i = LAPACKE_sgbrfs(LAPACK_ROW_MAJOR, trans, n, kl, ku, nrhs, ab, ldab, afb, ldafb, ipiv, b, ldb, x, ldx, ferr, berr);
-	IPIV_C(lda, ipiv);
 
 	info.GetReturnValue().Set(
 		v8::Number::New(info.GetIsolate(), i)
