@@ -136,5 +136,7 @@ void dgbrfsx(const v8::FunctionCallbackInfo<v8::Value>& info);
 void sgbrfsx(const v8::FunctionCallbackInfo<v8::Value>& info);
 void dgtrfs(const v8::FunctionCallbackInfo<v8::Value>& info);
 void sgtrfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dporfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+void sporfs(const v8::FunctionCallbackInfo<v8::Value>& info);
 
 #endif
