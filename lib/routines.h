@@ -144,5 +144,7 @@ void dpprfs(const v8::FunctionCallbackInfo<v8::Value>& info);
 void spprfs(const v8::FunctionCallbackInfo<v8::Value>& info);
 void dpbrfs(const v8::FunctionCallbackInfo<v8::Value>& info);
 void spbrfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dptrfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+void sptrfs(const v8::FunctionCallbackInfo<v8::Value>& info);
 
 #endif

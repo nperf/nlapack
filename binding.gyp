@@ -72,7 +72,8 @@
         "routines/lineq/refine/porfs.cc",
         "routines/lineq/refine/porfsx.cc",
         "routines/lineq/refine/pprfs.cc",
-        "routines/lineq/refine/pbrfs.cc"
+        "routines/lineq/refine/pbrfs.cc",
+        "routines/lineq/refine/ptrfs.cc"
       ],
       "include_dirs" : [
         "lib",
