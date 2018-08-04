@@ -62,7 +62,9 @@
         "routines/lineq/cond/spcon.cc",
         "routines/lineq/cond/trcon.cc",
         "routines/lineq/cond/tpcon.cc",
-        "routines/lineq/cond/tbcon.cc"
+        "routines/lineq/cond/tbcon.cc",
+
+        "routines/lineq/refine/gerfs.cc"
       ],
       "include_dirs" : [
         "lib",

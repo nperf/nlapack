@@ -122,6 +122,10 @@ void Init(v8::Local<v8::Object> exports) {
   NODE_SET_METHOD(exports, "stpcon", stpcon);
   NODE_SET_METHOD(exports, "dtbcon", dtbcon);
   NODE_SET_METHOD(exports, "stbcon", stbcon);
+
+  // LAPACK Routines for Refining the Solution and Estimating Its Error
+  NODE_SET_METHOD(exports, "dgerfs", dgerfs);
+  NODE_SET_METHOD(exports, "sgerfs", sgerfs);
 }
 
 NODE_MODULE(addon, Init)
