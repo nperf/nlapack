@@ -78,7 +78,9 @@
         "routines/lineq/refine/syrfsx.cc",
         # "routines/lineq/refine/herfs.cc",
         # "routines/lineq/refine/herfsx.cc",
-        "routines/lineq/refine/sprfs.cc"
+        "routines/lineq/refine/sprfs.cc",
+        # "routines/lineq/refine/hprfs.cc",
+        "routines/lineq/refine/trrfs.cc"
       ],
       "include_dirs" : [
         "lib",
