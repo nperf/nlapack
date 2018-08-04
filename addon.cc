@@ -128,6 +128,8 @@ void Init(v8::Local<v8::Object> exports) {
   NODE_SET_METHOD(exports, "sgerfs", sgerfs);
   NODE_SET_METHOD(exports, "dgerfsx", dgerfsx);
   NODE_SET_METHOD(exports, "sgerfsx", sgerfsx);
+  NODE_SET_METHOD(exports, "dgbrfs", dgbrfs);
+  NODE_SET_METHOD(exports, "sgbrfs", sgbrfs);
 }
 
 NODE_MODULE(addon, Init)

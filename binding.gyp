@@ -65,7 +65,8 @@
         "routines/lineq/cond/tbcon.cc",
 
         "routines/lineq/refine/gerfs.cc",
-        "routines/lineq/refine/gerfsx.cc"
+        "routines/lineq/refine/gerfsx.cc",
+        "routines/lineq/refine/gbrfs.cc"
       ],
       "include_dirs" : [
         "lib",
