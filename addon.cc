@@ -136,6 +136,8 @@ void Init(v8::Local<v8::Object> exports) {
   NODE_SET_METHOD(exports, "sgtrfs", sgtrfs);
   NODE_SET_METHOD(exports, "dporfs", dporfs);
   NODE_SET_METHOD(exports, "sporfs", sporfs);
+  NODE_SET_METHOD(exports, "dporfsx", dporfsx);
+  NODE_SET_METHOD(exports, "sporfsx", sporfsx);
 }
 
 NODE_MODULE(addon, Init)
