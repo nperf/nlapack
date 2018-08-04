@@ -140,5 +140,7 @@ void dporfs(const v8::FunctionCallbackInfo<v8::Value>& info);
 void sporfs(const v8::FunctionCallbackInfo<v8::Value>& info);
 void dporfsx(const v8::FunctionCallbackInfo<v8::Value>& info);
 void sporfsx(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dpprfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+void spprfs(const v8::FunctionCallbackInfo<v8::Value>& info);
 
 #endif
