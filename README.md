@@ -88,7 +88,7 @@ $ npm test
 - [x] `?porfs(uplo, n, nrhs, a, lda, af, ldaf, b, ldb, x, ldx, ferr, berr)`
 - [x] `?porfsx(uplo, equed, n, nrhs, a, lda, af, ldaf, s, b, ldb, x, ldx, rcond, berr, n_err_bnds, err_bnds_norm, err_bnds_comp, nparams, params)`
 - [x] `?pprfs(uplo, n, nrhs, ap, afp, b, ldb, x, ldx, ferr, berr)`
-- [ ] `?pbrfs(uplo, n, kd, nrhs, ab, ldab, afb, ldafb, b, ldb, x, ldx, ferr, berr)`
+- [x] `?pbrfs(uplo, n, kd, nrhs, ab, ldab, afb, ldafb, b, ldb, x, ldx, ferr, berr)`
 - [ ] `?ptrfs(n, nrhs, d, e, df, ef, b, ldb, x, ldx, ferr, berr)`
 - [ ] `?syrfs(uplo, n, nrhs, a, lda, af, ldaf, ipiv, b, ldb, x, ldx, ferr, berr)`
 - [ ] `?syrfsx(uplo, equed, n, nrhs, a, lda, af, ldaf, ipiv, s, b, ldb, x, ldx, rcond, berr, n_err_bnds, err_bnds_norm, err_bnds_comp, nparams, params)`

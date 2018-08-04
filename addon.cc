@@ -140,6 +140,8 @@ void Init(v8::Local<v8::Object> exports) {
   NODE_SET_METHOD(exports, "sporfsx", sporfsx);
   NODE_SET_METHOD(exports, "dpprfs", dpprfs);
   NODE_SET_METHOD(exports, "spprfs", spprfs);
+  NODE_SET_METHOD(exports, "dpbrfs", dpbrfs);
+  NODE_SET_METHOD(exports, "spbrfs", spbrfs);
 }
 
 NODE_MODULE(addon, Init)
