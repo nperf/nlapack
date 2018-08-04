@@ -14,7 +14,7 @@ void dptrfs(const v8::FunctionCallbackInfo<v8::Value>& info) {
 	double *ferr = reinterpret_cast<double*>(GET_CONTENTS(info[10].As<v8::Float64Array>()));
 	double *berr = reinterpret_cast<double*>(GET_CONTENTS(info[11].As<v8::Float64Array>()));
 
-	lapack_int i = LAPACKE_dptrfs(LAPACK_ROW_MAJOR, n, nrhs, d, e, df, ef, b, ldb, x, ldx, ferr, berr)
+	lapack_int i = LAPACKE_dptrfs(LAPACK_ROW_MAJOR, n, nrhs, d, e, df, ef, b, ldb, x, ldx, ferr, berr);
 	info.GetReturnValue().Set(
 		v8::Number::New(info.GetIsolate(), i)
 	);
@@ -34,7 +34,7 @@ void sptrfs(const v8::FunctionCallbackInfo<v8::Value>& info) {
 	float *ferr = reinterpret_cast<float*>(GET_CONTENTS(info[10].As<v8::Float32Array>()));
 	float *berr = reinterpret_cast<float*>(GET_CONTENTS(info[11].As<v8::Float32Array>()));
 
-	lapack_int i = LAPACKE_sptrfs(LAPACK_ROW_MAJOR, n, nrhs, d, e, df, ef, b, ldb, x, ldx, ferr, berr)
+	lapack_int i = LAPACKE_sptrfs(LAPACK_ROW_MAJOR, n, nrhs, d, e, df, ef, b, ldb, x, ldx, ferr, berr);
 	info.GetReturnValue().Set(
 		v8::Number::New(info.GetIsolate(), i)
 	);

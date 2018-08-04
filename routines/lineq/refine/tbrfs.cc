@@ -31,7 +31,7 @@ void stbrfs(const v8::FunctionCallbackInfo<v8::Value>& info) {
  	lapack_int kd = info[4]->Uint32Value();
 	lapack_int nrhs = info[5]->Uint32Value();
 	float *ab = reinterpret_cast<float*>(GET_CONTENTS(info[6].As<v8::Float32Array>()));
-	lapack_intb ldab = info[7]->Uint32Value();
+	lapack_int ldab = info[7]->Uint32Value();
 	float *b = reinterpret_cast<float*>(GET_CONTENTS(info[8].As<v8::Float32Array>()));
 	lapack_int ldb = info[9]->Uint32Value();
 	float *x = reinterpret_cast<float*>(GET_CONTENTS(info[10].As<v8::Float32Array>()));

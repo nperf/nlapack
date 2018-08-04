@@ -35,7 +35,7 @@ void ssprfs(const v8::FunctionCallbackInfo<v8::Value>& info) {
 	float *ferr = reinterpret_cast<float*>(GET_CONTENTS(info[10].As<v8::Float32Array>()));
 	float *berr = reinterpret_cast<float*>(GET_CONTENTS(info[11].As<v8::Float32Array>()));
 
-	lapack_int i = LAPACKE_ssprfs(LAPACK_ROW_MAJOR, uplo, n, nrhs, ap,, ipiv,afp, b, ldb, x, ldx, ferr, berr);
+	lapack_int i = LAPACKE_ssprfs(LAPACK_ROW_MAJOR, uplo, n, nrhs, ap, afp, ipiv, b, ldb, x, ldx, ferr, berr);
 
 	info.GetReturnValue().Set(
 		v8::Number::New(info.GetIsolate(), i)
