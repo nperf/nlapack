@@ -85,7 +85,8 @@
         "routines/lineq/refine/tbrfs.cc",
 
         "routines/lineq/matinv/getri.cc",
-        "routines/lineq/matinv/potri.cc"
+        "routines/lineq/matinv/potri.cc",
+        "routines/lineq/matinv/pftri.cc"
       ],
       "include_dirs" : [
         "lib",

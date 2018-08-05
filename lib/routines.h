@@ -169,5 +169,7 @@ void dgetri(const v8::FunctionCallbackInfo<v8::Value>& info);
 void sgetri(const v8::FunctionCallbackInfo<v8::Value>& info);
 void dpotri(const v8::FunctionCallbackInfo<v8::Value>& info);
 void spotri(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dpftri(const v8::FunctionCallbackInfo<v8::Value>& info);
+void spftri(const v8::FunctionCallbackInfo<v8::Value>& info);
 
 #endif
