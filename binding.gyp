@@ -98,7 +98,8 @@
         # "routines/lineq/matinv/hetri2x.cc",
         "routines/lineq/matinv/sptri.cc",
         # "routines/lineq/matinv/hptri.cc",
-        "routines/lineq/matinv/trtri.cc"
+        "routines/lineq/matinv/trtri.cc",
+        "routines/lineq/matinv/tftri.cc"
       ],
       "include_dirs" : [
         "lib",
