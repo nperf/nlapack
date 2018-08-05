@@ -198,6 +198,10 @@ void Init(v8::Local<v8::Object> exports) {
   NODE_SET_METHOD(exports, "stftri", stftri);
   NODE_SET_METHOD(exports, "dtptri", dtptri);
   NODE_SET_METHOD(exports, "stptri", stptri);
+
+  // LAPACK Routines for Matrix Equilibration
+  NODE_SET_METHOD(exports, "dgeequ", dgeequ);
+  NODE_SET_METHOD(exports, "sgeequ", sgeequ);
 }
 
 NODE_MODULE(addon, Init)

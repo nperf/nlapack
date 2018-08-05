@@ -100,7 +100,9 @@
         # "routines/lineq/matinv/hptri.cc",
         "routines/lineq/matinv/trtri.cc",
         "routines/lineq/matinv/tftri.cc",
-        "routines/lineq/matinv/tptri.cc"
+        "routines/lineq/matinv/tptri.cc",
+
+        "routines/lineq/mateq/geequ.cc"
       ],
       "include_dirs" : [
         "lib",
