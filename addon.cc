@@ -188,6 +188,8 @@ void Init(v8::Local<v8::Object> exports) {
   // NODE_SET_METHOD(exports, "ssytri2x", ssytri2x);
   // NODE_SET_METHOD(exports, "dhetri2x", dhetri2x);
   // NODE_SET_METHOD(exports, "shetri2x", shetri2x);
+  NODE_SET_METHOD(exports, "dsptri", dsptri);
+  NODE_SET_METHOD(exports, "ssptri", ssptri);
 }
 
 NODE_MODULE(addon, Init)
