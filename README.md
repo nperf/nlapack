@@ -106,7 +106,7 @@ $ npm test
 - [x] `?potri(uplo, n, a, lda)`
 - [x] `?pftri(transr, uplo, n, a)`
 - [x] `?pptri(uplo, n, ap)`
-- [ ] `?sytri(uplo, n, a, lda, ipiv)`
+- [x] `?sytri(uplo, n, a, lda, ipiv)`
 - [ ] `?sytri_rook(uplo, n, a, lda, ipiv)`
 - [ ] `?hetri(uplo, n, a, lda, ipiv)`
 - [ ] `?hetri_rook(uplo, n, a, lda, ipiv)`

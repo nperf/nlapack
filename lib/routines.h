@@ -173,5 +173,7 @@ void dpftri(const v8::FunctionCallbackInfo<v8::Value>& info);
 void spftri(const v8::FunctionCallbackInfo<v8::Value>& info);
 void dpptri(const v8::FunctionCallbackInfo<v8::Value>& info);
 void spptri(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dsytri(const v8::FunctionCallbackInfo<v8::Value>& info);
+void ssytri(const v8::FunctionCallbackInfo<v8::Value>& info);
 
 #endif
