@@ -116,7 +116,7 @@ $ npm test
 - [ ] `?hetri2x(uplo, n, a, lda, ipiv, nb)`
 - [x] `?sptri(uplo, n, ap, ipiv)`
 - [ ] `?hptri(uplo, n, ap, ipiv)`
-- [ ] `?trtri(uplo, diag, n, a, lda)`
+- [x] `?trtri(uplo, diag, n, a, lda)`
 - [ ] `?tftri(transr, uplo, diag, n, a)`
 - [ ] `?tptri(uplo, diag, n, ap)`
 

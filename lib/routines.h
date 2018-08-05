@@ -191,5 +191,9 @@ void ssytri(const v8::FunctionCallbackInfo<v8::Value>& info);
 // void shetri2x(const v8::FunctionCallbackInfo<v8::Value>& info);
 void dsptri(const v8::FunctionCallbackInfo<v8::Value>& info);
 void ssptri(const v8::FunctionCallbackInfo<v8::Value>& info);
+// void dhptri(const v8::FunctionCallbackInfo<v8::Value>& info);
+// void shptri(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dtrtri(const v8::FunctionCallbackInfo<v8::Value>& info);
+void strtri(const v8::FunctionCallbackInfo<v8::Value>& info);
 
 #endif
