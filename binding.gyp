@@ -108,7 +108,8 @@
         # "routines/lineq/mateq/gbequb.cc",
         "routines/lineq/mateq/poequ.cc",
         # "routines/lineq/mateq/poequb.cc",
-        # "routines/lineq/mateq/ppequ.cc",
+        "routines/lineq/mateq/ppequ.cc",
+        "routines/lineq/mateq/pbequ.cc"
       ],
       "include_dirs" : [
         "lib",

@@ -129,7 +129,7 @@ $ npm test
 - [x] `?poequ(n, a, lda, s, scond, amax)`
 - [ ] `?poequb(n, a, lda, s, scond, amax)`
 - [x] `?ppequ(uplo, n, ap, s, scond, amax)`
-- [ ] `?pbequ(uplo, n, kd, ab, ldab, s, scond, amax)`
+- [x] `?pbequ(uplo, n, kd, ab, ldab, s, scond, amax)`
 - [ ] `?syequb(uplo, n, a, lda, s, scond, amax)`
 - [ ] `?heequb(uplo, n, a, lda, s, scond, amax)`
 
