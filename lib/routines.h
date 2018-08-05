@@ -197,5 +197,7 @@ void dtrtri(const v8::FunctionCallbackInfo<v8::Value>& info);
 void strtri(const v8::FunctionCallbackInfo<v8::Value>& info);
 void dtftri(const v8::FunctionCallbackInfo<v8::Value>& info);
 void stftri(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dtptri(const v8::FunctionCallbackInfo<v8::Value>& info);
+void stptri(const v8::FunctionCallbackInfo<v8::Value>& info);
 
 #endif

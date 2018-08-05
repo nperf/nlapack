@@ -118,7 +118,7 @@ $ npm test
 - [ ] `?hptri(uplo, n, ap, ipiv)`
 - [x] `?trtri(uplo, diag, n, a, lda)`
 - [x] `?tftri(transr, uplo, diag, n, a)`
-- [ ] `?tptri(uplo, diag, n, ap)`
+- [x] `?tptri(uplo, diag, n, ap)`
 
 
 Works out of the box with OSX since CLAPACK is included in the standard Accelerate framework. You might have to download and build [LAPACK](http://www.netlib.org/lapack/#_lapack_version_3_6_0) from source on other operating systems (**LINUX:** `sudo apt-get liblapack-dev`).

@@ -196,6 +196,8 @@ void Init(v8::Local<v8::Object> exports) {
   NODE_SET_METHOD(exports, "strtri", strtri);
   NODE_SET_METHOD(exports, "dtftri", dtftri);
   NODE_SET_METHOD(exports, "stftri", stftri);
+  NODE_SET_METHOD(exports, "dtptri", dtptri);
+  NODE_SET_METHOD(exports, "stptri", stptri);
 }
 
 NODE_MODULE(addon, Init)
