@@ -86,7 +86,8 @@
 
         "routines/lineq/matinv/getri.cc",
         "routines/lineq/matinv/potri.cc",
-        "routines/lineq/matinv/pftri.cc"
+        "routines/lineq/matinv/pftri.cc",
+        "routines/lineq/matinv/pptri.cc"
       ],
       "include_dirs" : [
         "lib",
