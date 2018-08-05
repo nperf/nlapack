@@ -100,7 +100,18 @@
         # "routines/lineq/matinv/hptri.cc",
         "routines/lineq/matinv/trtri.cc",
         "routines/lineq/matinv/tftri.cc",
-        "routines/lineq/matinv/tptri.cc"
+        "routines/lineq/matinv/tptri.cc",
+
+        "routines/lineq/mateq/geequ.cc",
+        "routines/lineq/mateq/geequb.cc",
+        "routines/lineq/mateq/gbequ.cc",
+        "routines/lineq/mateq/gbequb.cc",
+        "routines/lineq/mateq/poequ.cc",
+        "routines/lineq/mateq/poequb.cc",
+        "routines/lineq/mateq/ppequ.cc",
+        "routines/lineq/mateq/pbequ.cc",
+        "routines/lineq/mateq/syequb.cc",
+        # "routines/lineq/mateq/heequb.cc",
       ],
       "include_dirs" : [
         "lib",

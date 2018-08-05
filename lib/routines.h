@@ -199,5 +199,26 @@ void dtftri(const v8::FunctionCallbackInfo<v8::Value>& info);
 void stftri(const v8::FunctionCallbackInfo<v8::Value>& info);
 void dtptri(const v8::FunctionCallbackInfo<v8::Value>& info);
 void stptri(const v8::FunctionCallbackInfo<v8::Value>& info);
+// LAPACK Routines for Matrix Equilibration
+void dgeequ(const v8::FunctionCallbackInfo<v8::Value>& info);
+void sgeequ(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dgeequb(const v8::FunctionCallbackInfo<v8::Value>& info);
+void sgeequb(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dgbequ(const v8::FunctionCallbackInfo<v8::Value>& info);
+void sgbequ(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dgbequb(const v8::FunctionCallbackInfo<v8::Value>& info);
+void sgbequb(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dpoequ(const v8::FunctionCallbackInfo<v8::Value>& info);
+void spoequ(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dpoequb(const v8::FunctionCallbackInfo<v8::Value>& info);
+void spoequb(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dppequ(const v8::FunctionCallbackInfo<v8::Value>& info);
+void sppequ(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dpbequ(const v8::FunctionCallbackInfo<v8::Value>& info);
+void spbequ(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dsyequb(const v8::FunctionCallbackInfo<v8::Value>& info);
+void ssyequb(const v8::FunctionCallbackInfo<v8::Value>& info);
+// void dheequb(const v8::FunctionCallbackInfo<v8::Value>& info);
+// void sheequb(const v8::FunctionCallbackInfo<v8::Value>& info);
 
 #endif

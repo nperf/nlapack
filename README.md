@@ -120,6 +120,19 @@ $ npm test
 - [x] `?tftri(transr, uplo, diag, n, a)`
 - [x] `?tptri(uplo, diag, n, ap)`
 
+#### [Matrix Equilibration](https://software.intel.com/en-us/mkl-developer-reference-fortran-matrix-equilibration-lapack-computational-routines)
+
+- [x] `?geequ(m, n, a, lda, r, c, rowcnd, colcnd, amax)`
+- [x] `?geequb(m, n, a, lda, r, c, rowcnd, colcnd, amax)`
+- [x] `?gbequ(m, n, kl, ku, ab, ldab, r, c, rowcnd, colcnd, amax)`
+- [x] `?gbequb(m, n, kl, ku, ab, ldab, r, c, rowcnd, colcnd, amax)`
+- [x] `?poequ(n, a, lda, s, scond, amax)`
+- [x] `?poequb(n, a, lda, s, scond, amax)`
+- [x] `?ppequ(uplo, n, ap, s, scond, amax)`
+- [x] `?pbequ(uplo, n, kd, ab, ldab, s, scond, amax)`
+- [x] `?syequb(uplo, n, a, lda, s, scond, amax)`
+- [ ] `?heequb(uplo, n, a, lda, s, scond, amax)`
+
 
 Works out of the box with OSX since CLAPACK is included in the standard Accelerate framework. You might have to download and build [LAPACK](http://www.netlib.org/lapack/#_lapack_version_3_6_0) from source on other operating systems (**LINUX:** `sudo apt-get liblapack-dev`).
 
