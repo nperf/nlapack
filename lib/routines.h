@@ -206,5 +206,9 @@ void sgeequ(const v8::FunctionCallbackInfo<v8::Value>& info);
 // void sgeequb(const v8::FunctionCallbackInfo<v8::Value>& info);
 void dgbequ(const v8::FunctionCallbackInfo<v8::Value>& info);
 void sgbequ(const v8::FunctionCallbackInfo<v8::Value>& info);
+// void dgbequb(const v8::FunctionCallbackInfo<v8::Value>& info);
+// void sgbequb(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dpoequ(const v8::FunctionCallbackInfo<v8::Value>& info);
+void spoequ(const v8::FunctionCallbackInfo<v8::Value>& info);
 
 #endif

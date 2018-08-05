@@ -206,6 +206,10 @@ void Init(v8::Local<v8::Object> exports) {
   // NODE_SET_METHOD(exports, "sgeequb", sgeequb);
   NODE_SET_METHOD(exports, "dgbequ", dgbequ);
   NODE_SET_METHOD(exports, "sgbequ", sgbequ);
+  // NODE_SET_METHOD(exports, "dgbequb", dgbequb);
+  // NODE_SET_METHOD(exports, "sgbequb", sgbequb);
+  NODE_SET_METHOD(exports, "dpoequ", dpoequ);
+  NODE_SET_METHOD(exports, "spoequ", spoequ);
 }
 
 NODE_MODULE(addon, Init)

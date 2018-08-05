@@ -126,7 +126,7 @@ $ npm test
 - [ ] `?geequb(m, n, a, lda, r, c, rowcnd, colcnd, amax)`
 - [x] `?gbequ(m, n, kl, ku, ab, ldab, r, c, rowcnd, colcnd, amax)`
 - [ ] `?gbequb(m, n, kl, ku, ab, ldab, r, c, rowcnd, colcnd, amax)`
-- [ ] `?poequ(n, a, lda, s, scond, amax)`
+- [x] `?poequ(n, a, lda, s, scond, amax)`
 - [ ] `?poequb(n, a, lda, s, scond, amax)`
 - [ ] `?ppequ(uplo, n, ap, s, scond, amax)`
 - [ ] `?pbequ(uplo, n, kd, ab, ldab, s, scond, amax)`
