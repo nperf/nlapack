@@ -166,6 +166,8 @@ void Init(v8::Local<v8::Object> exports) {
   // LAPACK Routines for Matrix Inversion
   NODE_SET_METHOD(exports, "dgetri", dgetri);
   NODE_SET_METHOD(exports, "sgetri", sgetri);
+  NODE_SET_METHOD(exports, "dpotri", dpotri);
+  NODE_SET_METHOD(exports, "spotri", spotri);
 }
 
 NODE_MODULE(addon, Init)

@@ -103,7 +103,7 @@ $ npm test
 #### [Matrix Inversion](https://software.intel.com/en-us/mkl-developer-reference-fortran-matrix-inversion-lapack-computational-routines)
 
 - [x] `?getri(n, a, lda, ipiv)`
-- [ ] `?potri(uplo, n, a, lda)`
+- [x] `?potri(uplo, n, a, lda)`
 - [ ] `?pftri(transr, uplo, n, a)`
 - [ ] `?pptri(uplo, n, ap)`
 - [ ] `?sytri(uplo, n, a, lda, ipiv)`
