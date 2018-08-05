@@ -162,6 +162,10 @@ void Init(v8::Local<v8::Object> exports) {
   NODE_SET_METHOD(exports, "stprfs", stprfs);
   NODE_SET_METHOD(exports, "dtbrfs", dtbrfs);
   NODE_SET_METHOD(exports, "stbrfs", stbrfs);
+
+  // LAPACK Routines for Matrix Inversion
+  NODE_SET_METHOD(exports, "dgetri", dgetri);
+  NODE_SET_METHOD(exports, "sgetri", sgetri);
 }
 
 NODE_MODULE(addon, Init)

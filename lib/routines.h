@@ -164,5 +164,8 @@ void dtprfs(const v8::FunctionCallbackInfo<v8::Value>& info);
 void stprfs(const v8::FunctionCallbackInfo<v8::Value>& info);
 void dtbrfs(const v8::FunctionCallbackInfo<v8::Value>& info);
 void stbrfs(const v8::FunctionCallbackInfo<v8::Value>& info);
+// LAPACK Routines for Matrix Inversion
+void dgetri(const v8::FunctionCallbackInfo<v8::Value>& info);
+void sgetri(const v8::FunctionCallbackInfo<v8::Value>& info);
 
 #endif

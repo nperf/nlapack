@@ -82,7 +82,9 @@
         # "routines/lineq/refine/hprfs.cc",
         "routines/lineq/refine/trrfs.cc",
         "routines/lineq/refine/tprfs.cc",
-        "routines/lineq/refine/tbrfs.cc"
+        "routines/lineq/refine/tbrfs.cc",
+
+        "routines/lineq/matinv/getri.cc"
       ],
       "include_dirs" : [
         "lib",
