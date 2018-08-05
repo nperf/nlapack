@@ -1,6 +1,7 @@
 {
   "files.associations": {
     "complex": "cpp",
-    "algorithm": "cpp"
+    "algorithm": "cpp",
+    "queue": "cpp"
   }
 }

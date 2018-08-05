@@ -202,6 +202,10 @@ void Init(v8::Local<v8::Object> exports) {
   // LAPACK Routines for Matrix Equilibration
   NODE_SET_METHOD(exports, "dgeequ", dgeequ);
   NODE_SET_METHOD(exports, "sgeequ", sgeequ);
+  // NODE_SET_METHOD(exports, "dgeequb", dgeequb);
+  // NODE_SET_METHOD(exports, "sgeequb", sgeequb);
+  NODE_SET_METHOD(exports, "dgbequ", dgbequ);
+  NODE_SET_METHOD(exports, "sgbequ", sgbequ);
 }
 
 NODE_MODULE(addon, Init)

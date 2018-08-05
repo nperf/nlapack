@@ -202,5 +202,9 @@ void stptri(const v8::FunctionCallbackInfo<v8::Value>& info);
 // LAPACK Routines for Matrix Equilibration
 void dgeequ(const v8::FunctionCallbackInfo<v8::Value>& info);
 void sgeequ(const v8::FunctionCallbackInfo<v8::Value>& info);
+// void dgeequb(const v8::FunctionCallbackInfo<v8::Value>& info);
+// void sgeequb(const v8::FunctionCallbackInfo<v8::Value>& info);
+void dgbequ(const v8::FunctionCallbackInfo<v8::Value>& info);
+void sgbequ(const v8::FunctionCallbackInfo<v8::Value>& info);
 
 #endif
