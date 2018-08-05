@@ -82,7 +82,25 @@
         # "routines/lineq/refine/hprfs.cc",
         "routines/lineq/refine/trrfs.cc",
         "routines/lineq/refine/tprfs.cc",
-        "routines/lineq/refine/tbrfs.cc"
+        "routines/lineq/refine/tbrfs.cc",
+
+        "routines/lineq/matinv/getri.cc",
+        "routines/lineq/matinv/potri.cc",
+        "routines/lineq/matinv/pftri.cc",
+        "routines/lineq/matinv/pptri.cc",
+        "routines/lineq/matinv/sytri.cc",
+        # "routines/lineq/matinv/sytri_rook.cc",
+        # "routines/lineq/matinv/hetri.cc",
+        # "routines/lineq/matinv/hetri_rook.cc",
+        # "routines/lineq/matinv/sytri2.cc",
+        # "routines/lineq/matinv/hetri2.cc",
+        # "routines/lineq/matinv/sytri2x.cc",
+        # "routines/lineq/matinv/hetri2x.cc",
+        "routines/lineq/matinv/sptri.cc",
+        # "routines/lineq/matinv/hptri.cc",
+        "routines/lineq/matinv/trtri.cc",
+        "routines/lineq/matinv/tftri.cc",
+        "routines/lineq/matinv/tptri.cc"
       ],
       "include_dirs" : [
         "lib",

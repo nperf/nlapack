@@ -162,6 +162,42 @@ void Init(v8::Local<v8::Object> exports) {
   NODE_SET_METHOD(exports, "stprfs", stprfs);
   NODE_SET_METHOD(exports, "dtbrfs", dtbrfs);
   NODE_SET_METHOD(exports, "stbrfs", stbrfs);
+
+  // LAPACK Routines for Matrix Inversion
+  NODE_SET_METHOD(exports, "dgetri", dgetri);
+  NODE_SET_METHOD(exports, "sgetri", sgetri);
+  NODE_SET_METHOD(exports, "dpotri", dpotri);
+  NODE_SET_METHOD(exports, "spotri", spotri);
+  NODE_SET_METHOD(exports, "dpftri", dpftri);
+  NODE_SET_METHOD(exports, "spftri", spftri);
+  NODE_SET_METHOD(exports, "dpptri", dpptri);
+  NODE_SET_METHOD(exports, "spptri", spptri);
+  NODE_SET_METHOD(exports, "dsytri", dsytri);
+  NODE_SET_METHOD(exports, "ssytri", ssytri);
+  // NODE_SET_METHOD(exports, "dsytri_rook", dsytri_rook);
+  // NODE_SET_METHOD(exports, "ssytri_rook", ssytri_rook);
+  // NODE_SET_METHOD(exports, "dhetri", dhetri);
+  // NODE_SET_METHOD(exports, "shetri", shetri);
+  // NODE_SET_METHOD(exports, "dhetri_rook", dhetri_rook);
+  // NODE_SET_METHOD(exports, "shetri_rook", shetri_rook);
+  // NODE_SET_METHOD(exports, "dsytri2", dsytri2);
+  // NODE_SET_METHOD(exports, "ssytri2", ssytri2);
+  // NODE_SET_METHOD(exports, "dhetri2", dhetri2);
+  // NODE_SET_METHOD(exports, "shetri2", shetri2);
+  // NODE_SET_METHOD(exports, "dsytri2x", dsytri2x);
+  // NODE_SET_METHOD(exports, "ssytri2x", ssytri2x);
+  // NODE_SET_METHOD(exports, "dhetri2x", dhetri2x);
+  // NODE_SET_METHOD(exports, "shetri2x", shetri2x);
+  NODE_SET_METHOD(exports, "dsptri", dsptri);
+  NODE_SET_METHOD(exports, "ssptri", ssptri);
+  // NODE_SET_METHOD(exports, "dhptri", dhptri);
+  // NODE_SET_METHOD(exports, "shptri", shptri);
+  NODE_SET_METHOD(exports, "dtrtri", dtrtri);
+  NODE_SET_METHOD(exports, "strtri", strtri);
+  NODE_SET_METHOD(exports, "dtftri", dtftri);
+  NODE_SET_METHOD(exports, "stftri", stftri);
+  NODE_SET_METHOD(exports, "dtptri", dtptri);
+  NODE_SET_METHOD(exports, "stptri", stptri);
 }
 
 NODE_MODULE(addon, Init)

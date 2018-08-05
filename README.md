@@ -100,6 +100,26 @@ $ npm test
 - [x] `?tprfs(uplo, trans, diag, n, nrhs, ap, b, ldb, x, ldx, ferr, berr)`
 - [x] `?tbrfs(uplo, trans, diag, n, kd, nrhs, ab, ldab, b, ldb, x, ldx, ferr, berr)`
 
+#### [Matrix Inversion](https://software.intel.com/en-us/mkl-developer-reference-fortran-matrix-inversion-lapack-computational-routines)
+
+- [x] `?getri(n, a, lda, ipiv)`
+- [x] `?potri(uplo, n, a, lda)`
+- [x] `?pftri(transr, uplo, n, a)`
+- [x] `?pptri(uplo, n, ap)`
+- [x] `?sytri(uplo, n, a, lda, ipiv)`
+- [ ] `?sytri_rook(uplo, n, a, lda, ipiv)`
+- [ ] `?hetri(uplo, n, a, lda, ipiv)`
+- [ ] `?hetri_rook(uplo, n, a, lda, ipiv)`
+- [ ] `?sytri2(uplo, n, a, lda, ipiv)`
+- [ ] `?hetri2(uplo, n, a, lda, ipiv)`
+- [ ] `?sytri2x(uplo, n, a, lda, ipiv, nb)`
+- [ ] `?hetri2x(uplo, n, a, lda, ipiv, nb)`
+- [x] `?sptri(uplo, n, ap, ipiv)`
+- [ ] `?hptri(uplo, n, ap, ipiv)`
+- [x] `?trtri(uplo, diag, n, a, lda)`
+- [x] `?tftri(transr, uplo, diag, n, a)`
+- [x] `?tptri(uplo, diag, n, ap)`
+
 
 Works out of the box with OSX since CLAPACK is included in the standard Accelerate framework. You might have to download and build [LAPACK](http://www.netlib.org/lapack/#_lapack_version_3_6_0) from source on other operating systems (**LINUX:** `sudo apt-get liblapack-dev`).
 
