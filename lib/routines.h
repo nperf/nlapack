@@ -175,5 +175,19 @@ void dpptri(const v8::FunctionCallbackInfo<v8::Value>& info);
 void spptri(const v8::FunctionCallbackInfo<v8::Value>& info);
 void dsytri(const v8::FunctionCallbackInfo<v8::Value>& info);
 void ssytri(const v8::FunctionCallbackInfo<v8::Value>& info);
+// void dsytri_rook(const v8::FunctionCallbackInfo<v8::Value>& info);
+// void ssytri_rook(const v8::FunctionCallbackInfo<v8::Value>& info);
+// void dhetri(const v8::FunctionCallbackInfo<v8::Value>& info);
+// void shetri(const v8::FunctionCallbackInfo<v8::Value>& info);
+// void dhetri_rook(const v8::FunctionCallbackInfo<v8::Value>& info);
+// void shetri_rook(const v8::FunctionCallbackInfo<v8::Value>& info);
+// void dsytri2(const v8::FunctionCallbackInfo<v8::Value>& info);
+// void ssytri2(const v8::FunctionCallbackInfo<v8::Value>& info);
+// void dhetri2(const v8::FunctionCallbackInfo<v8::Value>& info);
+// void shetri2(const v8::FunctionCallbackInfo<v8::Value>& info);
+// void dsytri2x(const v8::FunctionCallbackInfo<v8::Value>& info);
+// void ssytri2x(const v8::FunctionCallbackInfo<v8::Value>& info);
+// void dhetri2x(const v8::FunctionCallbackInfo<v8::Value>& info);
+// void shetri2x(const v8::FunctionCallbackInfo<v8::Value>& info);
 
 #endif

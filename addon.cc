@@ -174,6 +174,20 @@ void Init(v8::Local<v8::Object> exports) {
   NODE_SET_METHOD(exports, "spptri", spptri);
   NODE_SET_METHOD(exports, "dsytri", dsytri);
   NODE_SET_METHOD(exports, "ssytri", ssytri);
+  // NODE_SET_METHOD(exports, "dsytri_rook", dsytri_rook);
+  // NODE_SET_METHOD(exports, "ssytri_rook", ssytri_rook);
+  // NODE_SET_METHOD(exports, "dhetri", dhetri);
+  // NODE_SET_METHOD(exports, "shetri", shetri);
+  // NODE_SET_METHOD(exports, "dhetri_rook", dhetri_rook);
+  // NODE_SET_METHOD(exports, "shetri_rook", shetri_rook);
+  // NODE_SET_METHOD(exports, "dsytri2", dsytri2);
+  // NODE_SET_METHOD(exports, "ssytri2", ssytri2);
+  // NODE_SET_METHOD(exports, "dhetri2", dhetri2);
+  // NODE_SET_METHOD(exports, "shetri2", shetri2);
+  // NODE_SET_METHOD(exports, "dsytri2x", dsytri2x);
+  // NODE_SET_METHOD(exports, "ssytri2x", ssytri2x);
+  // NODE_SET_METHOD(exports, "dhetri2x", dhetri2x);
+  // NODE_SET_METHOD(exports, "shetri2x", shetri2x);
 }
 
 NODE_MODULE(addon, Init)

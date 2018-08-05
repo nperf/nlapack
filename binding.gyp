@@ -88,7 +88,14 @@
         "routines/lineq/matinv/potri.cc",
         "routines/lineq/matinv/pftri.cc",
         "routines/lineq/matinv/pptri.cc",
-        "routines/lineq/matinv/sytri.cc"
+        "routines/lineq/matinv/sytri.cc",
+        # "routines/lineq/matinv/sytri_rook.cc",
+        # "routines/lineq/matinv/hetri.cc",
+        # "routines/lineq/matinv/hetri_rook.cc",
+        # "routines/lineq/matinv/sytri2.cc",
+        # "routines/lineq/matinv/hetri2.cc",
+        # "routines/lineq/matinv/sytri2x.cc",
+        # "routines/lineq/matinv/hetri2x.cc",
       ],
       "include_dirs" : [
         "lib",
