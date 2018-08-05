@@ -123,14 +123,14 @@ $ npm test
 #### [Matrix Equilibration](https://software.intel.com/en-us/mkl-developer-reference-fortran-matrix-equilibration-lapack-computational-routines)
 
 - [x] `?geequ(m, n, a, lda, r, c, rowcnd, colcnd, amax)`
-- [ ] `?geequb(m, n, a, lda, r, c, rowcnd, colcnd, amax)`
+- [x] `?geequb(m, n, a, lda, r, c, rowcnd, colcnd, amax)`
 - [x] `?gbequ(m, n, kl, ku, ab, ldab, r, c, rowcnd, colcnd, amax)`
-- [ ] `?gbequb(m, n, kl, ku, ab, ldab, r, c, rowcnd, colcnd, amax)`
+- [x] `?gbequb(m, n, kl, ku, ab, ldab, r, c, rowcnd, colcnd, amax)`
 - [x] `?poequ(n, a, lda, s, scond, amax)`
-- [ ] `?poequb(n, a, lda, s, scond, amax)`
+- [x] `?poequb(n, a, lda, s, scond, amax)`
 - [x] `?ppequ(uplo, n, ap, s, scond, amax)`
 - [x] `?pbequ(uplo, n, kd, ab, ldab, s, scond, amax)`
-- [ ] `?syequb(uplo, n, a, lda, s, scond, amax)`
+- [x] `?syequb(uplo, n, a, lda, s, scond, amax)`
 - [ ] `?heequb(uplo, n, a, lda, s, scond, amax)`
 
 

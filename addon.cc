@@ -202,20 +202,24 @@ void Init(v8::Local<v8::Object> exports) {
   // LAPACK Routines for Matrix Equilibration
   NODE_SET_METHOD(exports, "dgeequ", dgeequ);
   NODE_SET_METHOD(exports, "sgeequ", sgeequ);
-  // NODE_SET_METHOD(exports, "dgeequb", dgeequb);
-  // NODE_SET_METHOD(exports, "sgeequb", sgeequb);
+  NODE_SET_METHOD(exports, "dgeequb", dgeequb);
+  NODE_SET_METHOD(exports, "sgeequb", sgeequb);
   NODE_SET_METHOD(exports, "dgbequ", dgbequ);
   NODE_SET_METHOD(exports, "sgbequ", sgbequ);
-  // NODE_SET_METHOD(exports, "dgbequb", dgbequb);
-  // NODE_SET_METHOD(exports, "sgbequb", sgbequb);
+  NODE_SET_METHOD(exports, "dgbequb", dgbequb);
+  NODE_SET_METHOD(exports, "sgbequb", sgbequb);
   NODE_SET_METHOD(exports, "dpoequ", dpoequ);
   NODE_SET_METHOD(exports, "spoequ", spoequ);
-  // NODE_SET_METHOD(exports, "dpoequb", dpoequb);
-  // NODE_SET_METHOD(exports, "spoequb", spoequb);
+  NODE_SET_METHOD(exports, "dpoequb", dpoequb);
+  NODE_SET_METHOD(exports, "spoequb", spoequb);
   NODE_SET_METHOD(exports, "dppequ", dppequ);
   NODE_SET_METHOD(exports, "sppequ", sppequ);
   NODE_SET_METHOD(exports, "dpbequ", dpbequ);
   NODE_SET_METHOD(exports, "spbequ", spbequ);
+  NODE_SET_METHOD(exports, "dsyequb", dsyequb);
+  NODE_SET_METHOD(exports, "ssyequb", ssyequb);
+  // NODE_SET_METHOD(exports, "dheequb", dheequb);
+  // NODE_SET_METHOD(exports, "sheequb", sheequb);
 }
 
 NODE_MODULE(addon, Init)
