@@ -133,6 +133,11 @@ $ npm test
 - [x] `?syequb(uplo, n, a, lda, s, scond, amax)`
 - [ ] `?heequb(uplo, n, a, lda, s, scond, amax)`
 
+### [LAPACK Utility Functions and Routines](https://software.intel.com/en-us/mkl-developer-reference-fortran-matrix-equilibration-lapack-computational-routines)
+
+- [x] `ilaver(vers_major, vers_minor, vers_patch)`
+- [x] `?lamch(cmach)`
+
 
 Works out of the box with OSX since CLAPACK is included in the standard Accelerate framework. You might have to download and build [LAPACK](http://www.netlib.org/lapack/#_lapack_version_3_6_0) from source on other operating systems (**LINUX:** `sudo apt-get liblapack-dev`).
 
