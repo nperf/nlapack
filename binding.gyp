@@ -112,6 +112,8 @@
         "routines/lineq/mateq/pbequ.cc",
         "routines/lineq/mateq/syequb.cc",
         # "routines/lineq/mateq/heequb.cc",
+
+        "routines/test/latms.cc"
       ],
       "include_dirs" : [
         "lib",
