@@ -220,6 +220,12 @@ void Init(v8::Local<v8::Object> exports) {
   NODE_SET_METHOD(exports, "ssyequb", ssyequb);
   // NODE_SET_METHOD(exports, "dheequb", dheequb);
   // NODE_SET_METHOD(exports, "sheequb", sheequb);
+
+  // LAPACK Utility Functions and Routines
+  NODE_SET_METHOD(exports, "ilaver", ilaver);
+  NODE_SET_METHOD(exports, "dlamch", dlamch);
+  NODE_SET_METHOD(exports, "slamch", slamch);
+
   // LAPACK Test Functions and Routines
   NODE_SET_METHOD(exports, "dlatms", dlatms);
   NODE_SET_METHOD(exports, "slatms", slatms);

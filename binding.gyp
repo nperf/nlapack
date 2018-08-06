@@ -113,6 +113,9 @@
         "routines/lineq/mateq/syequb.cc",
         # "routines/lineq/mateq/heequb.cc",
 
+        "routines/util/ilaver.cc",
+        "routines/util/lamch.cc",
+
         "routines/test/latms.cc"
       ],
       "include_dirs" : [

@@ -133,6 +133,11 @@ $ npm test
 - [x] `?syequb(uplo, n, a, lda, s, scond, amax)`
 - [ ] `?heequb(uplo, n, a, lda, s, scond, amax)`
 
+### [LAPACK Utility Functions and Routines](https://software.intel.com/en-us/mkl-developer-reference-fortran-matrix-equilibration-lapack-computational-routines)
+
+- [x] `ilaver(vers_major, vers_minor, vers_patch)`
+- [x] `?lamch(cmach)`
+
 ### [LAPACK Test Functions and Routines](https://software.intel.com/en-us/mkl-developer-reference-fortran-lapack-test-functions-and-routines)
 
 - [x] `?latms(m, n, dist, iseed, sym, d, mode, cond, dmax, kl, ku, pack, a, lda)
