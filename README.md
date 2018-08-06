@@ -138,6 +138,10 @@ $ npm test
 - [x] `ilaver(vers_major, vers_minor, vers_patch)`
 - [x] `?lamch(cmach)`
 
+### [LAPACK Test Functions and Routines](https://software.intel.com/en-us/mkl-developer-reference-fortran-lapack-test-functions-and-routines)
+
+- [x] `?latms(m, n, dist, iseed, sym, d, mode, cond, dmax, kl, ku, pack, a, lda)
+
 
 Works out of the box with OSX since CLAPACK is included in the standard Accelerate framework. You might have to download and build [LAPACK](http://www.netlib.org/lapack/#_lapack_version_3_6_0) from source on other operating systems (**LINUX:** `sudo apt-get liblapack-dev`).
 
