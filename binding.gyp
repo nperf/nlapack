@@ -119,12 +119,9 @@
         "routines/test/latms.cc"
       ],
       "include_dirs" : [
-        "lib",
-        "/usr/local/include",
-        "/usr/include"
+        "lib"
       ],
       "libraries": [
-        "-llapacke",
         "-llapack",
         "-lblas"
       ]
