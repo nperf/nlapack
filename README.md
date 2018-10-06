@@ -1,5 +1,7 @@
 # nLAPACK ![travis](https://img.shields.io/travis/mateogianolio/nlapack.svg)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/mateogianolio/nlapack.svg)](https://greenkeeper.io/)
+
 Node `>=4.0` C++ bindings for all single- and double-precision CLAPACK (Linear Algebra Package) routines.
 
 ```bash
