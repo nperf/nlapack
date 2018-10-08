@@ -4,8 +4,11 @@
 
 Node `>=4.0` C++ bindings for all single- and double-precision CLAPACK (Linear Algebra Package) routines.
 
+**NOTE: Only works for OSX at the moment**
+
 ```bash
-$ npm install mateogianolio/nlapack
+$ brew install lapack
+$ npm install nlapack
 $ npm test
 ```
 
@@ -142,7 +145,5 @@ $ npm test
 
 - [x] `?latms(m, n, dist, iseed, sym, d, mode, cond, dmax, kl, ku, pack, a, lda)
 
-
-Works out of the box with OSX since CLAPACK is included in the standard Accelerate framework. You might have to download and build [LAPACK](http://www.netlib.org/lapack/#_lapack_version_3_6_0) from source on other operating systems (**LINUX:** `sudo apt-get liblapack-dev`).
 
 Double precision functions expect `Float64Array` vectors, single precision functions expect `Float32Array` vectors.
