@@ -1,13 +1,27 @@
 language: node_js
 node_js:
-  - "4.0"
+  - "6.9.0"
 before_install:
-  - sudo apt-get install liblapack-dev liblapacke-dev
+  - sudo apt-get install libblas-dev liblapacke-dev
 env:
-  - CXX=g++-4.8
+  global:
+    - CXX=g++-4.8
+    - CC_TEST_REPORTER_ID=c9028b8a585955e28f6fe7f5db8b17c2aa6fc0e1a812611cf9d0887cde8385d1
+before_script:
+  - npm install -g nyc
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+script:
+  - npm run lint
+  - npm test
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 addons:
   apt:
     sources:
     - ubuntu-toolchain-r-test
     packages:
+    - gcc-4.8
     - g++-4.8
+    - clang

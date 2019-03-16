@@ -2,9 +2,7 @@
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/mateogianolio/nlapack.svg)](https://greenkeeper.io/)
 
-Node `>=4.0` C++ bindings for all single- and double-precision CLAPACK (Linear Algebra Package) routines.
-
-**NOTE: Only works for OSX at the moment**
+Node `>=6.9` C++ bindings for all single- and double-precision CLAPACK (Linear Algebra Package) routines.
 
 ```bash
 $ brew install lapack
@@ -143,7 +141,7 @@ $ npm test
 
 ### [LAPACK Test Functions and Routines](https://software.intel.com/en-us/mkl-developer-reference-fortran-lapack-test-functions-and-routines)
 
-- [x] `?latms(m, n, dist, iseed, sym, d, mode, cond, dmax, kl, ku, pack, a, lda)
+- [x] `?latms(m, n, dist, iseed, sym, d, mode, cond, dmax, kl, ku, pack, a, lda)`
 
 
 Double precision functions expect `Float64Array` vectors, single precision functions expect `Float32Array` vectors.

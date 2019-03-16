@@ -1,9 +1,9 @@
 {
   "targets": [
     {
-      "target_name": "addon",
+      "target_name": "nlapack",
       "sources": [
-        "addon.cc",
+        "src/index.cc",
         "routines/lineq/matfac/getrf.cc",
         # "routines/lineq/matfac/getrf2.cc",
         "routines/lineq/matfac/gbtrf.cc",
@@ -119,17 +119,12 @@
         "routines/test/latms.cc"
       ],
       "include_dirs" : [
-        "/usr/local/opt/lapack/include",
         "lib"
       ],
       "link_settings": {
         "libraries": [
-          "-llapacke",
           "-llapack",
           "-lblas"
-        ],
-        "library_dirs": [
-          "/usr/local/opt/lapack/lib",
         ]
       }
     }

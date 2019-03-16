@@ -2,7 +2,7 @@
 #define ROUTINES_H
 
 #include <node.h>
-#include <lapacke.h>
+#include "lapacke.h"
 
 #define GET_CONTENTS(view) \
 (static_cast<unsigned char*>(view->Buffer()->GetContents().Data()) + view->ByteOffset())
