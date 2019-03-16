@@ -12,8 +12,8 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "mocha": "^5.2.0",
-    "vectorious": "^4.8.5"
+    "mocha": "^6.0.2",
+    "vectorious": "^5.3.3"
   },
   "author": "Mateo Gianolio",
   "license": "MIT",
