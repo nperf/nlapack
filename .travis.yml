@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - "6.9.0"
 before_install:
-  - sudo apt-get install libblas-dev liblapacke-dev
+  - sudo apt-get install libblas-dev liblapack-dev liblapacke-dev
 env:
   global:
     - CXX=g++-4.8
