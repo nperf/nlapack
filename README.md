@@ -1,15 +1,28 @@
-# nLAPACK ![travis](https://img.shields.io/travis/mateogianolio/nlapack.svg)
+# nLAPACK ![travis](https://img.shields.io/travis/nperf/nlapack.svg)
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/mateogianolio/nlapack.svg)](https://greenkeeper.io/)
+[![Greenkeeper badge](https://badges.greenkeeper.io/nperf/nlapack.svg)](https://greenkeeper.io/)
 
 Node `>=6.9` C++ bindings for all single- and double-precision CLAPACK (Linear Algebra Package) routines.
 
+### Requirements
+
+#### Linux
+
 ```bash
-$ brew install lapack
-$ npm install nlapack
-$ npm test
+$ sudo apt-get install libblas-dev liblapack-dev liblapacke-dev
 ```
 
+#### MacOS
+
+```bash
+$ brew install lapack
+```
+
+### Usage
+
+```bash
+$ npm install nlapack
+```
 
 ### [LAPACK Linear Equation Computational Routines](https://software.intel.com/en-us/mkl-developer-reference-fortran-lapack-linear-equation-computational-routines)
 
