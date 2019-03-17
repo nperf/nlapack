@@ -1,5 +1,10 @@
 import {
   INLapack,
+  MatrixDistribution,
+  MatrixEquilibration,
+  MatrixNorm,
+  MatrixPacking,
+  MatrixSymmetry,
   MatrixTrans,
   MatrixUnit,
   MatrixUpperLower,
@@ -22,6 +27,30 @@ export const Lower: MatrixUpperLower = 'L';
 
 export const NonUnit: MatrixUnit = 'N';
 export const Unit: MatrixUnit = 'U';
+
+export const OneNorm: MatrixNorm = 'O';
+export const InfinityNorm: MatrixNorm = 'I';
+
+export const NoEquilibration: MatrixEquilibration = 'N';
+export const RowEquilibration: MatrixEquilibration = 'R';
+export const ColumnEquilibration: MatrixEquilibration = 'C';
+export const BothEquilibration: MatrixEquilibration = 'B';
+
+export const UniformDistribution: MatrixDistribution = 'U';
+export const SymmetricDistribution: MatrixDistribution = 'S';
+export const NormalDistribution: MatrixDistribution = 'N';
+
+export const Symmetric: MatrixSymmetry = 'S';
+export const Hermitian: MatrixSymmetry = 'H';
+export const Positive: MatrixSymmetry = 'P';
+export const NonSymmetric: MatrixSymmetry = 'N';
+
+export const NoPacking: MatrixPacking = 'N';
+export const UpperPacking: MatrixPacking = 'U';
+export const LowerPacking: MatrixPacking = 'L';
+export const UpperBandPacking: MatrixPacking = 'Q';
+export const LowerBandPacking: MatrixPacking = 'B';
+export const BandPacking: MatrixPacking = 'Z';
 
 // LAPACK Linear Equation Routines: Matrix Factorization
 export const dgetrf: typeof nlapack.dgetrf = nlapack.dgetrf;
