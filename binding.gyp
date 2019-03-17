@@ -119,12 +119,19 @@
         "routines/test/latms.cc"
       ],
       "include_dirs" : [
+        "/usr/local/opt/lapack/include",
+        "/usr/include",
         "lib"
       ],
       "link_settings": {
         "libraries": [
+          "-llapacke",
           "-llapack",
           "-lblas"
+        ],
+        "library_dirs": [
+          "/usr/lib",
+          "/usr/local/opt/lapack/lib"
         ]
       }
     }

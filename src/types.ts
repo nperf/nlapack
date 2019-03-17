@@ -1,3 +1,4 @@
+export type FloatArray = Float64Array | Float32Array;
 export type MatrixTrans = 'N' | 'T' | 'C';
 export type MatrixUpperLower = 'U' | 'L';
 export type MatrixUnit = 'N' | 'U';

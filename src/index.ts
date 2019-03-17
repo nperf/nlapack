@@ -7,7 +7,7 @@ import {
 
 let nlapack: INLapack;
 try {
-  nlapack = require('./build/release/nlapack');
+  nlapack = require('../build/Release/nlapack');
 } catch (_) {
   nlapack = require('./nlapack');
 }
