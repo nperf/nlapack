@@ -1,4 +1,4 @@
-# nLAPACK ![travis](https://img.shields.io/travis/nperf/nlapack.svg)
+# nLAPACK ![version](https://img.shields.io/npm/v/nlapack.svg) ![travis](https://img.shields.io/travis/nperf/nlapack.svg) [![maintainability](https://api.codeclimate.com/v1/badges/31e0315d5a76af1b3ed4/maintainability)](https://codeclimate.com/github/nperf/nlapack/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/31e0315d5a76af1b3ed4/test_coverage)](https://codeclimate.com/github/nperf/nlapack/test_coverage)
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/nperf/nlapack.svg)](https://greenkeeper.io/)
 
