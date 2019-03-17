@@ -1,0 +1,298 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>nlapack</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.js" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">nlapack</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1> nlapack</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<h1 id="nlapack-travis">nLAPACK <img src="https://img.shields.io/travis/nperf/nlapack.svg" alt="travis"></h1>
+				<p><a href="https://greenkeeper.io/"><img src="https://badges.greenkeeper.io/nperf/nlapack.svg" alt="Greenkeeper badge"></a></p>
+				<p>Node <code>&gt;=6.9</code> C++ bindings for all single- and double-precision CLAPACK (Linear Algebra Package) routines.</p>
+				<h3 id="requirements">Requirements</h3>
+				<h4 id="linux">Linux</h4>
+				<pre><code class="language-bash">$ sudo apt-get install libblas-dev liblapack-dev liblapacke-dev</code></pre>
+				<h4 id="macos">MacOS</h4>
+				<pre><code class="language-bash">$ brew install lapack</code></pre>
+				<h3 id="usage">Usage</h3>
+				<pre><code class="language-bash">$ npm install nlapack</code></pre>
+				<h3 id="lapack-linear-equation-computational-routines"><a href="https://software.intel.com/en-us/mkl-developer-reference-fortran-lapack-linear-equation-computational-routines">LAPACK Linear Equation Computational Routines</a></h3>
+				<h4 id="matrix-factorization"><a href="https://software.intel.com/en-us/node/468680">Matrix Factorization</a></h4>
+				<ul>
+					<li><input checked="" disabled="" type="checkbox"> <code>?getrf(m, n, a, lda, ipiv)</code></li>
+					<li><input disabled="" type="checkbox"> <code>?getrf2(m, n, a, lda, ipiv)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?gbtrf(m, n, kl, ku, ab, ldab, ipiv)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?gttrf(n, dl, d, du, du2, ipiv)</code></li>
+					<li><input disabled="" type="checkbox"> <code>?dttrfb(n, dl, d, du)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?potrf(uplo, n, a, lda)</code></li>
+					<li><input disabled="" type="checkbox"> <code>?potrf2(uplo, n, a, lda)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?pstrf(uplo, n, a, lda, piv, rank, tol)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?pftrf(transr, uplo, n, a)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?pptrf(uplo, n, ap)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?pbtrf(uplo, n, kd, ab, ldab)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?pttrf(n, d, e)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?sytrf(uplo, n, a, lda, ipiv)</code></li>
+					<li><input disabled="" type="checkbox"> <code>?sytrf_aa(uplo, n, a, lda, ipiv)</code></li>
+					<li><input disabled="" type="checkbox"> <code>?sytrf_rook(uplo, n, a, lda, ipiv)</code></li>
+					<li><input disabled="" type="checkbox"> <code>?hetrf(uplo, n, a, lda, ipiv)</code></li>
+					<li><input disabled="" type="checkbox"> <code>?hetrf_aa(uplo, n, a, lda, ipiv)</code></li>
+					<li><input disabled="" type="checkbox"> <code>?hetrf_rook(uplo, n, a, lda, ipiv)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?sptrf(uplo, n, ap, ipiv)</code></li>
+					<li><input disabled="" type="checkbox"> <code>?hptrf(uplo, n, ap, ipiv)</code></li>
+				</ul>
+				<h4 id="solving-systems-of-linear-equations"><a href="https://software.intel.com/en-us/node/520891">Solving Systems of Linear Equations</a></h4>
+				<ul>
+					<li><input checked="" disabled="" type="checkbox"> <code>?getrs(trans, n, nrhs, a, lda, ipiv, b, ldb)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?gbtrs(trans, n, kl, ku, nrhs, ab, ldab, ipiv, b, ldb)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?gttrs(trans, n, nrhs, dl, d, du du2, ipiv, b, ldb)</code></li>
+					<li><input disabled="" type="checkbox"> <code>?dttrsb(trans, n, nrhs, dl, d, du, b, ldb)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?potrs(uplo, n, nrhs, a, lda, b, ldb)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?pftrs(transr, uplo, n, nrhs, a, b, ldb)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?pptrs(uplo, n, nrhs, ap, b, ldb)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?pbtrs(uplo, n, kd, nrhs, ab, ldab, b, ldb)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?pttrs(n, nrhs, d, e, b, ldb)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?sytrs(uplo, n, nrhs, a, lda, ipiv, b, ldb)</code></li>
+					<li><input disabled="" type="checkbox"> <code>?sytrs_aa(uplo, n, nrhs, a, lda, ipiv, b, ldb)</code></li>
+					<li><input disabled="" type="checkbox"> <code>?sytrs_rook(uplo, n, nrhs, a, lda, ipiv, b, ldb)</code></li>
+					<li><input disabled="" type="checkbox"> <code>?hetrs()</code></li>
+					<li><input disabled="" type="checkbox"> <code>?hetrs_aa()</code></li>
+					<li><input disabled="" type="checkbox"> <code>?hetrs_rook()</code></li>
+					<li><input disabled="" type="checkbox"> <code>?sytrs2(uplo, n, nrhs, a, lda, ipiv, b, ldb)</code></li>
+					<li><input disabled="" type="checkbox"> <code>?hetrs2()</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?sptrs(uplo, n, nrhs, ap, ipiv, b, ldb)</code></li>
+					<li><input disabled="" type="checkbox"> <code>?hptrs()</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?trtrs(uplo, trans, diag, n, nrhs, a, lda, b, ldb)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?tptrs(uplo, trans, diag, n, nrhs, ap, b, ldb)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?tbtrs(uplo, trans, diag, n, kd, nrhs, ab, ldab, b, ldb)</code></li>
+				</ul>
+				<h4 id="estimating-the-condition-number"><a href="https://software.intel.com/en-us/mkl-developer-reference-fortran-estimating-the-condition-number-lapack-computational-routines">Estimating the Condition Number</a></h4>
+				<ul>
+					<li><input checked="" disabled="" type="checkbox"> <code>?gecon(norm, n, a, lda, anorm, rcond)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?gbcon(norm, n, kl, ku, ab, ldab, ipiv, anorm, rcond)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?gtcon(norm, n, dl, d, du, du2, ipiv, anorm, rcond)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?pocon(uplo, n, a, lda, anorm, rcond)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?ppcon(uplo, n, ap, anorm, rcond)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?pbcon(uplo, n, kd, ab, ldab, anorm, rcond)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?ptcon(uplo, d, e, anorm, rcond)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?sycon(uplo, n, a, lda, ipiv, anorm, rcond)</code></li>
+					<li><input disabled="" type="checkbox"> <code>?sycon_rook(uplo, n, a, lda, ipiv, anorm, rcond)</code></li>
+					<li><input disabled="" type="checkbox"> <code>?hecon(uplo, n, a, lda, ipiv, anorm, rcond)</code></li>
+					<li><input disabled="" type="checkbox"> <code>?hecon_rook(uplo, n, a, lda, ipiv, anorm, rcond)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?spcon(uplo, n, ap, ipiv, anorm, rcond)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?trcon(norm, uplo, diag, n, a, lda, rcond)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?tpcon(norm, uplo, diag, n, ap, rcond)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?tbcon(norm, uplo, diag, n, kd, ab, ldab, rcond)</code></li>
+				</ul>
+				<h4 id="refining-the-solution-and-estimating-its-error"><a href="https://software.intel.com/en-us/mkl-developer-reference-fortran-refining-the-solution-and-estimating-its-error-lapack-computational-routines">Refining the Solution and Estimating Its Error</a></h4>
+				<ul>
+					<li><input checked="" disabled="" type="checkbox"> <code>?gerfs(trans, n, nrhs, a, lda, af, ldaf, ipiv, b, ldb, x, ldx, ferr, berr)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?gerfsx(trans, equed, n, nrhs, a, lda, af, ldaf, ipiv, r, c, b, ldb, x, ldx, rcond, berr, n_err_bnds, err_bnds_norm, err_bnds_comp, nparams, params)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?gbrfs(trans, n, kl, ku, nrhs, ab, ldab, afb, ldafb, ipiv, b, ldb, x, ldx, ferr, berr)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?gbrfsx(trans, equed, n, kl, ku, nrhs, ab, ldab, afb, ldafb, ipiv, r, c, b, ldb, x, ldx, rcond, berr, n_err_bnds, err_bnds_norm, err_bnds_comp, nparams, params)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?gtrfs(trans, n, nrhs, dl, d, du, dlf, df, duf, du2, ipiv, b, ldb, x, ldx, ferr, berr)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?porfs(uplo, n, nrhs, a, lda, af, ldaf, b, ldb, x, ldx, ferr, berr)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?porfsx(uplo, equed, n, nrhs, a, lda, af, ldaf, s, b, ldb, x, ldx, rcond, berr, n_err_bnds, err_bnds_norm, err_bnds_comp, nparams, params)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?pprfs(uplo, n, nrhs, ap, afp, b, ldb, x, ldx, ferr, berr)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?pbrfs(uplo, n, kd, nrhs, ab, ldab, afb, ldafb, b, ldb, x, ldx, ferr, berr)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?ptrfs(n, nrhs, d, e, df, ef, b, ldb, x, ldx, ferr, berr)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?syrfs(uplo, n, nrhs, a, lda, af, ldaf, ipiv, b, ldb, x, ldx, ferr, berr)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?syrfsx(uplo, equed, n, nrhs, a, lda, af, ldaf, ipiv, s, b, ldb, x, ldx, rcond, berr, n_err_bnds, err_bnds_norm, err_bnds_comp, nparams, params)</code></li>
+					<li><input disabled="" type="checkbox"> <code>?herfs(uplo, n, nrhs, a, lda, af, ldaf, ipiv, b, ldb, x, ldx, ferr, berr)</code></li>
+					<li><input disabled="" type="checkbox"> <code>?herfsx(uplo, equed, n, nrhs, a, lda, af, ldaf, ipiv, s, b, ldb, x, ldx, rcond, berr, n_err_bnds, err_bnds_norm, err_bnds_comp, nparams, params)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?sprfs(uplo, n, nrhs, ap, afp, ipiv, b, ldb, x, ldx, ferr, berr)</code></li>
+					<li><input disabled="" type="checkbox"> <code>?hprfs(uplo, n, nrhs, ap, afp, ipiv, b, ldb, x, ldx, ferr, berr)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?trrfs(uplo, trans, diag, n, nrhs, a, lda, b, ldb, x, ldx, ferr, berr)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?tprfs(uplo, trans, diag, n, nrhs, ap, b, ldb, x, ldx, ferr, berr)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?tbrfs(uplo, trans, diag, n, kd, nrhs, ab, ldab, b, ldb, x, ldx, ferr, berr)</code></li>
+				</ul>
+				<h4 id="matrix-inversion"><a href="https://software.intel.com/en-us/mkl-developer-reference-fortran-matrix-inversion-lapack-computational-routines">Matrix Inversion</a></h4>
+				<ul>
+					<li><input checked="" disabled="" type="checkbox"> <code>?getri(n, a, lda, ipiv)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?potri(uplo, n, a, lda)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?pftri(transr, uplo, n, a)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?pptri(uplo, n, ap)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?sytri(uplo, n, a, lda, ipiv)</code></li>
+					<li><input disabled="" type="checkbox"> <code>?sytri_rook(uplo, n, a, lda, ipiv)</code></li>
+					<li><input disabled="" type="checkbox"> <code>?hetri(uplo, n, a, lda, ipiv)</code></li>
+					<li><input disabled="" type="checkbox"> <code>?hetri_rook(uplo, n, a, lda, ipiv)</code></li>
+					<li><input disabled="" type="checkbox"> <code>?sytri2(uplo, n, a, lda, ipiv)</code></li>
+					<li><input disabled="" type="checkbox"> <code>?hetri2(uplo, n, a, lda, ipiv)</code></li>
+					<li><input disabled="" type="checkbox"> <code>?sytri2x(uplo, n, a, lda, ipiv, nb)</code></li>
+					<li><input disabled="" type="checkbox"> <code>?hetri2x(uplo, n, a, lda, ipiv, nb)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?sptri(uplo, n, ap, ipiv)</code></li>
+					<li><input disabled="" type="checkbox"> <code>?hptri(uplo, n, ap, ipiv)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?trtri(uplo, diag, n, a, lda)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?tftri(transr, uplo, diag, n, a)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?tptri(uplo, diag, n, ap)</code></li>
+				</ul>
+				<h4 id="matrix-equilibration"><a href="https://software.intel.com/en-us/mkl-developer-reference-fortran-matrix-equilibration-lapack-computational-routines">Matrix Equilibration</a></h4>
+				<ul>
+					<li><input checked="" disabled="" type="checkbox"> <code>?geequ(m, n, a, lda, r, c, rowcnd, colcnd, amax)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?geequb(m, n, a, lda, r, c, rowcnd, colcnd, amax)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?gbequ(m, n, kl, ku, ab, ldab, r, c, rowcnd, colcnd, amax)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?gbequb(m, n, kl, ku, ab, ldab, r, c, rowcnd, colcnd, amax)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?poequ(n, a, lda, s, scond, amax)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?poequb(n, a, lda, s, scond, amax)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?ppequ(uplo, n, ap, s, scond, amax)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?pbequ(uplo, n, kd, ab, ldab, s, scond, amax)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?syequb(uplo, n, a, lda, s, scond, amax)</code></li>
+					<li><input disabled="" type="checkbox"> <code>?heequb(uplo, n, a, lda, s, scond, amax)</code></li>
+				</ul>
+				<h3 id="lapack-utility-functions-and-routines"><a href="https://software.intel.com/en-us/mkl-developer-reference-fortran-matrix-equilibration-lapack-computational-routines">LAPACK Utility Functions and Routines</a></h3>
+				<ul>
+					<li><input checked="" disabled="" type="checkbox"> <code>ilaver(vers_major, vers_minor, vers_patch)</code></li>
+					<li><input checked="" disabled="" type="checkbox"> <code>?lamch(cmach)</code></li>
+				</ul>
+				<h3 id="lapack-test-functions-and-routines"><a href="https://software.intel.com/en-us/mkl-developer-reference-fortran-lapack-test-functions-and-routines">LAPACK Test Functions and Routines</a></h3>
+				<ul>
+					<li><input checked="" disabled="" type="checkbox"> <code>?latms(m, n, dist, iseed, sym, d, mode, cond, dmax, kl, ku, pack, a, lda)</code></li>
+				</ul>
+				<p>Double precision functions expect <code>Float64Array</code> vectors, single precision functions expect <code>Float32Array</code> vectors.</p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_index_.html">"index"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_types_.html">"types"</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>
