@@ -14,7 +14,7 @@ const equals: (x: FloatArray, y: FloatArray) => boolean = (x: FloatArray, y: Flo
     return false;
   }
 
-  for (let i = 0; i < x.length; i++) {
+  for (let i: number = 0; i < x.length; i += 1) {
     if (x[i] !== y[i]) {
       return false;
     }
