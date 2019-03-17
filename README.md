@@ -2,7 +2,7 @@
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/nperf/nlapack.svg)](https://greenkeeper.io/)
 
-Node `>=6.9` C++ bindings for all single- and double-precision CLAPACK (Linear Algebra Package) routines.
+Node `>=6.9` C++ bindings for all single- and double-precision LAPACK (Linear Algebra Package) routines.
 
 ### Requirements
 
