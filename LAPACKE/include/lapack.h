@@ -12,6 +12,38 @@
 
 #include <stdlib.h>
 
+#ifndef LAPACK_COMPLEX_CUSTOM
+
+/* Complex type (single precision) */
+#ifndef lapack_complex_float
+#include <complex.h>
+#define lapack_complex_float    float _Complex
+#endif
+
+#ifndef lapack_complex_float_real
+#define lapack_complex_float_real(z)       (creal(z))
+#endif
+
+#ifndef lapack_complex_float_imag
+#define lapack_complex_float_imag(z)       (cimag(z))
+#endif
+
+/* Complex type (double precision) */
+#ifndef lapack_complex_double
+#include <complex.h>
+#define lapack_complex_double   double _Complex
+#endif
+
+#ifndef lapack_complex_double_real
+#define lapack_complex_double_real(z)      (creal(z))
+#endif
+
+#ifndef lapack_complex_double_imag
+#define lapack_complex_double_imag(z)       (cimag(z))
+#endif
+
+#endif /* LAPACK_COMPLEX_CUSTOM */
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -47,38 +79,6 @@ extern "C" {
 * -Dlapack_complex_float="std::complex<float>"
 * -Dlapack_complex_double="std::complex<double>"
 */
-
-#ifndef LAPACK_COMPLEX_CUSTOM
-
-/* Complex type (single precision) */
-#ifndef lapack_complex_float
-#include <complex.h>
-#define lapack_complex_float    float _Complex
-#endif
-
-#ifndef lapack_complex_float_real
-#define lapack_complex_float_real(z)       (creal(z))
-#endif
-
-#ifndef lapack_complex_float_imag
-#define lapack_complex_float_imag(z)       (cimag(z))
-#endif
-
-/* Complex type (double precision) */
-#ifndef lapack_complex_double
-#include <complex.h>
-#define lapack_complex_double   double _Complex
-#endif
-
-#ifndef lapack_complex_double_real
-#define lapack_complex_double_real(z)      (creal(z))
-#endif
-
-#ifndef lapack_complex_double_imag
-#define lapack_complex_double_imag(z)       (cimag(z))
-#endif
-
-#endif /* LAPACK_COMPLEX_CUSTOM */
 
 /* Callback logical functions of one, two, or three arguments are used
 *  to select eigenvalues to sort to the top left of the Schur form.
