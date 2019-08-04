@@ -123,7 +123,7 @@
       ],
       "link_settings": {
         "libraries": [
-          "lapack/liblapacke.a",
+          "../lapack/liblapacke.a",
           "-llapack",
           "-lblas"
         ],
