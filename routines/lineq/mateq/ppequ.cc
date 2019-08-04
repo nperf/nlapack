@@ -1,8 +1,8 @@
 #include "routines.h"
 
 void dppequ(const v8::FunctionCallbackInfo<v8::Value>& info) {
- 	char uplo = info[0]->Uint32Value();
-	lapack_int n = info[1]->Uint32Value();
+ 	char uplo = info[0].As<v8::Integer>()->Value();
+	lapack_int n = info[1].As<v8::Integer>()->Value();
 	double *ap = reinterpret_cast<double*>(GET_CONTENTS(info[2].As<v8::Float64Array>()));
 	double *s = reinterpret_cast<double*>(GET_CONTENTS(info[3].As<v8::Float64Array>()));
 	double *scond = reinterpret_cast<double*>(GET_CONTENTS(info[4].As<v8::Float64Array>()));
@@ -16,8 +16,8 @@ void dppequ(const v8::FunctionCallbackInfo<v8::Value>& info) {
 }
 
 void sppequ(const v8::FunctionCallbackInfo<v8::Value>& info) {
-	char uplo = info[0]->Uint32Value();
-	lapack_int n = info[1]->Uint32Value();
+	char uplo = info[0].As<v8::Integer>()->Value();
+	lapack_int n = info[1].As<v8::Integer>()->Value();
 	float *ap = reinterpret_cast<float*>(GET_CONTENTS(info[2].As<v8::Float32Array>()));
 	float *s = reinterpret_cast<float*>(GET_CONTENTS(info[3].As<v8::Float32Array>()));
 	float *scond = reinterpret_cast<float*>(GET_CONTENTS(info[4].As<v8::Float32Array>()));

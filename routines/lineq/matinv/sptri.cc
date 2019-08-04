@@ -1,8 +1,8 @@
 #include "routines.h"
 
 void dsptri(const v8::FunctionCallbackInfo<v8::Value>& info) {
- 	char uplo = info[0]->Uint32Value();
- 	lapack_int n = info[1]->Uint32Value();
+ 	char uplo = info[0].As<v8::Integer>()->Value();
+ 	lapack_int n = info[1].As<v8::Integer>()->Value();
 	double *ap = reinterpret_cast<double*>(GET_CONTENTS(info[2].As<v8::Float64Array>()));
 	lapack_int *ipiv = reinterpret_cast<int*>(GET_CONTENTS(info[3].As<v8::Int32Array>()));
 
@@ -14,8 +14,8 @@ void dsptri(const v8::FunctionCallbackInfo<v8::Value>& info) {
 }
 
 void ssptri(const v8::FunctionCallbackInfo<v8::Value>& info) {
-	char uplo = info[0]->Uint32Value();
-	lapack_int n = info[1]->Uint32Value();
+	char uplo = info[0].As<v8::Integer>()->Value();
+	lapack_int n = info[1].As<v8::Integer>()->Value();
 	float *ap = reinterpret_cast<float*>(GET_CONTENTS(info[2].As<v8::Float32Array>()));
 	lapack_int *ipiv = reinterpret_cast<int*>(GET_CONTENTS(info[3].As<v8::Int32Array>()));
 

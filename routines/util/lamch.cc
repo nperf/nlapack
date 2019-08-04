@@ -1,7 +1,7 @@
 #include "routines.h"
 
 void dlamch(const v8::FunctionCallbackInfo<v8::Value>& info) {
-	char cmach = info[0]->Uint32Value();
+	char cmach = info[0].As<v8::Integer>()->Value();
 
 	double val = LAPACKE_dlamch(cmach);
 
@@ -11,7 +11,7 @@ void dlamch(const v8::FunctionCallbackInfo<v8::Value>& info) {
 }
 
 void slamch(const v8::FunctionCallbackInfo<v8::Value>& info) {
-	char cmach = info[0]->Uint32Value();
+	char cmach = info[0].As<v8::Integer>()->Value();
 
 	float val = LAPACKE_slamch(cmach);
 

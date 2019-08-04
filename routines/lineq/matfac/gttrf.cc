@@ -1,7 +1,7 @@
 #include "routines.h"
 
 void dgttrf(const v8::FunctionCallbackInfo<v8::Value>& info) {
-	lapack_int n = info[0]->Uint32Value();
+	lapack_int n = info[0].As<v8::Integer>()->Value();
 	double *dl = reinterpret_cast<double*>(GET_CONTENTS(info[1].As<v8::Float64Array>()));
 	double *d = reinterpret_cast<double*>(GET_CONTENTS(info[2].As<v8::Float64Array>()));
 	double *du = reinterpret_cast<double*>(GET_CONTENTS(info[3].As<v8::Float64Array>()));
@@ -16,7 +16,7 @@ void dgttrf(const v8::FunctionCallbackInfo<v8::Value>& info) {
 }
 
 void sgttrf(const v8::FunctionCallbackInfo<v8::Value>& info) {
-	lapack_int n = info[0]->Uint32Value();
+	lapack_int n = info[0].As<v8::Integer>()->Value();
 	float *dl = reinterpret_cast<float*>(GET_CONTENTS(info[1].As<v8::Float32Array>()));
 	float *d = reinterpret_cast<float*>(GET_CONTENTS(info[2].As<v8::Float32Array>()));
 	float *du = reinterpret_cast<float*>(GET_CONTENTS(info[3].As<v8::Float32Array>()));

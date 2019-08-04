@@ -1,10 +1,10 @@
 #include "routines.h"
 
 void dsytrf_aa(const v8::FunctionCallbackInfo<v8::Value>& info) {
-	char uplo = info[0]->Uint32Value();
-	lapack_int n = info[1]->Uint32Value();
+	char uplo = info[0].As<v8::Integer>()->Value();
+	lapack_int n = info[1].As<v8::Integer>()->Value();
 	double *a = reinterpret_cast<double*>(GET_CONTENTS(info[2].As<v8::Float64Array>()));
-	lapack_int lda = info[3]->Uint32Value();
+	lapack_int lda = info[3].As<v8::Integer>()->Value();
 	lapack_int *ipiv = reinterpret_cast<int*>(GET_CONTENTS(info[4].As<v8::Int32Array>()));
 
 	lapack_int i = LAPACKE_dsytrf_aa(LAPACK_ROW_MAJOR, uplo, n, a, lda, ipiv);
@@ -15,10 +15,10 @@ void dsytrf_aa(const v8::FunctionCallbackInfo<v8::Value>& info) {
 }
 
 void ssytrf_aa(const v8::FunctionCallbackInfo<v8::Value>& info) {
-	char uplo = info[0]->Uint32Value();
-	lapack_int n = info[1]->Uint32Value();
+	char uplo = info[0].As<v8::Integer>()->Value();
+	lapack_int n = info[1].As<v8::Integer>()->Value();
 	float *a = reinterpret_cast<float*>(GET_CONTENTS(info[2].As<v8::Float64Array>()));
-	lapack_int lda = info[3]->Uint32Value();
+	lapack_int lda = info[3].As<v8::Integer>()->Value();
 	lapack_int *ipiv = reinterpret_cast<int*>(GET_CONTENTS(info[4].As<v8::Int32Array>()));
 
 	lapack_int i = LAPACKE_ssytrf_aa(LAPACK_ROW_MAJOR, uplo, n, a, lda, ipiv);
