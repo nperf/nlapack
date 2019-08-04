@@ -5,3 +5,4 @@ coverage
 built
 build
 .vscode
+liblapacke.a
