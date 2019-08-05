@@ -132,7 +132,7 @@
           "include_dirs": ["/usr/local/opt/lapack/include"],
           "libraries": ["/usr/local/opt/lapack/lib/liblapacke.dylib"]
         }, { # not OSX
-          "include_dirs": ["/usr/include"]
+          "include_dirs": ["/usr/include"],
           "libraries": ["-llapacke"]
         }]
       ]
