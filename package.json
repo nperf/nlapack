@@ -8,7 +8,6 @@
     "lint": "tslint -p . -c tslint.json 'src/*.ts'",
     "docs": "typedoc --out docs --exclude \"**/*+(.spec).ts\" --target es6 src && touch docs/.nojekyll",
     "build": "node-gyp rebuild && tsc",
-    "preinstall": "cd LAPACKE && make lapacke",
     "install": "npm run build"
   },
   "nyc": {
