@@ -1,8 +1,8 @@
 #include "routines.h"
 
 void dgeev(const v8::FunctionCallbackInfo<v8::Value>& info) {
- 	lapack_int jobvl = info[0].As<v8::Integer>()->Value();
- 	lapack_int jobvr = info[1].As<v8::Integer>()->Value();
+ 	char jobvl = info[0].As<v8::Integer>()->Value();
+ 	char jobvr = info[1].As<v8::Integer>()->Value();
  	lapack_int n = info[2].As<v8::Integer>()->Value();
 	double *a = reinterpret_cast<double*>(GET_CONTENTS(info[3].As<v8::Float64Array>()));
 	lapack_int lda = info[4].As<v8::Integer>()->Value();
@@ -21,8 +21,8 @@ void dgeev(const v8::FunctionCallbackInfo<v8::Value>& info) {
 }
 
 void sgeev(const v8::FunctionCallbackInfo<v8::Value>& info) {
-	lapack_int jobvl = info[0].As<v8::Integer>()->Value();
-	lapack_int jobvr = info[1].As<v8::Integer>()->Value();
+	char jobvl = info[0].As<v8::Integer>()->Value();
+	char jobvr = info[1].As<v8::Integer>()->Value();
 	lapack_int n = info[2].As<v8::Integer>()->Value();
 	float *a = reinterpret_cast<float*>(GET_CONTENTS(info[3].As<v8::Float32Array>()));
 	lapack_int lda = info[4].As<v8::Integer>()->Value();

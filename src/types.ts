@@ -1,13 +1,14 @@
 export type FloatArray = Float64Array | Float32Array;
-export type MatrixTrans = 'N' | 'T' | 'C';
-export type MatrixUpperLower = 'U' | 'L';
-export type MatrixUnit = 'N' | 'U';
-export type MatrixNorm = '1' | 'O' | 'I';
-export type MatrixEquilibration = 'N' | 'R' | 'C' | 'B';
-export type MatrixDistribution = 'U' | 'S' | 'N';
-export type MatrixSymmetry = 'S' | 'H' | 'P' | 'N';
+export type MatrixTrans = 78 | 84 | 67;
+export type MatrixUpperLower = 85 | 76;
+export type MatrixUnit = 78 | 85;
+export type MatrixNorm = 49 | 48 | 73;
+export type MatrixEquilibration = 78 | 82 | 67 | 66;
+export type MatrixDistribution = 85 | 83 | 78;
+export type MatrixSymmetry = 83 | 72 | 80 | 78;
 export type MatrixMode = -6 | -5 | -4 | -3 | -2 | -1 | 0 | 1 | 2 | 3 | 4 | 5 | 6;
-export type MatrixPacking = 'N' | 'U' | 'L' | 'B' | 'Q' | 'Z';
+export type MatrixPacking = 78 | 85 | 76 | 66 | 81 | 90;
+export type MatrixEigenvector = 78 | 86;
 
 export interface INLapack {
   // tslint:disable: max-line-length
@@ -180,8 +181,8 @@ export interface INLapack {
   dgesv(n: number, nrhs: number, a: Float64Array, lda: number, ipiv: Int32Array, b: Float64Array, ldb: number): number;
   sgesv(n: number, nrhs: number, a: Float32Array, lda: number, ipiv: Int32Array, b: Float32Array, ldb: number): number;
 
-  dgeev(jobvl: number, jobvr: number, n: number, a: Float64Array, lda: number, wr: Float64Array, wi: Float64Array, vl: Float64Array, ldvl: number, vr: Float64Array, ldvr: number): number;
-  sgeev(jobvl: number, jobvr: number, n: number, a: Float32Array, lda: number, wr: Float32Array, wi: Float32Array, vl: Float32Array, ldvl: number, vr: Float32Array, ldvr: number): number;
+  dgeev(jobvl: MatrixEigenvector, jobvr: MatrixEigenvector, n: number, a: Float64Array, lda: number, wr: Float64Array, wi: Float64Array, vl: Float64Array, ldvl: number, vr: Float64Array, ldvr: number): number;
+  sgeev(jobvl: MatrixEigenvector, jobvr: MatrixEigenvector, n: number, a: Float32Array, lda: number, wr: Float32Array, wi: Float32Array, vl: Float32Array, ldvl: number, vr: Float32Array, ldvr: number): number;
 
   ilaver(vers_major: Int32Array, vers_minor: Int32Array, vers_patch: Int32Array): void;
 

@@ -3,10 +3,14 @@ import {
 } from 'assert';
 
 import {
+  dgeev,
   dgetrf,
+  Eigenvector,
+  NoEigenvector,
 } from './';
 import {
   FloatArray,
+  MatrixEigenvector,
 } from './types';
 
 const equals: (x: FloatArray, y: FloatArray) => boolean = (x: FloatArray, y: FloatArray): boolean => {
@@ -54,6 +58,47 @@ describe('dgetrf', () => {
           0.8, -0.2, -0, 0, 0, -0, 0.4, 0.8, 1.2,
           0.8, -0.1, 0, 0, 0, 0, 0, 0.4, 0.8,
           0.9, -0.1, 0, 0, 0, 0, 0, 0, 0.4,
+        ])
+      )
+    );
+  });
+});
+
+describe('dgeev', () => {
+  it ('should work as expected', () => {
+    const x: Float64Array = new Float64Array([
+      1, 0, 0,
+      0, 2, 0,
+      0, 0, 3,
+    ]);
+
+    const jobvl: MatrixEigenvector = NoEigenvector;
+    const jobvr: MatrixEigenvector = Eigenvector;
+
+    const wr: Float64Array = new Float64Array(3);
+    const wi: Float64Array = new Float64Array(3);
+
+    const vl: Float64Array = new Float64Array(9);
+    const vr: Float64Array = new Float64Array(9);
+
+    dgeev(jobvl, jobvr, 3, x, 3, wr, wi, vl, 3, vr, 3);
+
+    strictEqual(
+      true,
+      equals(
+        wr,
+        new Float64Array([1, 2, 3])
+      )
+    );
+
+    strictEqual(
+      true,
+      equals(
+        vr,
+        new Float64Array([
+          1, 0, 0,
+          0, 1, 0,
+          0, 0, 1,
         ])
       )
     );

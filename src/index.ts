@@ -1,6 +1,7 @@
 import {
   INLapack,
   MatrixDistribution,
+  MatrixEigenvector,
   MatrixEquilibration,
   MatrixNorm,
   MatrixPacking,
@@ -18,39 +19,42 @@ try {
 }
 
 // From enums declared in functions/cblas.h
-export const NoTrans: MatrixTrans = 'N';
-export const Trans: MatrixTrans = 'T';
-export const ConjTrans: MatrixTrans = 'C';
+export const NoTrans: MatrixTrans = 78;
+export const Trans: MatrixTrans = 84;
+export const ConjTrans: MatrixTrans = 67;
 
-export const Upper: MatrixUpperLower = 'U';
-export const Lower: MatrixUpperLower = 'L';
+export const Upper: MatrixUpperLower = 85;
+export const Lower: MatrixUpperLower = 76;
 
-export const NonUnit: MatrixUnit = 'N';
-export const Unit: MatrixUnit = 'U';
+export const NonUnit: MatrixUnit = 78;
+export const Unit: MatrixUnit = 85;
 
-export const OneNorm: MatrixNorm = 'O';
-export const InfinityNorm: MatrixNorm = 'I';
+export const OneNorm: MatrixNorm = 49;
+export const InfinityNorm: MatrixNorm = 73;
 
-export const NoEquilibration: MatrixEquilibration = 'N';
-export const RowEquilibration: MatrixEquilibration = 'R';
-export const ColumnEquilibration: MatrixEquilibration = 'C';
-export const BothEquilibration: MatrixEquilibration = 'B';
+export const NoEquilibration: MatrixEquilibration = 78;
+export const RowEquilibration: MatrixEquilibration = 82;
+export const ColumnEquilibration: MatrixEquilibration = 67;
+export const BothEquilibration: MatrixEquilibration = 66;
 
-export const UniformDistribution: MatrixDistribution = 'U';
-export const SymmetricDistribution: MatrixDistribution = 'S';
-export const NormalDistribution: MatrixDistribution = 'N';
+export const UniformDistribution: MatrixDistribution = 85;
+export const SymmetricDistribution: MatrixDistribution = 83;
+export const NormalDistribution: MatrixDistribution = 78;
 
-export const Symmetric: MatrixSymmetry = 'S';
-export const Hermitian: MatrixSymmetry = 'H';
-export const Positive: MatrixSymmetry = 'P';
-export const NonSymmetric: MatrixSymmetry = 'N';
+export const Symmetric: MatrixSymmetry = 83;
+export const Hermitian: MatrixSymmetry = 72;
+export const Positive: MatrixSymmetry = 80;
+export const NonSymmetric: MatrixSymmetry = 78;
 
-export const NoPacking: MatrixPacking = 'N';
-export const UpperPacking: MatrixPacking = 'U';
-export const LowerPacking: MatrixPacking = 'L';
-export const UpperBandPacking: MatrixPacking = 'Q';
-export const LowerBandPacking: MatrixPacking = 'B';
-export const BandPacking: MatrixPacking = 'Z';
+export const NoPacking: MatrixPacking = 78;
+export const UpperPacking: MatrixPacking = 85;
+export const LowerPacking: MatrixPacking = 76;
+export const LowerBandPacking: MatrixPacking = 66;
+export const UpperBandPacking: MatrixPacking = 81;
+export const BandPacking: MatrixPacking = 90;
+
+export const NoEigenvector: MatrixEigenvector = 78;
+export const Eigenvector: MatrixEigenvector = 86;
 
 // LAPACK Linear Equation Routines: Matrix Factorization
 export const dgetrf: typeof nlapack.dgetrf = nlapack.dgetrf;
