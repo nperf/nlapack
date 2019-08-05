@@ -147,6 +147,14 @@ $ npm install nlapack
 - [x] `?syequb(uplo, n, a, lda, s, scond, amax)`
 - [ ] `?heequb(uplo, n, a, lda, s, scond, amax)`
 
+### [LAPACK Linear Equation Driver Routines](https://software.intel.com/en-us/mkl-developer-reference-fortran-lapack-linear-equation-driver-routines)
+
+- [x] `?gesv(n, nrhs, a, lda, ipiv, b, ldb)`
+
+### [LAPACK Least Squares and Eigenvalue Problem Driver Routines](https://software.intel.com/en-us/mkl-developer-reference-fortran-lapack-least-squares-and-eigenvalue-problem-driver-routines)
+
+- [x] `?geev(jobvl, jobvr, n, a, lda, wr, wi, vl, ldvl, vr, ldvr)`
+
 ### [LAPACK Utility Functions and Routines](https://software.intel.com/en-us/mkl-developer-reference-fortran-matrix-equilibration-lapack-computational-routines)
 
 - [x] `ilaver(vers_major, vers_minor, vers_patch)`

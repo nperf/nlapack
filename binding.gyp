@@ -113,6 +113,10 @@
         "routines/lineq/mateq/syequb.cc",
         # "routines/lineq/mateq/heequb.cc",
 
+        "routines/lineq/drivers/gesv.cc",
+
+        "routines/eigen/drivers/geev.cc",
+
         "routines/util/ilaver.cc",
         "routines/util/lamch.cc",
 

@@ -220,6 +220,13 @@ void Init(v8::Local<v8::Object> exports) {
   NODE_SET_METHOD(exports, "ssyequb", ssyequb);
   // NODE_SET_METHOD(exports, "dheequb", dheequb);
   // NODE_SET_METHOD(exports, "sheequb", sheequb);
+  // LAPACK Linear Equation Driver Routines
+  NODE_SET_METHOD(exports, "dgesv", dgesv);
+  NODE_SET_METHOD(exports, "sgesv", sgesv);
+
+  // LAPACK Least Squares and Eigenvalue Problem Driver Routines
+  NODE_SET_METHOD(exports, "dgeev", dgeev);
+  NODE_SET_METHOD(exports, "sgeev", sgeev);
 
   // LAPACK Utility Functions and Routines
   NODE_SET_METHOD(exports, "ilaver", ilaver);

@@ -177,6 +177,12 @@ export interface INLapack {
   dsyequb(uplo: MatrixUpperLower, n: number, a: Float64Array, lda: number, s: Float64Array, scond: Float64Array, amax: Float64Array): number;
   ssyequb(uplo: MatrixUpperLower, n: number, a: Float32Array, lda: number, s: Float32Array, scond: Float32Array, amax: Float32Array): number;
 
+  dgesv(n: number, nrhs: number, a: Float64Array, lda: number, ipiv: Int32Array, b: Float64Array, ldb: number): number;
+  sgesv(n: number, nrhs: number, a: Float32Array, lda: number, ipiv: Int32Array, b: Float32Array, ldb: number): number;
+
+  dgeev(jobvl: number, jobvr: number, n: number, a: Float64Array, lda: number, wr: Float64Array, wi: Float64Array, vl: Float64Array, ldvl: number, vr: Float64Array, ldvr: number): number;
+  sgeev(jobvl: number, jobvr: number, n: number, a: Float32Array, lda: number, wr: Float32Array, wi: Float32Array, vl: Float32Array, ldvl: number, vr: Float32Array, ldvr: number): number;
+
   ilaver(vers_major: Int32Array, vers_minor: Int32Array, vers_patch: Int32Array): void;
 
   dlatms(m: number, n: number, dist: MatrixDistribution, iseed: Int32Array, sym: MatrixSymmetry, d: Float64Array, mode: MatrixMode, cond: number, dmax: number, kl: number, ku: number, pack: MatrixPacking, a: Float64Array, lda: number): number;

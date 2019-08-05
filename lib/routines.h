@@ -220,10 +220,19 @@ void dsyequb(const v8::FunctionCallbackInfo<v8::Value>& info);
 void ssyequb(const v8::FunctionCallbackInfo<v8::Value>& info);
 // void dheequb(const v8::FunctionCallbackInfo<v8::Value>& info);
 // void sheequb(const v8::FunctionCallbackInfo<v8::Value>& info);
+// LAPACK Linear Equation Driver Routines
+void dgesv(const v8::FunctionCallbackInfo<v8::Value>& info);
+void sgesv(const v8::FunctionCallbackInfo<v8::Value>& info);
+
+// LAPACK Least Squares and Eigenvalue Problem Driver Routines
+void dgeev(const v8::FunctionCallbackInfo<v8::Value>& info);
+void sgeev(const v8::FunctionCallbackInfo<v8::Value>& info);
+
 // LAPACK Utility Functions and Routines
 void ilaver(const v8::FunctionCallbackInfo<v8::Value>& info);
 void dlamch(const v8::FunctionCallbackInfo<v8::Value>& info);
 void slamch(const v8::FunctionCallbackInfo<v8::Value>& info);
+
 // LAPACK Test Functions and Routines
 void dlatms(const v8::FunctionCallbackInfo<v8::Value>& info);
 void slatms(const v8::FunctionCallbackInfo<v8::Value>& info);

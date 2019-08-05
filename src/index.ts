@@ -298,6 +298,14 @@ export const spbequ: typeof nlapack.spbequ = nlapack.spbequ;
 export const dsyequb: typeof nlapack.dsyequb = nlapack.dsyequb;
 export const ssyequb: typeof nlapack.ssyequb = nlapack.ssyequb;
 
+// LAPACK Linear Equation Routines: Drivers
+export const dgesv: typeof nlapack.dgesv = nlapack.dgesv;
+export const sgesv: typeof nlapack.sgesv = nlapack.sgesv;
+
+// LAPACK Least Squares and Eigenvalue Problem Driver Routines
+export const dgeev: typeof nlapack.dgeev = nlapack.dgeev;
+export const sgeev: typeof nlapack.sgeev = nlapack.sgeev;
+
 // LAPACK Utility Functions and Routines
 export const ilaver: typeof nlapack.ilaver = nlapack.ilaver;
 
