@@ -122,18 +122,17 @@
 
         "routines/test/latms.cc"
       ],
-      "include_dirs" : [
-        "lib",
-        "lapack/include"
-      ],
+      "include_dirs" : ["lib"],
       "libraries": [
         "-llapack",
         "-lblas"
       ],
       "conditions": [
         ['OS=="mac"', {
-          "libraries": ["<(module_root_dir)/lapack/lib/liblapacke.3.8.0.dylib"]
+          "include_dirs": ["/usr/local/opt/lapack/include"],
+          "libraries": ["/usr/local/opt/lapack/lib/liblapacke.dylib"]
         }, { # not OSX
+          "include_dirs": ["/usr/include"]
           "libraries": ["-llapacke"]
         }]
       ]
