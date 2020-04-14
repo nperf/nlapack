@@ -2,6 +2,7 @@
 #define ROUTINES_H
 
 #include <node.h>
+#include <complex.h>
 #include <lapacke.h>
 
 #define GET_CONTENTS(view) \
