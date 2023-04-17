@@ -12,144 +12,210 @@
 <div class="col-content">
 <div class="tsd-page-title">
 <h2>nlapack</h2></div>
-<div class="tsd-panel tsd-typography"><a id="md:nlapack----" class="tsd-anchor"></a><h1><a href="#$nlapack----" style="color:inherit;text-decoration:none">nLAPACK <img src="https://img.shields.io/npm/v/nlapack.svg" alt="version"> <img src="https://img.shields.io/travis/nperf/nlapack.svg" alt="travis"> <a href="https://codeclimate.com/github/nperf/nlapack/maintainability"><img src="https://api.codeclimate.com/v1/badges/31e0315d5a76af1b3ed4/maintainability" alt="maintainability"></a> <a href="https://codeclimate.com/github/nperf/nlapack/test_coverage"><img src="https://api.codeclimate.com/v1/badges/31e0315d5a76af1b3ed4/test_coverage" alt="Test Coverage"></a></a></h1><p><a href="https://greenkeeper.io/"><img src="https://badges.greenkeeper.io/nperf/nlapack.svg" alt="Greenkeeper badge"></a></p>
-<p>Node <code>&gt;=6.9</code> C++ bindings for all single- and double-precision LAPACK (Linear Algebra Package) routines.</p>
-<a id="md:requirements" class="tsd-anchor"></a><h3><a href="#$requirements" style="color:inherit;text-decoration:none">Requirements</a></h3><a id="md:linux" class="tsd-anchor"></a><h4><a href="#$linux" style="color:inherit;text-decoration:none">Linux</a></h4><pre><code class="language-bash"><span class="hl-0">$ </span><span class="hl-1">sudo</span><span class="hl-0"> </span><span class="hl-1">apt-get</span><span class="hl-0"> </span><span class="hl-1">install</span><span class="hl-0"> </span><span class="hl-1">libblas-dev</span><span class="hl-0"> </span><span class="hl-1">liblapack-dev</span><span class="hl-0"> </span><span class="hl-1">liblapacke-dev</span>
-</code></pre>
-<a id="md:macos" class="tsd-anchor"></a><h4><a href="#$macos" style="color:inherit;text-decoration:none">MacOS</a></h4><pre><code class="language-bash"><span class="hl-0">$ </span><span class="hl-1">brew</span><span class="hl-0"> </span><span class="hl-1">install</span><span class="hl-0"> </span><span class="hl-1">lapack</span>
-</code></pre>
-<a id="md:usage" class="tsd-anchor"></a><h3><a href="#$usage" style="color:inherit;text-decoration:none">Usage</a></h3><pre><code class="language-bash"><span class="hl-0">$ </span><span class="hl-1">npm</span><span class="hl-0"> </span><span class="hl-1">install</span><span class="hl-0"> </span><span class="hl-1">nlapack</span>
-</code></pre>
-<a id="md:lapack-linear-equation-computational-routines" class="tsd-anchor"></a><h3><a href="#$lapack-linear-equation-computational-routines" style="color:inherit;text-decoration:none"><a href="https://software.intel.com/en-us/mkl-developer-reference-fortran-lapack-linear-equation-computational-routines">LAPACK Linear Equation Computational Routines</a></a></h3><a id="md:matrix-factorization" class="tsd-anchor"></a><h4><a href="#$matrix-factorization" style="color:inherit;text-decoration:none"><a href="https://software.intel.com/en-us/node/468680">Matrix Factorization</a></a></h4><ul>
-<li><input checked="" disabled="" type="checkbox"> <code>?getrf(m, n, a, lda, ipiv)</code></li>
-<li><input disabled="" type="checkbox"> <code>?getrf2(m, n, a, lda, ipiv)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?gbtrf(m, n, kl, ku, ab, ldab, ipiv)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?gttrf(n, dl, d, du, du2, ipiv)</code></li>
-<li><input disabled="" type="checkbox"> <code>?dttrfb(n, dl, d, du)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?potrf(uplo, n, a, lda)</code></li>
-<li><input disabled="" type="checkbox"> <code>?potrf2(uplo, n, a, lda)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?pstrf(uplo, n, a, lda, piv, rank, tol)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?pftrf(transr, uplo, n, a)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?pptrf(uplo, n, ap)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?pbtrf(uplo, n, kd, ab, ldab)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?pttrf(n, d, e)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?sytrf(uplo, n, a, lda, ipiv)</code></li>
-<li><input disabled="" type="checkbox"> <code>?sytrf_aa(uplo, n, a, lda, ipiv)</code></li>
-<li><input disabled="" type="checkbox"> <code>?sytrf_rook(uplo, n, a, lda, ipiv)</code></li>
-<li><input disabled="" type="checkbox"> <code>?hetrf(uplo, n, a, lda, ipiv)</code></li>
-<li><input disabled="" type="checkbox"> <code>?hetrf_aa(uplo, n, a, lda, ipiv)</code></li>
-<li><input disabled="" type="checkbox"> <code>?hetrf_rook(uplo, n, a, lda, ipiv)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?sptrf(uplo, n, ap, ipiv)</code></li>
-<li><input disabled="" type="checkbox"> <code>?hptrf(uplo, n, ap, ipiv)</code></li>
-</ul>
-<a id="md:solving-systems-of-linear-equations" class="tsd-anchor"></a><h4><a href="#$solving-systems-of-linear-equations" style="color:inherit;text-decoration:none"><a href="https://software.intel.com/en-us/node/520891">Solving Systems of Linear Equations</a></a></h4><ul>
-<li><input checked="" disabled="" type="checkbox"> <code>?getrs(trans, n, nrhs, a, lda, ipiv, b, ldb)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?gbtrs(trans, n, kl, ku, nrhs, ab, ldab, ipiv, b, ldb)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?gttrs(trans, n, nrhs, dl, d, du du2, ipiv, b, ldb)</code></li>
-<li><input disabled="" type="checkbox"> <code>?dttrsb(trans, n, nrhs, dl, d, du, b, ldb)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?potrs(uplo, n, nrhs, a, lda, b, ldb)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?pftrs(transr, uplo, n, nrhs, a, b, ldb)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?pptrs(uplo, n, nrhs, ap, b, ldb)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?pbtrs(uplo, n, kd, nrhs, ab, ldab, b, ldb)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?pttrs(n, nrhs, d, e, b, ldb)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?sytrs(uplo, n, nrhs, a, lda, ipiv, b, ldb)</code></li>
-<li><input disabled="" type="checkbox"> <code>?sytrs_aa(uplo, n, nrhs, a, lda, ipiv, b, ldb)</code></li>
-<li><input disabled="" type="checkbox"> <code>?sytrs_rook(uplo, n, nrhs, a, lda, ipiv, b, ldb)</code></li>
-<li><input disabled="" type="checkbox"> <code>?hetrs()</code></li>
-<li><input disabled="" type="checkbox"> <code>?hetrs_aa()</code></li>
-<li><input disabled="" type="checkbox"> <code>?hetrs_rook()</code></li>
-<li><input disabled="" type="checkbox"> <code>?sytrs2(uplo, n, nrhs, a, lda, ipiv, b, ldb)</code></li>
-<li><input disabled="" type="checkbox"> <code>?hetrs2()</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?sptrs(uplo, n, nrhs, ap, ipiv, b, ldb)</code></li>
-<li><input disabled="" type="checkbox"> <code>?hptrs()</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?trtrs(uplo, trans, diag, n, nrhs, a, lda, b, ldb)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?tptrs(uplo, trans, diag, n, nrhs, ap, b, ldb)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?tbtrs(uplo, trans, diag, n, kd, nrhs, ab, ldab, b, ldb)</code></li>
-</ul>
-<a id="md:estimating-the-condition-number" class="tsd-anchor"></a><h4><a href="#$estimating-the-condition-number" style="color:inherit;text-decoration:none"><a href="https://software.intel.com/en-us/mkl-developer-reference-fortran-estimating-the-condition-number-lapack-computational-routines">Estimating the Condition Number</a></a></h4><ul>
-<li><input checked="" disabled="" type="checkbox"> <code>?gecon(norm, n, a, lda, anorm, rcond)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?gbcon(norm, n, kl, ku, ab, ldab, ipiv, anorm, rcond)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?gtcon(norm, n, dl, d, du, du2, ipiv, anorm, rcond)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?pocon(uplo, n, a, lda, anorm, rcond)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?ppcon(uplo, n, ap, anorm, rcond)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?pbcon(uplo, n, kd, ab, ldab, anorm, rcond)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?ptcon(uplo, d, e, anorm, rcond)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?sycon(uplo, n, a, lda, ipiv, anorm, rcond)</code></li>
-<li><input disabled="" type="checkbox"> <code>?sycon_rook(uplo, n, a, lda, ipiv, anorm, rcond)</code></li>
-<li><input disabled="" type="checkbox"> <code>?hecon(uplo, n, a, lda, ipiv, anorm, rcond)</code></li>
-<li><input disabled="" type="checkbox"> <code>?hecon_rook(uplo, n, a, lda, ipiv, anorm, rcond)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?spcon(uplo, n, ap, ipiv, anorm, rcond)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?trcon(norm, uplo, diag, n, a, lda, rcond)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?tpcon(norm, uplo, diag, n, ap, rcond)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?tbcon(norm, uplo, diag, n, kd, ab, ldab, rcond)</code></li>
-</ul>
-<a id="md:refining-the-solution-and-estimating-its-error" class="tsd-anchor"></a><h4><a href="#$refining-the-solution-and-estimating-its-error" style="color:inherit;text-decoration:none"><a href="https://software.intel.com/en-us/mkl-developer-reference-fortran-refining-the-solution-and-estimating-its-error-lapack-computational-routines">Refining the Solution and Estimating Its Error</a></a></h4><ul>
-<li><input checked="" disabled="" type="checkbox"> <code>?gerfs(trans, n, nrhs, a, lda, af, ldaf, ipiv, b, ldb, x, ldx, ferr, berr)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?gerfsx(trans, equed, n, nrhs, a, lda, af, ldaf, ipiv, r, c, b, ldb, x, ldx, rcond, berr, n_err_bnds, err_bnds_norm, err_bnds_comp, nparams, params)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?gbrfs(trans, n, kl, ku, nrhs, ab, ldab, afb, ldafb, ipiv, b, ldb, x, ldx, ferr, berr)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?gbrfsx(trans, equed, n, kl, ku, nrhs, ab, ldab, afb, ldafb, ipiv, r, c, b, ldb, x, ldx, rcond, berr, n_err_bnds, err_bnds_norm, err_bnds_comp, nparams, params)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?gtrfs(trans, n, nrhs, dl, d, du, dlf, df, duf, du2, ipiv, b, ldb, x, ldx, ferr, berr)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?porfs(uplo, n, nrhs, a, lda, af, ldaf, b, ldb, x, ldx, ferr, berr)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?porfsx(uplo, equed, n, nrhs, a, lda, af, ldaf, s, b, ldb, x, ldx, rcond, berr, n_err_bnds, err_bnds_norm, err_bnds_comp, nparams, params)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?pprfs(uplo, n, nrhs, ap, afp, b, ldb, x, ldx, ferr, berr)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?pbrfs(uplo, n, kd, nrhs, ab, ldab, afb, ldafb, b, ldb, x, ldx, ferr, berr)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?ptrfs(n, nrhs, d, e, df, ef, b, ldb, x, ldx, ferr, berr)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?syrfs(uplo, n, nrhs, a, lda, af, ldaf, ipiv, b, ldb, x, ldx, ferr, berr)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?syrfsx(uplo, equed, n, nrhs, a, lda, af, ldaf, ipiv, s, b, ldb, x, ldx, rcond, berr, n_err_bnds, err_bnds_norm, err_bnds_comp, nparams, params)</code></li>
-<li><input disabled="" type="checkbox"> <code>?herfs(uplo, n, nrhs, a, lda, af, ldaf, ipiv, b, ldb, x, ldx, ferr, berr)</code></li>
-<li><input disabled="" type="checkbox"> <code>?herfsx(uplo, equed, n, nrhs, a, lda, af, ldaf, ipiv, s, b, ldb, x, ldx, rcond, berr, n_err_bnds, err_bnds_norm, err_bnds_comp, nparams, params)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?sprfs(uplo, n, nrhs, ap, afp, ipiv, b, ldb, x, ldx, ferr, berr)</code></li>
-<li><input disabled="" type="checkbox"> <code>?hprfs(uplo, n, nrhs, ap, afp, ipiv, b, ldb, x, ldx, ferr, berr)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?trrfs(uplo, trans, diag, n, nrhs, a, lda, b, ldb, x, ldx, ferr, berr)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?tprfs(uplo, trans, diag, n, nrhs, ap, b, ldb, x, ldx, ferr, berr)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?tbrfs(uplo, trans, diag, n, kd, nrhs, ab, ldab, b, ldb, x, ldx, ferr, berr)</code></li>
-</ul>
-<a id="md:matrix-inversion" class="tsd-anchor"></a><h4><a href="#$matrix-inversion" style="color:inherit;text-decoration:none"><a href="https://software.intel.com/en-us/mkl-developer-reference-fortran-matrix-inversion-lapack-computational-routines">Matrix Inversion</a></a></h4><ul>
-<li><input checked="" disabled="" type="checkbox"> <code>?getri(n, a, lda, ipiv)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?potri(uplo, n, a, lda)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?pftri(transr, uplo, n, a)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?pptri(uplo, n, ap)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?sytri(uplo, n, a, lda, ipiv)</code></li>
-<li><input disabled="" type="checkbox"> <code>?sytri_rook(uplo, n, a, lda, ipiv)</code></li>
-<li><input disabled="" type="checkbox"> <code>?hetri(uplo, n, a, lda, ipiv)</code></li>
-<li><input disabled="" type="checkbox"> <code>?hetri_rook(uplo, n, a, lda, ipiv)</code></li>
-<li><input disabled="" type="checkbox"> <code>?sytri2(uplo, n, a, lda, ipiv)</code></li>
-<li><input disabled="" type="checkbox"> <code>?hetri2(uplo, n, a, lda, ipiv)</code></li>
-<li><input disabled="" type="checkbox"> <code>?sytri2x(uplo, n, a, lda, ipiv, nb)</code></li>
-<li><input disabled="" type="checkbox"> <code>?hetri2x(uplo, n, a, lda, ipiv, nb)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?sptri(uplo, n, ap, ipiv)</code></li>
-<li><input disabled="" type="checkbox"> <code>?hptri(uplo, n, ap, ipiv)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?trtri(uplo, diag, n, a, lda)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?tftri(transr, uplo, diag, n, a)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?tptri(uplo, diag, n, ap)</code></li>
-</ul>
-<a id="md:matrix-equilibration" class="tsd-anchor"></a><h4><a href="#$matrix-equilibration" style="color:inherit;text-decoration:none"><a href="https://software.intel.com/en-us/mkl-developer-reference-fortran-matrix-equilibration-lapack-computational-routines">Matrix Equilibration</a></a></h4><ul>
-<li><input checked="" disabled="" type="checkbox"> <code>?geequ(m, n, a, lda, r, c, rowcnd, colcnd, amax)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?geequb(m, n, a, lda, r, c, rowcnd, colcnd, amax)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?gbequ(m, n, kl, ku, ab, ldab, r, c, rowcnd, colcnd, amax)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?gbequb(m, n, kl, ku, ab, ldab, r, c, rowcnd, colcnd, amax)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?poequ(n, a, lda, s, scond, amax)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?poequb(n, a, lda, s, scond, amax)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?ppequ(uplo, n, ap, s, scond, amax)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?pbequ(uplo, n, kd, ab, ldab, s, scond, amax)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?syequb(uplo, n, a, lda, s, scond, amax)</code></li>
-<li><input disabled="" type="checkbox"> <code>?heequb(uplo, n, a, lda, s, scond, amax)</code></li>
-</ul>
-<a id="md:lapack-linear-equation-driver-routines" class="tsd-anchor"></a><h3><a href="#$lapack-linear-equation-driver-routines" style="color:inherit;text-decoration:none"><a href="https://software.intel.com/en-us/mkl-developer-reference-fortran-lapack-linear-equation-driver-routines">LAPACK Linear Equation Driver Routines</a></a></h3><ul>
-<li><input checked="" disabled="" type="checkbox"> <code>?gesv(n, nrhs, a, lda, ipiv, b, ldb)</code></li>
-</ul>
-<a id="md:lapack-least-squares-and-eigenvalue-problem-driver-routines" class="tsd-anchor"></a><h3><a href="#$lapack-least-squares-and-eigenvalue-problem-driver-routines" style="color:inherit;text-decoration:none"><a href="https://software.intel.com/en-us/mkl-developer-reference-fortran-lapack-least-squares-and-eigenvalue-problem-driver-routines">LAPACK Least Squares and Eigenvalue Problem Driver Routines</a></a></h3><ul>
-<li><input checked="" disabled="" type="checkbox"> <code>?geev(jobvl, jobvr, n, a, lda, wr, wi, vl, ldvl, vr, ldvr)</code></li>
-</ul>
-<a id="md:lapack-utility-functions-and-routines" class="tsd-anchor"></a><h3><a href="#$lapack-utility-functions-and-routines" style="color:inherit;text-decoration:none"><a href="https://software.intel.com/en-us/mkl-developer-reference-fortran-matrix-equilibration-lapack-computational-routines">LAPACK Utility Functions and Routines</a></a></h3><ul>
-<li><input checked="" disabled="" type="checkbox"> <code>ilaver(vers_major, vers_minor, vers_patch)</code></li>
-<li><input checked="" disabled="" type="checkbox"> <code>?lamch(cmach)</code></li>
-</ul>
-<a id="md:lapack-test-functions-and-routines" class="tsd-anchor"></a><h3><a href="#$lapack-test-functions-and-routines" style="color:inherit;text-decoration:none"><a href="https://software.intel.com/en-us/mkl-developer-reference-fortran-lapack-test-functions-and-routines">LAPACK Test Functions and Routines</a></a></h3><ul>
-<li><input checked="" disabled="" type="checkbox"> <code>?latms(m, n, dist, iseed, sym, d, mode, cond, dmax, kl, ku, pack, a, lda)</code></li>
-</ul>
-<p>Double precision functions expect <code>Float64Array</code> vectors, single precision functions expect <code>Float32Array</code> vectors.</p>
-</div></div>
+<section class="tsd-panel-group tsd-index-group">
+<section class="tsd-panel tsd-index-panel">
+<h3 class="tsd-index-heading uppercase">Index</h3>
+<section class="tsd-index-section">
+<h3 class="tsd-index-heading">Variables</h3>
+<div class="tsd-index-list"><a href="variables/BandPacking.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-variable)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-32-path"></rect><path d="M11.106 16L8.85 7.24H9.966L11.454 13.192C11.558 13.608 11.646 13.996 11.718 14.356C11.79 14.708 11.842 14.976 11.874 15.16C11.906 14.976 11.954 14.708 12.018 14.356C12.09 13.996 12.178 13.608 12.282 13.192L13.758 7.24H14.85L12.582 16H11.106Z" fill="var(--color-text)" id="icon-32-text"></path></svg><span>Band<wbr/>Packing</span></a>
+<a href="variables/BothEquilibration.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg><span>Both<wbr/>Equilibration</span></a>
+<a href="variables/ColumnEquilibration.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg><span>Column<wbr/>Equilibration</span></a>
+<a href="variables/ConjTrans.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg><span>Conj<wbr/>Trans</span></a>
+<a href="variables/Eigenvector.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg><span>Eigenvector</span></a>
+<a href="variables/Hermitian.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg><span>Hermitian</span></a>
+<a href="variables/InfinityNorm.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg><span>Infinity<wbr/>Norm</span></a>
+<a href="variables/Lower.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg><span>Lower</span></a>
+<a href="variables/LowerBandPacking.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg><span>Lower<wbr/>Band<wbr/>Packing</span></a>
+<a href="variables/LowerPacking.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg><span>Lower<wbr/>Packing</span></a>
+<a href="variables/NoEigenvector.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg><span>No<wbr/>Eigenvector</span></a>
+<a href="variables/NoEquilibration.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg><span>No<wbr/>Equilibration</span></a>
+<a href="variables/NoPacking.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg><span>No<wbr/>Packing</span></a>
+<a href="variables/NoTrans.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg><span>No<wbr/>Trans</span></a>
+<a href="variables/NonSymmetric.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg><span>Non<wbr/>Symmetric</span></a>
+<a href="variables/NonUnit.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg><span>Non<wbr/>Unit</span></a>
+<a href="variables/NormalDistribution.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg><span>Normal<wbr/>Distribution</span></a>
+<a href="variables/OneNorm.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg><span>One<wbr/>Norm</span></a>
+<a href="variables/Positive.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg><span>Positive</span></a>
+<a href="variables/RowEquilibration.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg><span>Row<wbr/>Equilibration</span></a>
+<a href="variables/Symmetric.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg><span>Symmetric</span></a>
+<a href="variables/SymmetricDistribution.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg><span>Symmetric<wbr/>Distribution</span></a>
+<a href="variables/Trans.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg><span>Trans</span></a>
+<a href="variables/UniformDistribution.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg><span>Uniform<wbr/>Distribution</span></a>
+<a href="variables/Unit.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg><span>Unit</span></a>
+<a href="variables/Upper.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg><span>Upper</span></a>
+<a href="variables/UpperBandPacking.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg><span>Upper<wbr/>Band<wbr/>Packing</span></a>
+<a href="variables/UpperPacking.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg><span>Upper<wbr/>Packing</span></a>
+</div></section>
+<section class="tsd-index-section">
+<h3 class="tsd-index-heading">Functions</h3>
+<div class="tsd-index-list"><a href="functions/dgbcon.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-function)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-64-path"></rect><path d="M9.39 16V7.24H14.55V8.224H10.446V11.128H14.238V12.112H10.47V16H9.39Z" fill="var(--color-text)" id="icon-64-text"></path></svg><span>dgbcon</span></a>
+<a href="functions/dgbequ.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dgbequ</span></a>
+<a href="functions/dgbequb.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dgbequb</span></a>
+<a href="functions/dgbrfs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dgbrfs</span></a>
+<a href="functions/dgbrfsx.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dgbrfsx</span></a>
+<a href="functions/dgbtrf.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dgbtrf</span></a>
+<a href="functions/dgbtrs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dgbtrs</span></a>
+<a href="functions/dgecon.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dgecon</span></a>
+<a href="functions/dgeequ.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dgeequ</span></a>
+<a href="functions/dgeequb.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dgeequb</span></a>
+<a href="functions/dgeev.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dgeev</span></a>
+<a href="functions/dgerfs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dgerfs</span></a>
+<a href="functions/dgerfsx.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dgerfsx</span></a>
+<a href="functions/dgesv.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dgesv</span></a>
+<a href="functions/dgetrf.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dgetrf</span></a>
+<a href="functions/dgetrf2.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dgetrf2</span></a>
+<a href="functions/dgetri.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dgetri</span></a>
+<a href="functions/dgetrs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dgetrs</span></a>
+<a href="functions/dgtcon.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dgtcon</span></a>
+<a href="functions/dgtrfs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dgtrfs</span></a>
+<a href="functions/dgttrf.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dgttrf</span></a>
+<a href="functions/dgttrs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dgttrs</span></a>
+<a href="functions/dlatms.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dlatms</span></a>
+<a href="functions/dpbcon.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dpbcon</span></a>
+<a href="functions/dpbequ.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dpbequ</span></a>
+<a href="functions/dpbrfs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dpbrfs</span></a>
+<a href="functions/dpbtrf.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dpbtrf</span></a>
+<a href="functions/dpbtrs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dpbtrs</span></a>
+<a href="functions/dpftrf.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dpftrf</span></a>
+<a href="functions/dpftri.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dpftri</span></a>
+<a href="functions/dpftrs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dpftrs</span></a>
+<a href="functions/dpocon.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dpocon</span></a>
+<a href="functions/dpoequ.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dpoequ</span></a>
+<a href="functions/dpoequb.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dpoequb</span></a>
+<a href="functions/dporfs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dporfs</span></a>
+<a href="functions/dporfsx.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dporfsx</span></a>
+<a href="functions/dpotrf.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dpotrf</span></a>
+<a href="functions/dpotrf2.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dpotrf2</span></a>
+<a href="functions/dpotri.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dpotri</span></a>
+<a href="functions/dpotrs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dpotrs</span></a>
+<a href="functions/dppcon.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dppcon</span></a>
+<a href="functions/dppequ.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dppequ</span></a>
+<a href="functions/dpprfs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dpprfs</span></a>
+<a href="functions/dpptrf.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dpptrf</span></a>
+<a href="functions/dpptri.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dpptri</span></a>
+<a href="functions/dpptrs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dpptrs</span></a>
+<a href="functions/dpstrf.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dpstrf</span></a>
+<a href="functions/dptcon.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dptcon</span></a>
+<a href="functions/dptrfs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dptrfs</span></a>
+<a href="functions/dpttrf.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dpttrf</span></a>
+<a href="functions/dpttrs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dpttrs</span></a>
+<a href="functions/dspcon.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dspcon</span></a>
+<a href="functions/dsprfs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dsprfs</span></a>
+<a href="functions/dsptrf.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dsptrf</span></a>
+<a href="functions/dsptri.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dsptri</span></a>
+<a href="functions/dsptrs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dsptrs</span></a>
+<a href="functions/dsycon.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dsycon</span></a>
+<a href="functions/dsyequb.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dsyequb</span></a>
+<a href="functions/dsyrfs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dsyrfs</span></a>
+<a href="functions/dsyrfsx.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dsyrfsx</span></a>
+<a href="functions/dsytrf.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dsytrf</span></a>
+<a href="functions/dsytrf_aa.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dsytrf_<wbr/>aa</span></a>
+<a href="functions/dsytrf_rook.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dsytrf_<wbr/>rook</span></a>
+<a href="functions/dsytri.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dsytri</span></a>
+<a href="functions/dsytri2.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dsytri2</span></a>
+<a href="functions/dsytri2x.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dsytri2x</span></a>
+<a href="functions/dsytri_rook.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dsytri_<wbr/>rook</span></a>
+<a href="functions/dsytrs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dsytrs</span></a>
+<a href="functions/dsytrs2.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dsytrs2</span></a>
+<a href="functions/dsytrs_aa.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dsytrs_<wbr/>aa</span></a>
+<a href="functions/dsytrs_rook.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dsytrs_<wbr/>rook</span></a>
+<a href="functions/dtbcon.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dtbcon</span></a>
+<a href="functions/dtbrfs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dtbrfs</span></a>
+<a href="functions/dtbtrs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dtbtrs</span></a>
+<a href="functions/dtftri.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dtftri</span></a>
+<a href="functions/dtpcon.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dtpcon</span></a>
+<a href="functions/dtprfs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dtprfs</span></a>
+<a href="functions/dtptri.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dtptri</span></a>
+<a href="functions/dtptrs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dtptrs</span></a>
+<a href="functions/dtrcon.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dtrcon</span></a>
+<a href="functions/dtrrfs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dtrrfs</span></a>
+<a href="functions/dtrtri.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dtrtri</span></a>
+<a href="functions/dtrtrs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dtrtrs</span></a>
+<a href="functions/ilaver.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>ilaver</span></a>
+<a href="functions/sgbcon.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>sgbcon</span></a>
+<a href="functions/sgbequ.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>sgbequ</span></a>
+<a href="functions/sgbequb.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>sgbequb</span></a>
+<a href="functions/sgbrfs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>sgbrfs</span></a>
+<a href="functions/sgbrfsx.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>sgbrfsx</span></a>
+<a href="functions/sgbtrf.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>sgbtrf</span></a>
+<a href="functions/sgbtrs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>sgbtrs</span></a>
+<a href="functions/sgecon.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>sgecon</span></a>
+<a href="functions/sgeequ.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>sgeequ</span></a>
+<a href="functions/sgeequb.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>sgeequb</span></a>
+<a href="functions/sgeev.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>sgeev</span></a>
+<a href="functions/sgerfs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>sgerfs</span></a>
+<a href="functions/sgerfsx.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>sgerfsx</span></a>
+<a href="functions/sgesv.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>sgesv</span></a>
+<a href="functions/sgetrf.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>sgetrf</span></a>
+<a href="functions/sgetrf2.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>sgetrf2</span></a>
+<a href="functions/sgetri.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>sgetri</span></a>
+<a href="functions/sgetrs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>sgetrs</span></a>
+<a href="functions/sgtcon.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>sgtcon</span></a>
+<a href="functions/sgtrfs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>sgtrfs</span></a>
+<a href="functions/sgttrf.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>sgttrf</span></a>
+<a href="functions/sgttrs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>sgttrs</span></a>
+<a href="functions/slatms.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>slatms</span></a>
+<a href="functions/spbcon.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>spbcon</span></a>
+<a href="functions/spbequ.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>spbequ</span></a>
+<a href="functions/spbrfs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>spbrfs</span></a>
+<a href="functions/spbtrf.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>spbtrf</span></a>
+<a href="functions/spbtrs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>spbtrs</span></a>
+<a href="functions/spftrf.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>spftrf</span></a>
+<a href="functions/spftri.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>spftri</span></a>
+<a href="functions/spftrs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>spftrs</span></a>
+<a href="functions/spocon.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>spocon</span></a>
+<a href="functions/spoequ.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>spoequ</span></a>
+<a href="functions/spoequb.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>spoequb</span></a>
+<a href="functions/sporfs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>sporfs</span></a>
+<a href="functions/sporfsx.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>sporfsx</span></a>
+<a href="functions/spotrf.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>spotrf</span></a>
+<a href="functions/spotrf2.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>spotrf2</span></a>
+<a href="functions/spotri.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>spotri</span></a>
+<a href="functions/spotrs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>spotrs</span></a>
+<a href="functions/sppcon.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>sppcon</span></a>
+<a href="functions/sppequ.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>sppequ</span></a>
+<a href="functions/spprfs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>spprfs</span></a>
+<a href="functions/spptrf.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>spptrf</span></a>
+<a href="functions/spptri.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>spptri</span></a>
+<a href="functions/spptrs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>spptrs</span></a>
+<a href="functions/spstrf.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>spstrf</span></a>
+<a href="functions/sptcon.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>sptcon</span></a>
+<a href="functions/sptrfs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>sptrfs</span></a>
+<a href="functions/spttrf.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>spttrf</span></a>
+<a href="functions/spttrs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>spttrs</span></a>
+<a href="functions/sspcon.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>sspcon</span></a>
+<a href="functions/ssprfs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>ssprfs</span></a>
+<a href="functions/ssptrf.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>ssptrf</span></a>
+<a href="functions/ssptri.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>ssptri</span></a>
+<a href="functions/ssptrs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>ssptrs</span></a>
+<a href="functions/ssycon.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>ssycon</span></a>
+<a href="functions/ssyequb.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>ssyequb</span></a>
+<a href="functions/ssyrfs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>ssyrfs</span></a>
+<a href="functions/ssyrfsx.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>ssyrfsx</span></a>
+<a href="functions/ssytrf.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>ssytrf</span></a>
+<a href="functions/ssytrf_aa.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>ssytrf_<wbr/>aa</span></a>
+<a href="functions/ssytrf_rook.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>ssytrf_<wbr/>rook</span></a>
+<a href="functions/ssytri.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>ssytri</span></a>
+<a href="functions/ssytri2.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>ssytri2</span></a>
+<a href="functions/ssytri2x.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>ssytri2x</span></a>
+<a href="functions/ssytri_rook.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>ssytri_<wbr/>rook</span></a>
+<a href="functions/ssytrs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>ssytrs</span></a>
+<a href="functions/ssytrs2.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>ssytrs2</span></a>
+<a href="functions/ssytrs_aa.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>ssytrs_<wbr/>aa</span></a>
+<a href="functions/ssytrs_rook.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>ssytrs_<wbr/>rook</span></a>
+<a href="functions/stbcon.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>stbcon</span></a>
+<a href="functions/stbrfs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>stbrfs</span></a>
+<a href="functions/stbtrs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>stbtrs</span></a>
+<a href="functions/stftri.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>stftri</span></a>
+<a href="functions/stpcon.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>stpcon</span></a>
+<a href="functions/stprfs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>stprfs</span></a>
+<a href="functions/stptri.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>stptri</span></a>
+<a href="functions/stptrs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>stptrs</span></a>
+<a href="functions/strcon.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>strcon</span></a>
+<a href="functions/strrfs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>strrfs</span></a>
+<a href="functions/strtri.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>strtri</span></a>
+<a href="functions/strtrs.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>strtrs</span></a>
+</div></section></section></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
@@ -164,41 +230,11 @@
 <li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li>
 <li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></form></div>
 <div class="tsd-theme-toggle">
-<h4 class="uppercase">Theme</h4><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div>
-<details open class="tsd-index-accordion tsd-page-navigation"><summary class="tsd-accordion-summary">
-<h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4.93896 8.531L12 15.591L19.061 8.531L16.939 6.409L12 11.349L7.06098 6.409L4.93896 8.531Z" fill="var(--color-text)"></path></svg>On This Page</h3></summary>
-<div class="tsd-accordion-details">
-<ul>
-<li>
-<ul>
-<li><a href="#md:nlapack----"><span>nLAPACK    </span></a></li>
-<li>
-<ul>
-<li><a href="#md:requirements"><span>Requirements</span></a></li>
-<li>
-<ul>
-<li><a href="#md:linux"><span>Linux</span></a></li>
-<li>
-<ul>
-<li><a href="#md:macos"><span>MacOS</span></a></li></ul></li>
-<li><a href="#md:usage"><span>Usage</span></a></li>
-<li><a href="#md:lapack-linear-equation-computational-routines"><span>LAPACK <wbr/>Linear <wbr/>Equation <wbr/>Computational <wbr/>Routines</span></a></li>
-<li>
-<ul>
-<li><a href="#md:matrix-factorization"><span>Matrix <wbr/>Factorization</span></a></li>
-<li><a href="#md:solving-systems-of-linear-equations"><span>Solving <wbr/>Systems of <wbr/>Linear <wbr/>Equations</span></a></li>
-<li><a href="#md:estimating-the-condition-number"><span>Estimating the <wbr/>Condition <wbr/>Number</span></a></li>
-<li><a href="#md:refining-the-solution-and-estimating-its-error"><span>Refining the <wbr/>Solution and <wbr/>Estimating <wbr/>Its <wbr/>Error</span></a></li>
-<li><a href="#md:matrix-inversion"><span>Matrix <wbr/>Inversion</span></a></li>
-<li><a href="#md:matrix-equilibration"><span>Matrix <wbr/>Equilibration</span></a></li></ul></li>
-<li><a href="#md:lapack-linear-equation-driver-routines"><span>LAPACK <wbr/>Linear <wbr/>Equation <wbr/>Driver <wbr/>Routines</span></a></li>
-<li><a href="#md:lapack-least-squares-and-eigenvalue-problem-driver-routines"><span>LAPACK <wbr/>Least <wbr/>Squares and <wbr/>Eigenvalue <wbr/>Problem <wbr/>Driver <wbr/>Routines</span></a></li>
-<li><a href="#md:lapack-utility-functions-and-routines"><span>LAPACK <wbr/>Utility <wbr/>Functions and <wbr/>Routines</span></a></li>
-<li><a href="#md:lapack-test-functions-and-routines"><span>LAPACK <wbr/>Test <wbr/>Functions and <wbr/>Routines</span></a></li></ul></li></ul></li></ul></li></ul></div></details></div>
+<h4 class="uppercase">Theme</h4><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div></div>
 <div class="site-menu">
 <nav class="tsd-navigation"><a href="modules.html" class="current"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-namespace)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-4-path"></rect><path d="M9.33 16V7.24H10.77L13.446 14.74C13.43 14.54 13.41 14.296 13.386 14.008C13.37 13.712 13.354 13.404 13.338 13.084C13.33 12.756 13.326 12.448 13.326 12.16V7.24H14.37V16H12.93L10.266 8.5C10.282 8.692 10.298 8.936 10.314 9.232C10.33 9.52 10.342 9.828 10.35 10.156C10.366 10.476 10.374 10.784 10.374 11.08V16H9.33Z" fill="var(--color-text)" id="icon-4-text"></path></svg><span>nlapack</span></a>
 <ul class="tsd-small-nested-navigation">
-<li><a href="variables/BandPacking.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-variable)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-32-path"></rect><path d="M11.106 16L8.85 7.24H9.966L11.454 13.192C11.558 13.608 11.646 13.996 11.718 14.356C11.79 14.708 11.842 14.976 11.874 15.16C11.906 14.976 11.954 14.708 12.018 14.356C12.09 13.996 12.178 13.608 12.282 13.192L13.758 7.24H14.85L12.582 16H11.106Z" fill="var(--color-text)" id="icon-32-text"></path></svg><span>Band<wbr/>Packing</span></a></li>
+<li><a href="variables/BandPacking.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg><span>Band<wbr/>Packing</span></a></li>
 <li><a href="variables/BothEquilibration.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg><span>Both<wbr/>Equilibration</span></a></li>
 <li><a href="variables/ColumnEquilibration.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg><span>Column<wbr/>Equilibration</span></a></li>
 <li><a href="variables/ConjTrans.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg><span>Conj<wbr/>Trans</span></a></li>
@@ -226,7 +262,7 @@
 <li><a href="variables/Upper.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg><span>Upper</span></a></li>
 <li><a href="variables/UpperBandPacking.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg><span>Upper<wbr/>Band<wbr/>Packing</span></a></li>
 <li><a href="variables/UpperPacking.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg><span>Upper<wbr/>Packing</span></a></li>
-<li><a href="functions/dgbcon.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-function)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-64-path"></rect><path d="M9.39 16V7.24H14.55V8.224H10.446V11.128H14.238V12.112H10.47V16H9.39Z" fill="var(--color-text)" id="icon-64-text"></path></svg><span>dgbcon</span></a></li>
+<li><a href="functions/dgbcon.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dgbcon</span></a></li>
 <li><a href="functions/dgbequ.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dgbequ</span></a></li>
 <li><a href="functions/dgbequb.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dgbequb</span></a></li>
 <li><a href="functions/dgbrfs.html"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg><span>dgbrfs</span></a></li>
