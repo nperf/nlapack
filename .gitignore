@@ -2,7 +2,6 @@
 node_modules
 coverage
 .DS_Store
-dist
 build
 .vscode
 liblapacke.a
