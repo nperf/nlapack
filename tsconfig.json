@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "outDir": "./built",
-    "target": "es5",
+    "target": "esnext",
+    "module": "commonjs",
     "strict": true,
     "declaration": true,
     "removeComments": true,
@@ -15,7 +16,7 @@
       "dom"
     ],
     "types": [
-      "mocha",
+      "jest",
       "node"
     ]
   },
