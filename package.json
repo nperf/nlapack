@@ -1,44 +1,23 @@
 {
   "name": "nlapack",
-  "version": "2.0.5",
+  "version": "2.0.7",
   "description": "C++ bindings for all single- and double-precision CLAPACK (Linear Algebra Package) routines.",
-  "main": "built/index.js",
-  "types": "built/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "nyc mocha -r ts-node/register ./src/*.spec.ts",
+    "test": "jest",
     "docs": "typedoc --out docs --exclude \"**/*+(.spec).ts\" src && touch docs/.nojekyll",
-    "build": "node-gyp rebuild -j max",
-    "prepublishOnly": "tsc",
+    "build": "node-gyp rebuild -j max && rm -rf dist && tsc",
     "install": "npm run build"
-  },
-  "nyc": {
-    "extension": [
-      ".ts"
-    ],
-    "exclude": [
-      "**/*.d.ts",
-      "built/**",
-      "docs/**",
-      "coverage/**",
-      "lib/**",
-      "routines/**",
-      "src/*.spec.ts",
-      "src/index.cc"
-    ],
-    "reporter": [
-      "lcov"
-    ],
-    "all": true
   },
   "repository": {
     "git": "https://github.com/mateogianolio/nblas"
   },
-  "dependencies": {},
   "devDependencies": {
-    "@types/mocha": "^10.0.1",
+    "@types/jest": "^29.5.0",
     "@types/node": "^18.15.11",
-    "mocha": "^10.2.0",
-    "nyc": "^15.1.0",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
     "ts-node": "^10.9.1",
     "typedoc": "^0.24.4",
     "typescript": "^5.0.4"
