@@ -129,8 +129,8 @@
       ],
       "conditions": [
         ['OS=="mac"', {
-          "include_dirs": ["$(brew --prefix lapack)/include"],
-          "libraries": ["$(brew --prefix lapack)/lib/liblapacke.dylib"]
+          "include_dirs": ["<!(brew --prefix lapack)/include"],
+          "libraries": ["<!(brew --prefix lapack)/lib/liblapacke.dylib"]
         }, { # not OSX
           "include_dirs": ["/usr/include"],
           "libraries": ["-llapacke"]
