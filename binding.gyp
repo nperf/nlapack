@@ -129,8 +129,8 @@
       ],
       "conditions": [
         ['OS=="mac"', {
-          "include_dirs": ["/opt/homebrew/opt/lapack/include"],
-          "libraries": ["/opt/homebrew/opt/lapack/lib/liblapacke.dylib"]
+          "include_dirs": ["$(HOMEBREW_PREFIX)/opt/lapack/include"],
+          "libraries": ["/$(HOMEBREW_PREFIX)/opt/lapack/lib/liblapacke.dylib"]
         }, { # not OSX
           "include_dirs": ["/usr/include"],
           "libraries": ["-llapacke"]
