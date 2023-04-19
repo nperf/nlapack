@@ -1,6 +1,6 @@
 {
   "name": "nlapack",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "C++ bindings for all single- and double-precision CLAPACK (Linear Algebra Package) routines.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
