@@ -164,5 +164,4 @@ $ npm install nlapack
 
 - [x] `?latms(m, n, dist, iseed, sym, d, mode, cond, dmax, kl, ku, pack, a, lda)`
 
-
 Double precision functions expect `Float64Array` vectors, single precision functions expect `Float32Array` vectors.
