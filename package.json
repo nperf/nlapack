@@ -18,9 +18,8 @@
     "lib",
     "binding.gyp"
   ],
-  "repository": {
-    "git": "https://github.com/mateogianolio/nblas"
-  },
+  "homepage": "https://github.com/nperf/nlapack#readme",
+  "repository": "github:nperf/nlapack",
   "devDependencies": {
     "@types/jest": "^29.5.0",
     "@types/node": "^18.15.11",
